@@ -1,5 +1,5 @@
 iUnitTest
-                                   ITO SOFT DESIGN Inc.Å@ http://www.itosoft.com/
+                                   ITO SOFT DESIGN Inc. http://www.itosoft.com/
                                    Katsuyoshi Ito <kito@itosoft.com>
                                    January 30, 2009
 
