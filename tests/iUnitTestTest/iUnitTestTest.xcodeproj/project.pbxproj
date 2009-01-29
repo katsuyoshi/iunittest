@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		461CFE920F299E0100315F17 /* IUTTestRunnerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7EE0F214CCF00D830A5 /* IUTTestRunnerMock.m */; };
+		461CFE930F299E0200315F17 /* IUTAssertionInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */; };
+		461CFE940F299E0200315F17 /* IUTAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B04600F2065B3000E8FE2 /* IUTAssertionTest.m */; };
+		461CFEA30F299E4700315F17 /* IUTResultTableViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7E50F214AC500D830A5 /* IUTResultTableViewControllerTest.m */; };
+		461CFEA40F299E4800315F17 /* IUTResultTableViewCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DADB0F21A40F00D830A5 /* IUTResultTableViewCellTest.m */; };
+		461CFEA50F299E4900315F17 /* IUTTestRunnerViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */; };
+		461CFEAD0F299E9F00315F17 /* IUTTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7130F20E75F00D830A5 /* IUTTestTest.m */; };
+		461CFF530F2A0DE900315F17 /* IUTTestRunnerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7910F21430500D830A5 /* IUTTestRunnerTest.m */; };
+		462057A10F28B2EC00857D87 /* IUTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462057A00F28B2EC00857D87 /* IUTDetailViewController.m */; };
+		4620593F0F28CB7300857D87 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4620593E0F28CB7300857D87 /* DetailView.xib */; };
+		465B04460F205A62000E8FE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B043C0F205A62000E8FE2 /* AppDelegate.m */; };
+		465B04470F205A62000E8FE2 /* IUTAssertion.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B043F0F205A62000E8FE2 /* IUTAssertion.m */; };
+		465B04480F205A62000E8FE2 /* IUTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B04410F205A62000E8FE2 /* IUTTest.m */; };
+		465B04490F205A62000E8FE2 /* IUTTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B04430F205A62000E8FE2 /* IUTTestRunner.m */; };
+		465B044A0F205A62000E8FE2 /* IUTTestRunnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B04450F205A62000E8FE2 /* IUTTestRunnerViewController.m */; };
+		465B044D0F205A79000E8FE2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465B044B0F205A79000E8FE2 /* MainWindow.xib */; };
+		465B044E0F205A79000E8FE2 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465B044C0F205A79000E8FE2 /* TestView.xib */; };
+		465B046D0F2067A5000E8FE2 /* IUTAssertionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */; };
+		466AF4EC0F2F049B004A649A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF4EB0F2F049B004A649A /* icon.png */; };
+		466AF5020F2F069C004A649A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF5010F2F069C004A649A /* Default.png */; };
+		46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */; };
+		46D6D7E30F214AAC00D830A5 /* IUTResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7E20F214AAC00D830A5 /* IUTResultTableViewController.m */; };
+		46D6D9E20F217B5700D830A5 /* IUTResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */; };
+		46D6DAD90F21A2C200D830A5 /* UITabBarBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DAD80F21A2C200D830A5 /* UITabBarBasedTest.m */; };
+		46D6DC4C0F21B98900D830A5 /* UITabBarBasedTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DC4B0F21B98900D830A5 /* UITabBarBasedTestTest.m */; };
+		46D6DC8E0F21BB6500D830A5 /* UINavigationBarBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DC8D0F21BB6500D830A5 /* UINavigationBarBasedTest.m */; };
+		46D6DCD20F21C23800D830A5 /* UINavigationBarBasedTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DCD10F21C23800D830A5 /* UINavigationBarBasedTestTest.m */; };
+		46D6DD170F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */; };
+		46D6DD1B0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* iUnitTestTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iUnitTestTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iUnitTestTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iUnitTestTest_Prefix.pch; sourceTree = "<group>"; };
+		4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTDetailViewController.h; sourceTree = "<group>"; };
+		462057A00F28B2EC00857D87 /* IUTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTDetailViewController.m; sourceTree = "<group>"; };
+		4620593E0F28CB7300857D87 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailView.xib; path = ../../iUnitTest/DetailView.xib; sourceTree = SOURCE_ROOT; };
+		465B043B0F205A62000E8FE2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		465B043C0F205A62000E8FE2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		465B043E0F205A62000E8FE2 /* IUTAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertion.h; sourceTree = "<group>"; };
+		465B043F0F205A62000E8FE2 /* IUTAssertion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertion.m; sourceTree = "<group>"; };
+		465B04400F205A62000E8FE2 /* IUTTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTest.h; sourceTree = "<group>"; };
+		465B04410F205A62000E8FE2 /* IUTTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTest.m; sourceTree = "<group>"; };
+		465B04420F205A62000E8FE2 /* IUTTestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunner.h; sourceTree = "<group>"; };
+		465B04430F205A62000E8FE2 /* IUTTestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunner.m; sourceTree = "<group>"; };
+		465B04440F205A62000E8FE2 /* IUTTestRunnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerViewController.h; sourceTree = "<group>"; };
+		465B04450F205A62000E8FE2 /* IUTTestRunnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerViewController.m; sourceTree = "<group>"; };
+		465B044B0F205A79000E8FE2 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = ../../iUnitTest/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		465B044C0F205A79000E8FE2 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TestView.xib; path = ../../iUnitTest/TestView.xib; sourceTree = SOURCE_ROOT; };
+		465B045F0F2065B3000E8FE2 /* IUTAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionTest.h; sourceTree = "<group>"; };
+		465B04600F2065B3000E8FE2 /* IUTAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionTest.m; sourceTree = "<group>"; };
+		465B046B0F2067A5000E8FE2 /* IUTAssertionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfo.h; sourceTree = "<group>"; };
+		465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionInfo.m; sourceTree = "<group>"; };
+		4665433D0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerViewControllerTest.h; sourceTree = "<group>"; };
+		4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerViewControllerTest.m; sourceTree = "<group>"; };
+		466AF4EB0F2F049B004A649A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../iUnitTest/icon.png; sourceTree = SOURCE_ROOT; };
+		466AF5010F2F069C004A649A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../iUnitTest/Default.png; sourceTree = SOURCE_ROOT; };
+		46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40.png; path = ../../iUnitTest/isd_logo_60x40.png; sourceTree = SOURCE_ROOT; };
+		46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfoTest.h; sourceTree = "<group>"; };
+		46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionInfoTest.m; sourceTree = "<group>"; };
+		46D6D7120F20E75F00D830A5 /* IUTTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestTest.h; sourceTree = "<group>"; };
+		46D6D7130F20E75F00D830A5 /* IUTTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestTest.m; sourceTree = "<group>"; };
+		46D6D7900F21430500D830A5 /* IUTTestRunnerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerTest.h; sourceTree = "<group>"; };
+		46D6D7910F21430500D830A5 /* IUTTestRunnerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerTest.m; sourceTree = "<group>"; };
+		46D6D7E10F214AAC00D830A5 /* IUTResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTResultTableViewController.h; sourceTree = "<group>"; };
+		46D6D7E20F214AAC00D830A5 /* IUTResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTResultTableViewController.m; sourceTree = "<group>"; };
+		46D6D7E40F214AC500D830A5 /* IUTResultTableViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTResultTableViewControllerTest.h; sourceTree = "<group>"; };
+		46D6D7E50F214AC500D830A5 /* IUTResultTableViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTResultTableViewControllerTest.m; sourceTree = "<group>"; };
+		46D6D7ED0F214CCF00D830A5 /* IUTTestRunnerMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerMock.h; sourceTree = "<group>"; };
+		46D6D7EE0F214CCF00D830A5 /* IUTTestRunnerMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerMock.m; sourceTree = "<group>"; };
+		46D6D9E00F217B5700D830A5 /* IUTResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTResultTableViewCell.h; sourceTree = "<group>"; };
+		46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTResultTableViewCell.m; sourceTree = "<group>"; };
+		46D6DAD70F21A2C200D830A5 /* UITabBarBasedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarBasedTest.h; sourceTree = "<group>"; };
+		46D6DAD80F21A2C200D830A5 /* UITabBarBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarBasedTest.m; sourceTree = "<group>"; };
+		46D6DADA0F21A40F00D830A5 /* IUTResultTableViewCellTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTResultTableViewCellTest.h; sourceTree = "<group>"; };
+		46D6DADB0F21A40F00D830A5 /* IUTResultTableViewCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTResultTableViewCellTest.m; sourceTree = "<group>"; };
+		46D6DC4A0F21B98900D830A5 /* UITabBarBasedTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarBasedTestTest.h; sourceTree = "<group>"; };
+		46D6DC4B0F21B98900D830A5 /* UITabBarBasedTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarBasedTestTest.m; sourceTree = "<group>"; };
+		46D6DC8C0F21BB6500D830A5 /* UINavigationBarBasedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarBasedTest.h; sourceTree = "<group>"; };
+		46D6DC8D0F21BB6500D830A5 /* UINavigationBarBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarBasedTest.m; sourceTree = "<group>"; };
+		46D6DCD00F21C23800D830A5 /* UINavigationBarBasedTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarBasedTestTest.h; sourceTree = "<group>"; };
+		46D6DCD10F21C23800D830A5 /* UINavigationBarBasedTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarBasedTestTest.m; sourceTree = "<group>"; };
+		46D6DD150F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarAndNavigationBarBasedTest.h; sourceTree = "<group>"; };
+		46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarAndNavigationBarBasedTest.m; sourceTree = "<group>"; };
+		46D6DD190F21C4C500D830A5 /* UITabBarAndNavigationTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarAndNavigationTestTest.h; sourceTree = "<group>"; };
+		46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarAndNavigationTestTest.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iUnitTestTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				465B045E0F20659F000E8FE2 /* SelfTests */,
+				465B043A0F205A62000E8FE2 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iUnitTestTest_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				466AF5010F2F069C004A649A /* Default.png */,
+				466AF4EB0F2F049B004A649A /* icon.png */,
+				46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */,
+				4620593E0F28CB7300857D87 /* DetailView.xib */,
+				465B044B0F205A79000E8FE2 /* MainWindow.xib */,
+				465B044C0F205A79000E8FE2 /* TestView.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		465B043A0F205A62000E8FE2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				465B043B0F205A62000E8FE2 /* AppDelegate.h */,
+				465B043C0F205A62000E8FE2 /* AppDelegate.m */,
+				465B043D0F205A62000E8FE2 /* UnitTest */,
+			);
+			name = Classes;
+			path = ../../iUnitTest/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		465B043D0F205A62000E8FE2 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				46D6DAD60F21A1B600D830A5 /* ControllerTest */,
+				465B046B0F2067A5000E8FE2 /* IUTAssertionInfo.h */,
+				465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */,
+				465B043E0F205A62000E8FE2 /* IUTAssertion.h */,
+				465B043F0F205A62000E8FE2 /* IUTAssertion.m */,
+				465B04400F205A62000E8FE2 /* IUTTest.h */,
+				465B04410F205A62000E8FE2 /* IUTTest.m */,
+				465B04420F205A62000E8FE2 /* IUTTestRunner.h */,
+				465B04430F205A62000E8FE2 /* IUTTestRunner.m */,
+				465B04440F205A62000E8FE2 /* IUTTestRunnerViewController.h */,
+				465B04450F205A62000E8FE2 /* IUTTestRunnerViewController.m */,
+				46D6D7E10F214AAC00D830A5 /* IUTResultTableViewController.h */,
+				46D6D7E20F214AAC00D830A5 /* IUTResultTableViewController.m */,
+				46D6D9E00F217B5700D830A5 /* IUTResultTableViewCell.h */,
+				46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */,
+				4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */,
+				462057A00F28B2EC00857D87 /* IUTDetailViewController.m */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		465B045E0F20659F000E8FE2 /* SelfTests */ = {
+			isa = PBXGroup;
+			children = (
+				46D6DC490F21B97000D830A5 /* ControllerTest */,
+				46D6D8060F2161CD00D830A5 /* Helpers */,
+				46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */,
+				46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */,
+				465B045F0F2065B3000E8FE2 /* IUTAssertionTest.h */,
+				465B04600F2065B3000E8FE2 /* IUTAssertionTest.m */,
+				46D6D7120F20E75F00D830A5 /* IUTTestTest.h */,
+				46D6D7130F20E75F00D830A5 /* IUTTestTest.m */,
+				46D6D7900F21430500D830A5 /* IUTTestRunnerTest.h */,
+				46D6D7910F21430500D830A5 /* IUTTestRunnerTest.m */,
+				46D6D7E40F214AC500D830A5 /* IUTResultTableViewControllerTest.h */,
+				46D6D7E50F214AC500D830A5 /* IUTResultTableViewControllerTest.m */,
+				46D6DADA0F21A40F00D830A5 /* IUTResultTableViewCellTest.h */,
+				46D6DADB0F21A40F00D830A5 /* IUTResultTableViewCellTest.m */,
+				4665433D0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.h */,
+				4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */,
+			);
+			path = SelfTests;
+			sourceTree = "<group>";
+		};
+		46D6D8060F2161CD00D830A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				46D6D7ED0F214CCF00D830A5 /* IUTTestRunnerMock.h */,
+				46D6D7EE0F214CCF00D830A5 /* IUTTestRunnerMock.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		46D6DAD60F21A1B600D830A5 /* ControllerTest */ = {
+			isa = PBXGroup;
+			children = (
+				46D6DAD70F21A2C200D830A5 /* UITabBarBasedTest.h */,
+				46D6DAD80F21A2C200D830A5 /* UITabBarBasedTest.m */,
+				46D6DC8C0F21BB6500D830A5 /* UINavigationBarBasedTest.h */,
+				46D6DC8D0F21BB6500D830A5 /* UINavigationBarBasedTest.m */,
+				46D6DD150F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.h */,
+				46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */,
+			);
+			path = ControllerTest;
+			sourceTree = "<group>";
+		};
+		46D6DC490F21B97000D830A5 /* ControllerTest */ = {
+			isa = PBXGroup;
+			children = (
+				46D6DC4A0F21B98900D830A5 /* UITabBarBasedTestTest.h */,
+				46D6DC4B0F21B98900D830A5 /* UITabBarBasedTestTest.m */,
+				46D6DCD00F21C23800D830A5 /* UINavigationBarBasedTestTest.h */,
+				46D6DCD10F21C23800D830A5 /* UINavigationBarBasedTestTest.m */,
+				46D6DD190F21C4C500D830A5 /* UITabBarAndNavigationTestTest.h */,
+				46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */,
+			);
+			path = ControllerTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iUnitTestTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iUnitTestTest" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iUnitTestTest;
+			productName = iUnitTestTest;
+			productReference = 1D6058910D05DD3D006BFB54 /* iUnitTestTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iUnitTestTest" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iUnitTestTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				465B044D0F205A79000E8FE2 /* MainWindow.xib in Resources */,
+				465B044E0F205A79000E8FE2 /* TestView.xib in Resources */,
+				4620593F0F28CB7300857D87 /* DetailView.xib in Resources */,
+				46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */,
+				466AF4EC0F2F049B004A649A /* icon.png in Resources */,
+				466AF5020F2F069C004A649A /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				465B04460F205A62000E8FE2 /* AppDelegate.m in Sources */,
+				465B04470F205A62000E8FE2 /* IUTAssertion.m in Sources */,
+				465B04480F205A62000E8FE2 /* IUTTest.m in Sources */,
+				465B04490F205A62000E8FE2 /* IUTTestRunner.m in Sources */,
+				465B044A0F205A62000E8FE2 /* IUTTestRunnerViewController.m in Sources */,
+				465B046D0F2067A5000E8FE2 /* IUTAssertionInfo.m in Sources */,
+				46D6D7E30F214AAC00D830A5 /* IUTResultTableViewController.m in Sources */,
+				46D6D9E20F217B5700D830A5 /* IUTResultTableViewCell.m in Sources */,
+				46D6DAD90F21A2C200D830A5 /* UITabBarBasedTest.m in Sources */,
+				46D6DC4C0F21B98900D830A5 /* UITabBarBasedTestTest.m in Sources */,
+				46D6DC8E0F21BB6500D830A5 /* UINavigationBarBasedTest.m in Sources */,
+				46D6DCD20F21C23800D830A5 /* UINavigationBarBasedTestTest.m in Sources */,
+				46D6DD170F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m in Sources */,
+				46D6DD1B0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m in Sources */,
+				462057A10F28B2EC00857D87 /* IUTDetailViewController.m in Sources */,
+				461CFE920F299E0100315F17 /* IUTTestRunnerMock.m in Sources */,
+				461CFE930F299E0200315F17 /* IUTAssertionInfoTest.m in Sources */,
+				461CFE940F299E0200315F17 /* IUTAssertionTest.m in Sources */,
+				461CFEA30F299E4700315F17 /* IUTResultTableViewControllerTest.m in Sources */,
+				461CFEA40F299E4800315F17 /* IUTResultTableViewCellTest.m in Sources */,
+				461CFEA50F299E4900315F17 /* IUTTestRunnerViewControllerTest.m in Sources */,
+				461CFEAD0F299E9F00315F17 /* IUTTestTest.m in Sources */,
+				461CFF530F2A0DE900315F17 /* IUTTestRunnerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iUnitTestTest_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = iUnitTestTest;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iUnitTestTest_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = iUnitTestTest;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iUnitTestTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iUnitTestTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
