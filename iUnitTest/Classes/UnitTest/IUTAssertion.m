@@ -207,7 +207,7 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
     assertedCount++;
     info.expected = NSStringFromCGRect(expected);
     info.actual = NSStringFromCGRect(value);
-    if (!CGPointEqualToPoint(value.origin, expected.origin) || !CGSizeEqualToSize(value.size, expected.size)) {
+    if (!CGRectEqualToRect(value, expected)) {
         @throw [self assertExceptionWithInfo:info];
     }
 }
