@@ -124,6 +124,7 @@
 {
     [startStopButton setTitle:title forState:UIControlStateNormal];
     [startStopButton setTitle:title forState:UIControlStateHighlighted];
+    [startStopButton setTitle:title forState:UIControlStateDisabled];
 }
 
 - (void)setProgress:(NSNumber *)value

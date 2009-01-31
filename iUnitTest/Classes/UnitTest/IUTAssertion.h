@@ -14,28 +14,32 @@
 
 #define ASSERT_FAIL(m) [self assert:NO info:IUTASSERTIN_INF(m)]
 
-#define ASSERT_SAME(_expected, _value) [self assertSame:_value expected:_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_NOT_SAME(_expected, _value) [self assertNotSame:_value expected:_expected info:IUTASSERTIN_INF(nil)]
+#define ASSERT_SAME(_expected, _value) [self assertSame:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NOT_SAME(_expected, _value) [self assertNotSame:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
 
 
-#define ASSERT_EQUAL(_expected, _value) [self assertEqual:_value expected:_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_NOT_EQUAL(_expected, _value) [self assertNotEqual:_value expected:_expected info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL(_expected, _value) [self assertEqual:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NOT_EQUAL(_expected, _value) [self assertNotEqual:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
 
-#define ASSERT_EQUAL_INT(_expected, _value) [self assertEqualInt:(int)_value expected:(int)_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_NOT_EQUAL_INT(_expected, _value) [self assertNotEqualInt:(int)_value expected:(int)_expected info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_INT(_expected, _value) [self assertEqualInt:(int)(_value) expected:(int)(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NOT_EQUAL_INT(_expected, _value) [self assertNotEqualInt:(int)(_value) expected:(int)(_expected) info:IUTASSERTIN_INF(nil)]
 
-#define ASSERT_EQUAL_FLOAT(_expected, _value) [self assertEqualFloat:(float)_value expected:(float)_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_NOT_EQUAL_FLOAT(_expected, _value) [self assertNotEqualFloat:(float)_value expected:(float)_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_EQUAL_FLOAT_DELTA(_expected, _value, _delta) [self assertEqualFloat:(float)_value expected:(float)_expected delta:(float)_delta info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_FLOAT(_expected, _value) [self assertEqualFloat:(float)(_value) expected:(float)(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NOT_EQUAL_FLOAT(_expected, _value) [self assertNotEqualFloat:(float)(_value) expected:(float)(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_FLOAT_DELTA(_expected, _value, _delta) [self assertEqualFloat:(float)(_value) expected:(float)(_expected) delta:(float)_delta info:IUTASSERTIN_INF(nil)]
 
-#define ASSERT_EQUAL_DOUBLE(_expected, _value) [self assertEqualDouble:(float)_value expected:(float)_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_NOT_EQUAL_DOUBLE(_expected, _value) [self assertNotEqualDouble:(float)_value expected:(float)_expected info:IUTASSERTIN_INF(nil)]
-#define ASSERT_EQUAL_DOUBLE_DELTA(_expected, _value, _delta) [self assertEqualDouble:(float)_value expected:(float)_expected delta:(float)_delta info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_DOUBLE(_expected, _value) [self assertEqualDouble:(float)(_value) expected:(float)(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NOT_EQUAL_DOUBLE(_expected, _value) [self assertNotEqualDouble:(float)(_value) expected:(float)(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_DOUBLE_DELTA(_expected, _value, _delta) [self assertEqualDouble:(float)(_value) expected:(float)(_expected) delta:(float)_delta info:IUTASSERTIN_INF(nil)]
 
 
-#define ASSERT_NIL(_value) [self assertNil:_value info:IUTASSERTIN_INF(nil)]
-#define ASSERT_NOT_NIL(_value) [self assertNotNil:_value info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NIL(_value) [self assertNil:(_value) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_NOT_NIL(_value) [self assertNotNil:(_value) info:IUTASSERTIN_INF(nil)]
 
+
+#define ASSERT_EQUAL_POINT(_expected, _value) [self assertEqualPoint:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_SIZE(_expected, _value) [self assertEqualSize:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
+#define ASSERT_EQUAL_RECT(_expected, _value) [self assertEqualRect:(_value) expected:(_expected) info:IUTASSERTIN_INF(nil)]
 
 
 extern NSString * const IUTAssertionExceptionName;
@@ -78,5 +82,8 @@ extern NSString * const IUTAssertionInfoKey;
 - (void)assertNil:(id)value info:(IUTAssertionInfo *)info;
 - (void)assertNotNil:(id)value info:(IUTAssertionInfo *)info;
 
+- (void)assertEqualPoint:(CGPoint)value expected:(CGPoint)expected info:(IUTAssertionInfo *)info;
+- (void)assertEqualSize:(CGSize)value expected:(CGSize)expected info:(IUTAssertionInfo *)info;
+- (void)assertEqualRect:(CGRect)value expected:(CGRect)expected info:(IUTAssertionInfo *)info;
 
 @end

@@ -15,6 +15,8 @@
 #pragma mark -
 #pragma mark throwing test
 
+#pragma mark boolean
+
 - (void)testAssertWithYes
 {
     @try {
@@ -50,6 +52,9 @@
         }
     }
 }
+
+
+#pragma mark object
 
 - (void)testAssertSameWithSuccess
 {
@@ -98,6 +103,8 @@
 }
 
 
+#pragma mark int
+
 - (void)testAssertEqualWithSuccess
 {
     @try {
@@ -144,6 +151,9 @@
         }
     }
 }
+
+
+#pragma mark float
 
 - (void)testAssertEqualFloatWithSuccess
 {
@@ -206,6 +216,8 @@
 }
 
 
+#pragma mark double
+
 - (void)testAssertEqualDoubleWithSuccess
 {
     @try {
@@ -265,6 +277,150 @@
         }
     }
 }
+
+
+#pragma mark point
+
+- (void)testAssertEqualPointWithSuccess
+{
+    @try {
+        ASSERT_EQUAL_POINT(CGPointMake(0, 1), CGPointMake(0, 1));
+    }
+    @catch (NSException * e) {
+        @throw;
+    }
+}
+
+- (void)testAssertEqualPointWithFail1
+{
+    @try {
+        ASSERT_EQUAL_POINT(CGPointMake(1, 1), CGPointMake(0, 1));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+- (void)testAssertEqualPointWithFail2
+{
+    @try {
+        ASSERT_EQUAL_POINT(CGPointMake(0, 2), CGPointMake(0, 1));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+
+#pragma mark size
+
+- (void)testAssertEqualSizeWithSuccess
+{
+    @try {
+        ASSERT_EQUAL_SIZE(CGSizeMake(0, 1), CGSizeMake(0, 1));
+    }
+    @catch (NSException * e) {
+        @throw;
+    }
+}
+
+- (void)testAssertEqualSizeWithFail1
+{
+    @try {
+        ASSERT_EQUAL_SIZE(CGSizeMake(1, 1), CGSizeMake(0, 1));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+- (void)testAssertEqualSizeWithFail2
+{
+    @try {
+        ASSERT_EQUAL_SIZE(CGSizeMake(0, 2), CGSizeMake(0, 1));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+
+#pragma mark rect
+
+- (void)testAssertEqualRectWithSuccess
+{
+    @try {
+        ASSERT_EQUAL_RECT(CGRectMake(0, 1, 2, 3), CGRectMake(0, 1, 2, 3));
+    }
+    @catch (NSException * e) {
+        @throw;
+    }
+}
+
+- (void)testAssertEqualRectWithFail1
+{
+    @try {
+        ASSERT_EQUAL_RECT(CGRectMake(1, 1, 2, 3), CGRectMake(0, 1, 2, 3));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+- (void)testAssertEqualRectWithFail2
+{
+    @try {
+        ASSERT_EQUAL_RECT(CGRectMake(0, 2, 2, 3), CGRectMake(0, 1, 2, 3));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+- (void)testAssertEqualRectWithFail3
+{
+    @try {
+        ASSERT_EQUAL_RECT(CGRectMake(0, 1, 3, 3), CGRectMake(0, 1, 2, 3));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+- (void)testAssertEqualRectWithFail4
+{
+    @try {
+        ASSERT_EQUAL_RECT(CGRectMake(0, 1, 2, 4), CGRectMake(0, 1, 2, 3));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
 
 
 #pragma mark -
@@ -592,6 +748,75 @@
     }
 }
 
+- (void)testAssertEqualPointInfo
+{
+    int line;
+    @try {
+        line = __LINE__; ASSERT_EQUAL_POINT(CGPointMake(0, 1), CGPointMake(0, 2));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        } else {
+            IUTAssertionInfo *info = [[e userInfo] objectForKey:IUTAssertionInfoKey];
+            ASSERT_EQUAL(NSStringFromCGPoint(CGPointMake(0, 2)), info.actual);
+            ASSERT_EQUAL(NSStringFromCGPoint(CGPointMake(0, 1)), info.expected);
+            ASSERT_EQUAL_INT(line, info.line);
+            ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
+            ASSERT_EQUAL(@"IUTAssertionTest", info.className);
+            ASSERT_EQUAL(@"testAssertEqualPointInfo", info.methodName);
+            ASSERT_EQUAL(([NSString stringWithFormat:@"expected:%@ but was:%@", NSStringFromCGPoint(CGPointMake(0, 1)), NSStringFromCGPoint(CGPointMake(0, 2))]), info.message); 
+        }
+    }
+}
+
+- (void)testAssertEqualSizeInfo
+{
+    int line;
+    @try {
+        line = __LINE__; ASSERT_EQUAL_SIZE(CGSizeMake(0, 1), CGSizeMake(0, 2));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        } else {
+            IUTAssertionInfo *info = [[e userInfo] objectForKey:IUTAssertionInfoKey];
+            ASSERT_EQUAL(NSStringFromCGSize(CGSizeMake(0, 2)), info.actual);
+            ASSERT_EQUAL(NSStringFromCGSize(CGSizeMake(0, 1)), info.expected);
+            ASSERT_EQUAL_INT(line, info.line);
+            ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
+            ASSERT_EQUAL(@"IUTAssertionTest", info.className);
+            ASSERT_EQUAL(@"testAssertEqualSizeInfo", info.methodName);
+            ASSERT_EQUAL(([NSString stringWithFormat:@"expected:%@ but was:%@", NSStringFromCGSize(CGSizeMake(0, 1)), NSStringFromCGSize(CGSizeMake(0, 2))]), info.message); 
+        }
+    }
+}
+
+- (void)testAssertEqualRectInfo
+{
+    int line;
+    @try {
+        line = __LINE__; ASSERT_EQUAL_RECT(CGRectMake(0, 1, 2, 3), CGRectMake(0, 1, 2, 4));
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        } else {
+            IUTAssertionInfo *info = [[e userInfo] objectForKey:IUTAssertionInfoKey];
+            ASSERT_EQUAL(NSStringFromCGRect(CGRectMake(0, 1, 2, 4)), info.actual);
+            ASSERT_EQUAL(NSStringFromCGRect(CGRectMake(0, 1, 2, 3)), info.expected);
+            ASSERT_EQUAL_INT(line, info.line);
+            ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
+            ASSERT_EQUAL(@"IUTAssertionTest", info.className);
+            ASSERT_EQUAL(@"testAssertEqualRectInfo", info.methodName);
+            ASSERT_EQUAL(([NSString stringWithFormat:@"expected:%@ but was:%@", NSStringFromCGRect(CGRectMake(0, 1, 2, 3)), NSStringFromCGRect(CGRectMake(0, 1, 2, 4))]), info.message); 
+        }
+    }
+}
+
 - (void)testClearAssertedCount
 {
     assertedCount = 123;
@@ -705,6 +930,27 @@
     ASSERT_EQUAL_INT(1, assertedCount);
 }
 
+- (void)testIncrementAtAssertPoint
+{
+    assertedCount = 0;
+    ASSERT_EQUAL_POINT(CGPointMake(0, 1), CGPointMake(0, 1));
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertSize
+{
+    assertedCount = 0;
+    ASSERT_EQUAL_SIZE(CGSizeMake(0, 1), CGSizeMake(0, 1));
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertRect
+{
+    assertedCount = 0;
+    ASSERT_EQUAL_RECT(CGRectMake(0, 1, 2, 3), CGRectMake(0, 1, 2, 3));
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
 - (void)testAssertionErrorExceptionFrom
 {
     NSException *exception = [NSException exceptionWithName:nil reason:@"test message" userInfo:nil];
@@ -715,5 +961,8 @@
     ASSERT_EQUAL(@"IUTAssertionTest", info.className);
     ASSERT_EQUAL(@"testAssertionErrorExceptionFrom", info.methodName);
 }
+
+
+
 
 @end

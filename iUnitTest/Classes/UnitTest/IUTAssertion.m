@@ -182,4 +182,34 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
     }
 }
 
+- (void)assertEqualPoint:(CGPoint)value expected:(CGPoint)expected info:(IUTAssertionInfo *)info
+{
+    assertedCount++;
+    info.expected = NSStringFromCGPoint(expected);
+    info.actual = NSStringFromCGPoint(value);
+    if (!CGPointEqualToPoint(value, expected)) {
+        @throw [self assertExceptionWithInfo:info];
+    }
+}
+
+- (void)assertEqualSize:(CGSize)value expected:(CGSize)expected info:(IUTAssertionInfo *)info
+{
+    assertedCount++;
+    info.expected = NSStringFromCGSize(expected);
+    info.actual = NSStringFromCGSize(value);
+    if (!CGSizeEqualToSize(value, expected)) {
+        @throw [self assertExceptionWithInfo:info];
+    }
+}
+
+- (void)assertEqualRect:(CGRect)value expected:(CGRect)expected info:(IUTAssertionInfo *)info
+{
+    assertedCount++;
+    info.expected = NSStringFromCGRect(expected);
+    info.actual = NSStringFromCGRect(value);
+    if (!CGPointEqualToPoint(value.origin, expected.origin) || !CGSizeEqualToSize(value.size, expected.size)) {
+        @throw [self assertExceptionWithInfo:info];
+    }
+}
+
 @end
