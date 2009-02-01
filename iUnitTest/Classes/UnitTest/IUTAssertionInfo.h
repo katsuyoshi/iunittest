@@ -22,6 +22,8 @@
     id expected;
     id actual;
     id delta;
+    
+    BOOL negativeCase;
 }
 
 @property (retain, readonly) NSString *className;
@@ -36,6 +38,7 @@
 @property (retain) id actual;
 @property (retain) id delta;
 
+@property BOOL negativeCase;
 
 + (id)assertionInfoWithClass:(Class)klass selector:(SEL)selector message:(NSString *)message filePath:(NSString *)path line:(NSInteger)line;
 

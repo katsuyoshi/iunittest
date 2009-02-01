@@ -53,6 +53,7 @@
 		462057A00F28B2EC00857D87 /* IUTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTDetailViewController.m; sourceTree = "<group>"; };
 		4620593E0F28CB7300857D87 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailView.xib; path = ../../iUnitTest/DetailView.xib; sourceTree = SOURCE_ROOT; };
 		4659B8F20F33FABC0030D828 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../iUnitTest/Default.png; sourceTree = SOURCE_ROOT; };
+		4659BC010F365CC00030D828 /* IUTAssertionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfo.h; sourceTree = "<group>"; };
 		465B043B0F205A62000E8FE2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		465B043C0F205A62000E8FE2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		465B043E0F205A62000E8FE2 /* IUTAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertion.h; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		465B044C0F205A79000E8FE2 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TestView.xib; path = ../../iUnitTest/TestView.xib; sourceTree = SOURCE_ROOT; };
 		465B045F0F2065B3000E8FE2 /* IUTAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionTest.h; sourceTree = "<group>"; };
 		465B04600F2065B3000E8FE2 /* IUTAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionTest.m; sourceTree = "<group>"; };
-		465B046B0F2067A5000E8FE2 /* IUTAssertionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfo.h; sourceTree = "<group>"; };
 		465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionInfo.m; sourceTree = "<group>"; };
 		4665433D0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerViewControllerTest.h; sourceTree = "<group>"; };
 		4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerViewControllerTest.m; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				46D6DAD60F21A1B600D830A5 /* ControllerTest */,
-				465B046B0F2067A5000E8FE2 /* IUTAssertionInfo.h */,
+				4659BC010F365CC00030D828 /* IUTAssertionInfo.h */,
 				465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */,
 				465B043E0F205A62000E8FE2 /* IUTAssertion.h */,
 				465B043F0F205A62000E8FE2 /* IUTAssertion.m */,

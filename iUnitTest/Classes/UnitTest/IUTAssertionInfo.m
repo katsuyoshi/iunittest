@@ -13,6 +13,7 @@
 
 @synthesize className, methodName, message, filePath, line;
 @synthesize expected, actual, delta;
+@synthesize negativeCase;
 
 
 + (id)assertionInfoWithClass:(Class)klass selector:(SEL)selector message:(NSString *)message filePath:(NSString *)path line:(NSInteger)line
@@ -49,9 +50,17 @@
         return message;
     } else {
         if (self.delta) {
-            return [NSString stringWithFormat:@"expected:%@ but was:%@ delta:%@", self.expected, self.actual, self.delta];
+            if (self.negativeCase) {
+                return [NSString stringWithFormat:@"expected:not %@ but was:%@ delta:%@", self.expected, self.actual, self.delta];
+            } else {
+                return [NSString stringWithFormat:@"expected:%@ but was:%@ delta:%@", self.expected, self.actual, self.delta];
+            }
         } else {
-            return [NSString stringWithFormat:@"expected:%@ but was:%@", self.expected, self.actual];
+            if (self.negativeCase) {
+                return [NSString stringWithFormat:@"expected:not %@ but was:%@", self.expected, self.actual];
+            } else {
+                return [NSString stringWithFormat:@"expected:%@ but was:%@", self.expected, self.actual];
+            }
         }
     }
 }

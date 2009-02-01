@@ -56,7 +56,7 @@
 
 #pragma mark object
 
-- (void)testAssertSameWithSuccess
+- (void)testAssertSameSuccess
 {
     @try {
         ASSERT_SAME(@"abc", @"abc");
@@ -66,7 +66,17 @@
     }
 }
 
-- (void)testAssertSameWithFail
+- (void)testAssertSameSuccessWithNil
+{
+    @try {
+        ASSERT_SAME(nil, nil);
+    }
+    @catch (NSException * e) {
+        @throw;
+    }
+}
+
+- (void)testAssertSameFail
 {
     @try {
         ASSERT_SAME([NSArray arrayWithObject:@"abc"], [NSArray arrayWithObject:@"abc"]);
@@ -79,7 +89,20 @@
     }
 }
 
-- (void)testAssertNotSameWithSuccess
+- (void)testAssertSameFailWithNil
+{
+    @try {
+        ASSERT_SAME(nil, [NSArray arrayWithObject:@"abc"]);
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+- (void)testAssertNotSameSuccess
 {
     @try {
         ASSERT_NOT_SAME([NSArray arrayWithObject:@"abc"], [NSArray arrayWithObject:@"abc"]);
@@ -89,7 +112,17 @@
     }
 }
 
-- (void)testAssertNotSameWithFail
+- (void)testAssertNotSameSuccessWithNil
+{
+    @try {
+        ASSERT_NOT_SAME(nil, @"def");
+    }
+    @catch (NSException * e) {
+        @throw;
+    }
+}
+
+- (void)testAssertNotSameFail
 {
     @try {
         ASSERT_NOT_SAME(@"abc", @"abc");
@@ -102,10 +135,21 @@
     }
 }
 
+- (void)testAssertNotSameFailWithNil
+{
+    @try {
+        ASSERT_NOT_SAME(nil, nil);
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
 
-#pragma mark int
 
-- (void)testAssertEqualWithSuccess
+- (void)testAssertEqualSuccess
 {
     @try {
         ASSERT_EQUAL(@"abc", @"abc");
@@ -116,7 +160,17 @@
     }
 }
 
-- (void)testAssertEqualWithFail
+- (void)testAssertEqualSuccessWithNil
+{
+    @try {
+        ASSERT_EQUAL(nil, nil);
+    }
+    @catch (NSException * e) {
+        @throw;
+    }
+}
+
+- (void)testAssertEqualFail
 {
     @try {
         ASSERT_EQUAL(@"abc", @"def");
@@ -129,7 +183,22 @@
     }
 }
 
-- (void)testAssertEqualIntWithSuccess
+- (void)testAssertEqualFailWithNil
+{
+    @try {
+        ASSERT_EQUAL(nil, @"def");
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        }
+    }
+}
+
+#pragma mark int
+
+- (void)testAssertEqualIntSuccess
 {
     @try {
         ASSERT_EQUAL_INT(123, 123);
@@ -139,7 +208,7 @@
     }
 }
 
-- (void)testAssertEqualIntWithFail
+- (void)testAssertEqualIntFail
 {
     @try {
         ASSERT_EQUAL_INT(123, 124);
@@ -155,7 +224,7 @@
 
 #pragma mark float
 
-- (void)testAssertEqualFloatWithSuccess
+- (void)testAssertEqualFloatSuccess
 {
     @try {
         ASSERT_EQUAL_FLOAT(123.4, 123.4);
@@ -165,7 +234,7 @@
     }
 }
 
-- (void)testAssertEqualFloatWithFail
+- (void)testAssertEqualFloatFail
 {
     @try {
         ASSERT_EQUAL_FLOAT(123.4, 123.5);
@@ -178,7 +247,7 @@
     }
 }
 
-- (void)testAssertEqualFloatDeltaWithSuccess
+- (void)testAssertEqualFloatDeltaSuccess
 {
     @try {
         ASSERT_EQUAL_FLOAT_DELTA(123.4, 123.5, 0.1);
@@ -189,7 +258,7 @@
     }
 }
 
-- (void)testAssertEqualFloatDeltaWithFail1
+- (void)testAssertEqualFloatDeltaFail1
 {
     @try {
         ASSERT_EQUAL_FLOAT_DELTA(123.4, 123.51, 0.1);
@@ -202,7 +271,7 @@
     }
 }
 
-- (void)testAssertEqualFloatDeltaWithFail2
+- (void)testAssertEqualFloatDeltaFail2
 {
     @try {
         ASSERT_EQUAL_FLOAT_DELTA(123.4, 122.9, 0.1);
@@ -218,7 +287,7 @@
 
 #pragma mark double
 
-- (void)testAssertEqualDoubleWithSuccess
+- (void)testAssertEqualDoubleSuccess
 {
     @try {
         ASSERT_EQUAL_DOUBLE(123.4, 123.4);
@@ -228,7 +297,7 @@
     }
 }
 
-- (void)testAssertEqualDoubleWithFail
+- (void)testAssertEqualDoubleFail
 {
     @try {
         ASSERT_EQUAL_DOUBLE(123.4, 123.5);
@@ -241,7 +310,7 @@
     }
 }
 
-- (void)testAssertEqualDoubleDeltaWithSuccess
+- (void)testAssertEqualDoubleDeltaSuccess
 {
     @try {
         ASSERT_EQUAL_DOUBLE_DELTA(123.4, 123.5, 0.1);
@@ -252,7 +321,7 @@
     }
 }
 
-- (void)testAssertEqualDoubleDeltaWithFail1
+- (void)testAssertEqualDoubleDeltaFail1
 {
     @try {
         ASSERT_EQUAL_DOUBLE_DELTA(123.4, 123.51, 0.1);
@@ -265,7 +334,7 @@
     }
 }
 
-- (void)testAssertEqualDoubleDeltaWithFail2
+- (void)testAssertEqualDoubleDeltaFail2
 {
     @try {
         ASSERT_EQUAL_DOUBLE_DELTA(123.4, 122.9, 0.1);
@@ -281,7 +350,7 @@
 
 #pragma mark point
 
-- (void)testAssertEqualPointWithSuccess
+- (void)testAssertEqualPointSuccess
 {
     @try {
         ASSERT_EQUAL_POINT(CGPointMake(0, 1), CGPointMake(0, 1));
@@ -291,7 +360,7 @@
     }
 }
 
-- (void)testAssertEqualPointWithFail1
+- (void)testAssertEqualPointFail1
 {
     @try {
         ASSERT_EQUAL_POINT(CGPointMake(1, 1), CGPointMake(0, 1));
@@ -304,7 +373,7 @@
     }
 }
 
-- (void)testAssertEqualPointWithFail2
+- (void)testAssertEqualPointFail2
 {
     @try {
         ASSERT_EQUAL_POINT(CGPointMake(0, 2), CGPointMake(0, 1));
@@ -320,7 +389,7 @@
 
 #pragma mark size
 
-- (void)testAssertEqualSizeWithSuccess
+- (void)testAssertEqualSizeSuccess
 {
     @try {
         ASSERT_EQUAL_SIZE(CGSizeMake(0, 1), CGSizeMake(0, 1));
@@ -330,7 +399,7 @@
     }
 }
 
-- (void)testAssertEqualSizeWithFail1
+- (void)testAssertEqualSizeFail1
 {
     @try {
         ASSERT_EQUAL_SIZE(CGSizeMake(1, 1), CGSizeMake(0, 1));
@@ -343,7 +412,7 @@
     }
 }
 
-- (void)testAssertEqualSizeWithFail2
+- (void)testAssertEqualSizeFail2
 {
     @try {
         ASSERT_EQUAL_SIZE(CGSizeMake(0, 2), CGSizeMake(0, 1));
@@ -359,7 +428,7 @@
 
 #pragma mark rect
 
-- (void)testAssertEqualRectWithSuccess
+- (void)testAssertEqualRectSuccess
 {
     @try {
         ASSERT_EQUAL_RECT(CGRectMake(0, 1, 2, 3), CGRectMake(0, 1, 2, 3));
@@ -369,7 +438,7 @@
     }
 }
 
-- (void)testAssertEqualRectWithFail1
+- (void)testAssertEqualRectFail1
 {
     @try {
         ASSERT_EQUAL_RECT(CGRectMake(1, 1, 2, 3), CGRectMake(0, 1, 2, 3));
@@ -382,7 +451,7 @@
     }
 }
 
-- (void)testAssertEqualRectWithFail2
+- (void)testAssertEqualRectFail2
 {
     @try {
         ASSERT_EQUAL_RECT(CGRectMake(0, 2, 2, 3), CGRectMake(0, 1, 2, 3));
@@ -395,7 +464,7 @@
     }
 }
 
-- (void)testAssertEqualRectWithFail3
+- (void)testAssertEqualRectFail3
 {
     @try {
         ASSERT_EQUAL_RECT(CGRectMake(0, 1, 3, 3), CGRectMake(0, 1, 2, 3));
@@ -408,7 +477,7 @@
     }
 }
 
-- (void)testAssertEqualRectWithFail4
+- (void)testAssertEqualRectFail4
 {
     @try {
         ASSERT_EQUAL_RECT(CGRectMake(0, 1, 2, 4), CGRectMake(0, 1, 2, 3));
@@ -511,7 +580,7 @@
             ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
             ASSERT_EQUAL(@"IUTAssertionTest", info.className);
             ASSERT_EQUAL(@"testAssertNotSameInfo", info.methodName);
-            ASSERT_EQUAL(@"expected:abc but was:abc", info.message); 
+            ASSERT_EQUAL(@"expected:not abc but was:abc", info.message); 
         }
     }
 }
@@ -557,7 +626,7 @@
             ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
             ASSERT_EQUAL(@"IUTAssertionTest", info.className);
             ASSERT_EQUAL(@"testAssertNotEqualInfo", info.methodName);
-            ASSERT_EQUAL(@"expected:abc but was:abc", info.message); 
+            ASSERT_EQUAL(@"expected:not abc but was:abc", info.message); 
         }
     }
 }
@@ -603,7 +672,7 @@
             ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
             ASSERT_EQUAL(@"IUTAssertionTest", info.className);
             ASSERT_EQUAL(@"testAssertNotEqualIntInfo", info.methodName);
-            ASSERT_EQUAL(@"expected:123 but was:123", info.message); 
+            ASSERT_EQUAL(@"expected:not 123 but was:123", info.message); 
         }
     }
 }
@@ -649,7 +718,7 @@
             ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
             ASSERT_EQUAL(@"IUTAssertionTest", info.className);
             ASSERT_EQUAL(@"testAssertNotEqualFloatInfo", info.methodName);
-            ASSERT_EQUAL(@"expected:123.4 but was:123.4", info.message); 
+            ASSERT_EQUAL(@"expected:not 123.4 but was:123.4", info.message); 
         }
     }
 }
@@ -719,7 +788,7 @@
             ASSERT_EQUAL(@"IUTAssertionTest.m", info.fileName);
             ASSERT_EQUAL(@"IUTAssertionTest", info.className);
             ASSERT_EQUAL(@"testAssertNotEqualDoubletInfo", info.methodName);
-            ASSERT_EQUAL(@"expected:123.4000015258789 but was:123.4000015258789", info.message); 
+            ASSERT_EQUAL(@"expected:not 123.4000015258789 but was:123.4000015258789", info.message); 
         }
     }
 }
@@ -871,6 +940,20 @@
 {
     assertedCount = 0;
     ASSERT_NOT_EQUAL(@"abc", @"def");
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertEqualWithNil
+{
+    assertedCount = 0;
+    ASSERT_EQUAL(nil, nil);
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertNotEqualWithNil
+{
+    assertedCount = 0;
+    ASSERT_NOT_EQUAL(nil, @"def");
     ASSERT_EQUAL_INT(1, assertedCount);
 }
 

@@ -37,6 +37,32 @@
     ASSERT_EQUAL(@"expected:expected but was:actual", info.message);
 }
 
+- (void)testMessageWithExpectedAndActualNagative
+{
+    IUTAssertionInfo *info = IUTASSERTIN_INF(nil);
+    info.actual = @"actual";
+    info.expected = @"expected";
+    info.negativeCase = YES;
+    ASSERT_EQUAL(@"expected:not expected but was:actual", info.message);
+}
+
+- (void)testMessageWithExpectedAndActualWithNil
+{
+    IUTAssertionInfo *info = IUTASSERTIN_INF(nil);
+    info.actual = @"actual";
+    info.expected = nil;
+    ASSERT_EQUAL(@"expected:(null) but was:actual", info.message);
+}
+
+- (void)testMessageWithExpectedAndActualNagativeWithNil
+{
+    IUTAssertionInfo *info = IUTASSERTIN_INF(nil);
+    info.actual = @"actual";
+    info.expected = nil;
+    info.negativeCase = YES;
+    ASSERT_EQUAL(@"expected:not (null) but was:actual", info.message);
+}
+
 - (void)testMessageWithExpectedAndActualDelta
 {
     IUTAssertionInfo *info = IUTASSERTIN_INF(nil);
