@@ -43,6 +43,7 @@
 		465B04240F2056FF000E8FE2 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		466AF4DD0F2F02A3004A649A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		466AF4F50F2F05E7004A649A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		46718C880F38239A00272C9A /* SenTestAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertion.h; sourceTree = "<group>"; };
 		46C6AB3D0F2DBE7E00BA1B73 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46C6AB3E0F2DBE7E00BA1B73 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		46C6AB410F2DBE7E00BA1B73 /* UINavigationBarBasedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarBasedTest.h; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				46C6AB400F2DBE7E00BA1B73 /* ControllerTest */,
+				46718C880F38239A00272C9A /* SenTestAssertion.h */,
 				46C6AB470F2DBE7E00BA1B73 /* IUTAssertion.h */,
 				46C6AB480F2DBE7E00BA1B73 /* IUTAssertion.m */,
 				46C6AB490F2DBE7E00BA1B73 /* IUTAssertionInfo.h */,

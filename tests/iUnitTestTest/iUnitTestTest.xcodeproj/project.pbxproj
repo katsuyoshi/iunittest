@@ -31,6 +31,7 @@
 		465B044E0F205A79000E8FE2 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465B044C0F205A79000E8FE2 /* TestView.xib */; };
 		465B046D0F2067A5000E8FE2 /* IUTAssertionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */; };
 		466AF4EC0F2F049B004A649A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF4EB0F2F049B004A649A /* icon.png */; };
+		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
 		46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */; };
 		46D6D7E30F214AAC00D830A5 /* IUTResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7E20F214AAC00D830A5 /* IUTResultTableViewController.m */; };
 		46D6D9E20F217B5700D830A5 /* IUTResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */; };
@@ -72,6 +73,9 @@
 		4665433D0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerViewControllerTest.h; sourceTree = "<group>"; };
 		4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerViewControllerTest.m; sourceTree = "<group>"; };
 		466AF4EB0F2F049B004A649A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../iUnitTest/icon.png; sourceTree = SOURCE_ROOT; };
+		46718BFF0F38156F00272C9A /* SenTestAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertion.h; sourceTree = "<group>"; };
+		46718C000F381B1F00272C9A /* SenTestAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertionTest.h; sourceTree = "<group>"; };
+		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
 		46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40.png; path = ../../iUnitTest/isd_logo_60x40.png; sourceTree = SOURCE_ROOT; };
 		46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfoTest.h; sourceTree = "<group>"; };
 		46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionInfoTest.m; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				46D6DAD60F21A1B600D830A5 /* ControllerTest */,
 				4659BC010F365CC00030D828 /* IUTAssertionInfo.h */,
 				465B046C0F2067A5000E8FE2 /* IUTAssertionInfo.m */,
+				46718BFF0F38156F00272C9A /* SenTestAssertion.h */,
 				465B043E0F205A62000E8FE2 /* IUTAssertion.h */,
 				465B043F0F205A62000E8FE2 /* IUTAssertion.m */,
 				465B04400F205A62000E8FE2 /* IUTTest.h */,
@@ -226,6 +231,8 @@
 				46D6DADB0F21A40F00D830A5 /* IUTResultTableViewCellTest.m */,
 				4665433D0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.h */,
 				4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */,
+				46718C000F381B1F00272C9A /* SenTestAssertionTest.h */,
+				46718C010F381B1F00272C9A /* SenTestAssertionTest.m */,
 			);
 			path = SelfTests;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 				461CFEA50F299E4900315F17 /* IUTTestRunnerViewControllerTest.m in Sources */,
 				461CFEAD0F299E9F00315F17 /* IUTTestTest.m in Sources */,
 				461CFF530F2A0DE900315F17 /* IUTTestRunnerTest.m in Sources */,
+				46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

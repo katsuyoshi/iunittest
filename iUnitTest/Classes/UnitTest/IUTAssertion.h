@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IUTAssertionInfo.h"
+#import "SenTestAssertion.h"
 
 
 #define ASSERT(value) [self assert:(value) info:IUTASSERTIN_INF(nil)]
