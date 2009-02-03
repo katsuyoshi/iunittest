@@ -66,7 +66,7 @@
 */
 
 #define STFail(description, ...) \
-    ASSERT_FAIL([NSString strintWith:description, ...])
+    ASSERT_FAIL(([NSString stringWithFormat:description, ##__VA_ARGS__]))
 
 
 /* FIXME: not suuported

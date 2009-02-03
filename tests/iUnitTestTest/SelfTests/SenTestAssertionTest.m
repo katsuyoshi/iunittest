@@ -247,5 +247,37 @@
     }
 }
 
+- (void)testSTFail
+{
+    @try {
+        STFail(@"assert");
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        } else {
+            IUTAssertionInfo *info = [[e userInfo] objectForKey:IUTAssertionInfoKey];
+            ASSERT_EQUAL(@"assert", info.message);
+        }
+    }
+}
+
+- (void)testSTFailWithArg
+{
+    @try {
+        STFail(@"assert %d %s %@", 10, "abcd", @"efgh");
+        @throw [NSException exceptionWithName:AssertFailExceptionName reason:NSStringFromSelector(_cmd) userInfo:nil];
+    }
+    @catch (NSException * e) {
+        if ([[e name] isEqualToString:AssertFailExceptionName]) {
+            @throw;
+        } else {
+            IUTAssertionInfo *info = [[e userInfo] objectForKey:IUTAssertionInfoKey];
+            ASSERT_EQUAL(@"assert 10 abcd efgh", info.message);
+        }
+    }
+}
+
 
 @end
