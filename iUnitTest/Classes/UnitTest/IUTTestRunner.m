@@ -9,6 +9,7 @@
 #import "IUTTestRunner.h"
 #import "IUTTest.h"
 #import "/usr/include/objc/objc-class.h"
+#import "IUTLog.h"
 
 
 @interface IUTTestRunner(_private)
@@ -241,44 +242,44 @@
     int i = 0;
 
     for (IUTTest *site in sites) {
-NSLog(NSStringFromClass([site class]));
+IUTLog(NSStringFromClass([site class]));
         [site clearAssertedCount];
         for (NSString *testSel in site.tests) {
             if (stopRequest) goto ABORT_TEST;
             @try {
-NSLog(@"  %@", testSel);
+IUTLog(@"  %@", testSel);
                 [tests addObject:testSel];
-NSLog(@"  　　setUp");
+IUTLog(@"  　　setUp");
                 [self performSelectorOnMainThread:@"setUp" target:site];
                 if (self.exception) @throw self.exception;
                 if (site.testAfterDelay != 0.0) {
                     [NSThread sleepForTimeInterval:site.testAfterDelay];
                 }
-NSLog(@"  　　test");
+IUTLog(@"  　　test");
                 [self performSelectorOnMainThread:testSel target:site];
                 if (self.exception) @throw self.exception;
                 [passes addObject:testSel];
             }
             @catch (NSException * e) {
                 if ([[e name] isEqualToString:IUTAssertionExceptionName]) {
-NSLog(@"    *** Fail:%@", [IUTAssertion assertionInfoForException:e].message);
+IUTLog(@"    *** Fail:%@", [IUTAssertion assertionInfoForException:e].message);
                     [fails addObject:e];
                 } else {
                     NSException *anException = [IUTAssertion assertionErrorExceptionFrom:e klass:[site class] selectorName:testSel];
-NSLog(@"    Error:%@", [IUTAssertion assertionInfoForException:anException].message);
+IUTLog(@"    Error:%@", [IUTAssertion assertionInfoForException:anException].message);
                     [errors addObject:anException];
                 }
             }
             @finally {
                 self.exception = nil;
                 @try {
-NSLog(@"  　　tearDown");
+IUTLog(@"  　　tearDown");
                     [self performSelectorOnMainThread:@"tearDown" target:site];
                     if (self.exception) @throw self.exception;
                 }
                 @catch (NSException * e) {
                     NSException *anException = [IUTAssertion assertionErrorExceptionFrom:e klass:[site class] selectorName:testSel];
-NSLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].message);
+IUTLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].message);
                     [errors addObject:anException];
                 }
                 @finally {

@@ -77,6 +77,7 @@
 		46718C000F381B1F00272C9A /* SenTestAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertionTest.h; sourceTree = "<group>"; };
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
 		46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40.png; path = ../../iUnitTest/isd_logo_60x40.png; sourceTree = SOURCE_ROOT; };
+		46C8F4B50F3A05AF00CE0DC0 /* IUTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTLog.h; sourceTree = "<group>"; };
 		46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfoTest.h; sourceTree = "<group>"; };
 		46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAssertionInfoTest.m; sourceTree = "<group>"; };
 		46D6D7120F20E75F00D830A5 /* IUTTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestTest.h; sourceTree = "<group>"; };
@@ -208,6 +209,7 @@
 				46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */,
 				4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */,
 				462057A00F28B2EC00857D87 /* IUTDetailViewController.m */,
+				46C8F4B50F3A05AF00CE0DC0 /* IUTLog.h */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -365,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

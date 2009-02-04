@@ -14,7 +14,7 @@
 @implementation IUTResultTableViewCell
 
 
-@synthesize resultLabel, backgroundView;
+@synthesize resultLabel, bgView;
 @synthesize exception;
 
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
@@ -25,9 +25,9 @@
         resultLabel.numberOfLines = 0;
         [self addSubview:resultLabel];
         
-        backgroundView = [UIView new];
-        [self addSubview:backgroundView];
-        [self sendSubviewToBack:backgroundView]; 
+        bgView = [UIView new];
+        [self addSubview:bgView];
+        [self sendSubviewToBack:bgView]; 
         
     }
     return self;
@@ -47,7 +47,7 @@
             self.resultLabel.backgroundColor = [IUTTestRunner errorColor];
             self.resultLabel.text = exception.reason;
         }
-        self.backgroundView.backgroundColor = self.resultLabel.backgroundColor;
+        self.bgView.backgroundColor = self.resultLabel.backgroundColor;
     }
 }
 
@@ -62,7 +62,7 @@
 
     CGRect rect = self.bounds;
     rect.size.height -= 1;
-    backgroundView.frame = rect;
+    bgView.frame = rect;
     
     CGRect baseRect = CGRectInset(self.contentView.bounds, 10, 10);
     rect = baseRect;
@@ -73,7 +73,7 @@
 - (void)dealloc {
     [exception release];
     [resultLabel release];
-    [backgroundView release];
+    [bgView release];
     [super dealloc];
 }
 

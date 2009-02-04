@@ -13,14 +13,14 @@
 @interface IUTResultTableViewCell : UITableViewCell {
 
     UILabel *resultLabel;
-    UIView *backgroundView;
+    UIView *bgView;
 
     NSException *exception;
 }
 
 
 @property (retain, readonly) UILabel *resultLabel;
-@property (retain, readonly) UIView *backgroundView;
+@property (retain, readonly) UIView *bgView;
 
 @property (retain) NSException *exception;
 
