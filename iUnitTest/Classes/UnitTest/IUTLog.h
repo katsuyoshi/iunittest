@@ -1,6 +1,6 @@
 /*
  *  IUTLog.h
- *  iUnitTestTest
+ *  iUnitTest
  *
  *  Created by Katsuyoshi Ito on 09/02/05.
  *  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
