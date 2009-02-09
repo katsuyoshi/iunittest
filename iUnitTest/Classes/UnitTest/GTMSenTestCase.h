@@ -1,6 +1,6 @@
 //
 //  GTMSenTestCase.h
-//  objective_resource_test
+//  iUnitTest
 //
 //  Created by Katsuyoshi Ito on 09/02/09.
 //  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
