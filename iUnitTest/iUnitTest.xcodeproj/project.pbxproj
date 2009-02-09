@@ -16,6 +16,7 @@
 		465B04250F2056FF000E8FE2 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465B04240F2056FF000E8FE2 /* TestView.xib */; };
 		466AF4DE0F2F02A3004A649A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF4DD0F2F02A3004A649A /* icon.png */; };
 		466AF4F60F2F05E7004A649A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF4F50F2F05E7004A649A /* Default.png */; };
+		466EDC7B0F4094F900D2B9AC /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 466EDC7A0F4094F900D2B9AC /* GTMSenTestCase.m */; };
 		46C6AB570F2DBE7E00BA1B73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB3E0F2DBE7E00BA1B73 /* AppDelegate.m */; };
 		46C6AB580F2DBE7E00BA1B73 /* UINavigationBarBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB420F2DBE7E00BA1B73 /* UINavigationBarBasedTest.m */; };
 		46C6AB590F2DBE7E00BA1B73 /* UITabBarAndNavigationBarBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB440F2DBE7E00BA1B73 /* UITabBarAndNavigationBarBasedTest.m */; };
@@ -43,6 +44,9 @@
 		465B04240F2056FF000E8FE2 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		466AF4DD0F2F02A3004A649A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		466AF4F50F2F05E7004A649A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		466EDC780F4094DB00D2B9AC /* IUTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTLog.h; sourceTree = "<group>"; };
+		466EDC790F4094F900D2B9AC /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSenTestCase.h; sourceTree = "<group>"; };
+		466EDC7A0F4094F900D2B9AC /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
 		46718C880F38239A00272C9A /* SenTestAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertion.h; sourceTree = "<group>"; };
 		46C6AB3D0F2DBE7E00BA1B73 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46C6AB3E0F2DBE7E00BA1B73 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -169,7 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				46C6AB400F2DBE7E00BA1B73 /* ControllerTest */,
+				466EDC780F4094DB00D2B9AC /* IUTLog.h */,
 				46718C880F38239A00272C9A /* SenTestAssertion.h */,
+				466EDC790F4094F900D2B9AC /* GTMSenTestCase.h */,
+				466EDC7A0F4094F900D2B9AC /* GTMSenTestCase.m */,
 				46C6AB470F2DBE7E00BA1B73 /* IUTAssertion.h */,
 				46C6AB480F2DBE7E00BA1B73 /* IUTAssertion.m */,
 				46C6AB490F2DBE7E00BA1B73 /* IUTAssertionInfo.h */,
@@ -274,6 +281,7 @@
 				46C6AB600F2DBE7E00BA1B73 /* IUTTest.m in Sources */,
 				46C6AB610F2DBE7E00BA1B73 /* IUTTestRunner.m in Sources */,
 				46C6AB620F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m in Sources */,
+				466EDC7B0F4094F900D2B9AC /* GTMSenTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
