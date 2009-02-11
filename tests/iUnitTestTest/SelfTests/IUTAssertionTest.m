@@ -1046,6 +1046,40 @@
 }
 
 
+#pragma mark Exception
 
+- (void)testAssertRaiseSuccess
+{
+    ASSERT_RAISE(
+        @throw [NSException exceptionWithName:nil reason:nil userInfo:nil];
+    );
+}
+
+- (void)testAssertRaiseFail
+{
+    @try {
+        ASSERT_RAISE([NSException exceptionWithName:nil reason:nil userInfo:nil];);
+        ASSERT_FAIL(@"");
+    }
+    @catch (NSException * e) {
+    }
+}
+
+- (void)testAssertNothingRaisedSuccess
+{
+    ASSERT_NOTHING_RAISED(
+        [NSException exceptionWithName:nil reason:nil userInfo:nil];
+    );
+}
+
+- (void)testAssertNothingRaisedFail
+{
+    @try {
+        ASSERT_NOTHING_RAISED(@throw [NSException exceptionWithName:nil reason:nil userInfo:nil];);
+        ASSERT_FAIL(@"");
+    }
+    @catch (NSException * e) {
+    }
+}
 
 @end

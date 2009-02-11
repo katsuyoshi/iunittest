@@ -43,6 +43,29 @@
 #define ASSERT_EQUAL_RECT(_expected, _value) [self assertEqualRect:(_value) expected:(_expected) info:IUTASSERTION_INF(nil)]
 
 
+#define ASSERT_RAISE(expr) \
+    { \
+        @try { \
+            {expr};\
+            ASSERT_FAIL(@"exception expected but none was thrown."); \
+        } \
+        @catch (id anException) { \
+        } \
+    }
+
+#define ASSERT_NOTHING_RAISED(expr) \
+    { \
+        @try { \
+            {expr};\
+        } \
+        @catch (id anException) { \
+            ASSERT_FAIL(([NSString stringWithFormat:@"Exception raised:%@", anException])); \
+        } \
+    }
+
+
+
+
 extern NSString * const IUTAssertionExceptionName;
 extern NSString * const IUTAssertionErrorExceptionName;
 
