@@ -1034,6 +1034,43 @@
     ASSERT_EQUAL_INT(1, assertedCount);
 }
 
+- (void)testIncrementAtAssertRaiseSuccess
+{
+    assertedCount = 0;
+    ASSERT_RAISE(@throw @"abc");
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertRaiseFail
+{
+    assertedCount = 0;
+    @try {
+        ASSERT_RAISE(@"abc");
+    }
+    @catch (NSException * e) {
+    }
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertNothingRaisedSuccess
+{
+    assertedCount = 0;
+    ASSERT_NOTHING_RAISED(@"abc");
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+- (void)testIncrementAtAssertNothingRaisedFail
+{
+    assertedCount = 0;
+    @try {
+        ASSERT_NOTHING_RAISED(@throw @"abc");
+    }
+    @catch (NSException * e) {
+    }
+    ASSERT_EQUAL_INT(1, assertedCount);
+}
+
+
 - (void)testAssertionErrorExceptionFrom
 {
     NSException *exception = [NSException exceptionWithName:nil reason:@"test message" userInfo:nil];
@@ -1057,12 +1094,15 @@
 
 - (void)testAssertRaiseFail
 {
-    @try {
-        ASSERT_RAISE([NSException exceptionWithName:nil reason:nil userInfo:nil];);
-        ASSERT_FAIL(@"");
-    }
-    @catch (NSException * e) {
-    }
+    do {
+        @try {
+            ASSERT_RAISE([NSException exceptionWithName:nil reason:nil userInfo:nil];);
+        }
+        @catch (NSException * e) {
+            continue;
+        }
+        ASSERT_FAIL(@"expected exception but nothing.");
+    } while(0);
 }
 
 - (void)testAssertNothingRaisedSuccess
@@ -1074,12 +1114,15 @@
 
 - (void)testAssertNothingRaisedFail
 {
-    @try {
-        ASSERT_NOTHING_RAISED(@throw [NSException exceptionWithName:nil reason:nil userInfo:nil];);
-        ASSERT_FAIL(@"");
-    }
-    @catch (NSException * e) {
-    }
+    do {
+        @try {
+            ASSERT_NOTHING_RAISED(@throw [NSException exceptionWithName:nil reason:nil userInfo:nil];);
+        }
+        @catch (NSException * e) {
+            continue;
+        }
+        ASSERT_FAIL(@"exception raised");
+    } while(0);
 }
 
 @end

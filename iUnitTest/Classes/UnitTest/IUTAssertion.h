@@ -44,24 +44,27 @@
 
 
 #define ASSERT_RAISE(expr) \
-    { \
+    do { \
         @try { \
-            {expr};\
-            ASSERT_FAIL(@"exception expected but none was thrown."); \
+            {expr;}\
         } \
         @catch (id anException) { \
+            assertedCount++; \
+            continue; \
         } \
-    }
+        ASSERT_FAIL(@"exception expected but none was thrown."); \
+    } while(0)
 
 #define ASSERT_NOTHING_RAISED(expr) \
-    { \
+    do { \
         @try { \
-            {expr};\
+            {expr;}\
+            assertedCount++; \
         } \
         @catch (id anException) { \
             ASSERT_FAIL(([NSString stringWithFormat:@"Exception raised:%@", anException])); \
         } \
-    }
+    } while(0)
 
 
 
