@@ -279,5 +279,45 @@
     }
 }
 
+- (void)testSTAssertThrowsSuccess
+{
+    STAssertThrows(@throw @"exception", nil);
+    STAssertThrows(@throw @"exception";, nil);
+}
+
+- (void)testSTAssertThrowsFail
+{
+    do {
+        @try {
+            STAssertThrows(NSLog(@"exception"), nil);
+            STAssertThrows(NSLog(@"exception");, nil);
+        }
+        @catch (NSException * e) {
+            continue;
+        }
+        ASSERT_FAIL(@"expected exception but nothing.");
+    } while(0);
+}
+
+- (void)testSTAssertNoThrowSuccess
+{
+    STAssertNoThrow(NSLog(@"exception"), nil);
+    STAssertNoThrow(NSLog(@"exception");, nil);
+}
+
+- (void)testSTAssertNoThrowFail
+{
+    do {
+        @try {
+            STAssertNoThrow(@throw @"exception", nil);
+            STAssertNoThrow(@throw @"exception";, nil);
+        }
+        @catch (NSException * e) {
+            continue;
+        }
+        ASSERT_FAIL(@"exception raised");
+    } while(0);
+}
+
 
 @end

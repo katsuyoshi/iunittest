@@ -50,6 +50,17 @@
 {
     [[NSArray array] objectAtIndex:1];
 }
+
+- (void)testAssertRaise
+{
+    ASSERT_RAISE(NSLog(@"exception"));
+}
+
+- (void)testAssertNothingRaised
+{
+    ASSERT_NOTHING_RAISED(@throw @"exception");
+}
+
 #endif
 
 @end

@@ -1096,7 +1096,7 @@
 {
     do {
         @try {
-            ASSERT_RAISE([NSException exceptionWithName:nil reason:nil userInfo:nil];);
+            ASSERT_RAISE(NSLog(@"exception"););
         }
         @catch (NSException * e) {
             continue;
@@ -1108,7 +1108,7 @@
 - (void)testAssertNothingRaisedSuccess
 {
     ASSERT_NOTHING_RAISED(
-        [NSException exceptionWithName:nil reason:nil userInfo:nil];
+        NSLog(@"exception");
     );
 }
 

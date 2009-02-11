@@ -56,11 +56,18 @@
     }
 
 
-/* FIXME: not suuported
 #define STAssertThrows(expression, description, ...) \
+    ASSERT_RAISE(expression)
+
+/* FIXME: not suuported
 #define STAssertThrowsSpecific(expression, specificException, description, ...) \
 #define STAssertThrowsSpecificNamed(expr, specificException, aName, description, ...) \
+*/
+
 #define STAssertNoThrow(expression, description, ...) \
+    ASSERT_NOTHING_RAISED(expression)
+    
+/* FIXME: not suuported
 #define STAssertNoThrowSpecific(expression, specificException, description, ...) \
 #define STAssertNoThrowSpecificNamed(expr, specificException, aName, description, ...) \
 */
