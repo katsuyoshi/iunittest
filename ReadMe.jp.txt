@@ -2,41 +2,41 @@ This is Japanese descripton.
 
 iUnitTest
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@—LŒÀ‰ïŽÐˆÉ“¡ƒ\ƒtƒgƒfƒUƒCƒ“ http://www.itosoft.com/
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ˆÉ“¡Ÿ—Ç <kito@itosoft.com>
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2009/01/30
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€æœ‰é™ä¼šç¤¾ä¼Šè—¤ã‚½ãƒ•ãƒˆãƒ‡ã‚¶ã‚¤ãƒ³ http://www.itosoft.com/
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ä¼Šè—¤å‹è‰¯ <kito@itosoft.com>
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€2009/01/30
 
-¡ƒCƒ“ƒgƒƒ_ƒNƒVƒ‡ƒ“
+â– ã‚¤ãƒ³ãƒˆãƒ­ãƒ€ã‚¯ã‚·ãƒ§ãƒ³
 
-iUnitTest‚ÍiPhoneƒ\ƒtƒg‚ÌUnit Test‚ðs‚È‚¤‚½‚ß‚ÌƒtƒŒ[ƒ€ƒ[ƒN‚ÅA
-Xcode—p‚ÌiUnitTestƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒeƒ“ƒvƒŒ[ƒg‚ð’ñ‹Ÿ‚µ‚Ü‚·B
-ƒeƒ“ƒvƒŒ[ƒg‚©‚çì¬‚µ‚½ƒvƒƒWƒFƒNƒg‚ÉAƒeƒXƒg‘ÎÛ‚Æ‚È‚éƒNƒ‰ƒX‚ð’Ç‰Á‚µ‚Ü‚·B
-ƒeƒXƒg‚ðs‚¤IUTTestƒNƒ‰ƒX‚ÌƒTƒuƒNƒ‰ƒX‚ðì¬‚µAtest‚©‚çŽn‚Ü‚éƒƒ\ƒbƒh‚ÉƒeƒXƒgƒR[ƒh‚ð‹Lq‚µ‚Ü‚·B
-ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ð‹N“®‚µStartƒ{ƒ^ƒ“‚ð‰Ÿ‚·‚ÆUnit Test‚ð’€ŽŸŽÀs‚µ‚Ü‚·B
-
-
-¡•K—v‚ÈŠÂ‹«
-
-iPhone SDK for iPhone OS 2.2ˆÈ~
+iUnitTestã¯iPhoneã‚½ãƒ•ãƒˆã®Unit Testã‚’è¡Œãªã†ãŸã‚ã®ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã§ã€
+Xcodeç”¨ã®iUnitTestã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’æä¾›ã—ã¾ã™ã€‚
+ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‹ã‚‰ä½œæˆã—ãŸãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã«ã€ãƒ†ã‚¹ãƒˆå¯¾è±¡ã¨ãªã‚‹ã‚¯ãƒ©ã‚¹ã‚’è¿½åŠ ã—ã¾ã™ã€‚
+ãƒ†ã‚¹ãƒˆã‚’è¡Œã†IUTTestã‚¯ãƒ©ã‚¹ã®ã‚µãƒ–ã‚¯ãƒ©ã‚¹ã‚’ä½œæˆã—ã€testã‹ã‚‰å§‹ã¾ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰ã«ãƒ†ã‚¹ãƒˆã‚³ãƒ¼ãƒ‰ã‚’è¨˜è¿°ã—ã¾ã™ã€‚
+ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’èµ·å‹•ã—Startãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨Unit Testã‚’é€æ¬¡å®Ÿè¡Œã—ã¾ã™ã€‚
 
 
-¡ƒCƒ“ƒXƒg[ƒ‹
+â– å¿…è¦ãªç’°å¢ƒ
 
-Terminal.app‚Å'sudo ./setup'‚ðŽÀs‚µ‚Ü‚·B
-iUnitTestƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Ìƒeƒ“ƒvƒŒ[ƒg‚ÆAƒeƒXƒgƒNƒ‰ƒX—p‚Ìƒeƒ“ƒvƒŒ[ƒgƒtƒ@ƒCƒ‹‚ª’Ç‰Á‚³‚ê‚Ü‚·B
-
-
-¡ƒTƒ“ƒvƒ‹
-
-tutorialƒtƒHƒ‹ƒ_‚ÉƒTƒ“ƒvƒ‹‚ª‚ ‚è‚Ü‚·B
-'Prefectures'ƒuƒƒWƒFƒNƒg‚Æ'PrefecturesTest'ƒvƒƒWƒFƒNƒg‚ª‚ ‚è‚Ü‚·B
-'Prefectures'‚ÍƒeƒXƒg‚³‚ê‚éƒvƒƒWƒFƒNƒg‚ÅA‚ ‚È‚½‚ÌƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚É‘Š“–‚·‚é•¨‚Å‚·B
-'PrefecturesTest'‚Í'Prefectures'‚É‚ ‚éƒNƒ‰ƒX‚ðƒeƒXƒg‚·‚é‚½‚ß‚ÌƒvƒƒWƒFƒNƒg‚Å
-iUnitTestƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒeƒ“ƒvƒŒ[ƒg‚©‚çì¬‚µ‚½•¨‚Å‚·B
+iPhone SDK for iPhone OS 2.2ä»¥é™
 
 
-¡ŽÓŽ«
-ŒöŠJ‚ÉÛ‚µA‘Š’k‚Éæ‚Á‚Ä’¸‚¢‚½ŠF—l‘å•Ï‚ ‚è‚ª‚Æ‚¤‚²‚´‚¢‚Ü‚µ‚½B
-‚Ü‚½Aˆê‚Â•ÔŽ–‚ÅƒAƒCƒRƒ“‚ð’ñ‹Ÿ‚µ‚Ä‚¢‚½‚¾‚¢‚½nobon‚³‚ñ(http://blog.nobon.boo.jp/)A
-‰õ‚­ReadMe‚Ì‰p–ó‚ðˆø‚«Žó‚¯‚Ä’¸‚¢‚½Š”Ž®‰ïŽÐ–œ—t(http://www.everyleaf.com)‚Ì‘åê”JŽq‚³‚ñ‚É‚Í
-“Á‚ÉŠ´ŽÓ\‚µã‚°‚Ü‚·B
+â– ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
+
+Terminal.appã§'sudo ./setup'ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
+iUnitTestã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã¨ã€ãƒ†ã‚¹ãƒˆã‚¯ãƒ©ã‚¹ç”¨ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ãŒè¿½åŠ ã•ã‚Œã¾ã™ã€‚
+
+
+â– ã‚µãƒ³ãƒ—ãƒ«
+
+tutorialãƒ•ã‚©ãƒ«ãƒ€ã«ã‚µãƒ³ãƒ—ãƒ«ãŒã‚ã‚Šã¾ã™ã€‚
+'Prefectures'ãƒ–ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¨'PrefecturesTest'ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãŒã‚ã‚Šã¾ã™ã€‚
+'Prefectures'ã¯ãƒ†ã‚¹ãƒˆã•ã‚Œã‚‹ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã§ã€ã‚ãªãŸã®ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã«ç›¸å½“ã™ã‚‹ç‰©ã§ã™ã€‚
+'PrefecturesTest'ã¯'Prefectures'ã«ã‚ã‚‹ã‚¯ãƒ©ã‚¹ã‚’ãƒ†ã‚¹ãƒˆã™ã‚‹ãŸã‚ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã§
+iUnitTestã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‹ã‚‰ä½œæˆã—ãŸç‰©ã§ã™ã€‚
+
+
+â– è¬è¾ž
+å…¬é–‹ã«éš›ã—ã€ç›¸è«‡ã«ä¹—ã£ã¦é ‚ã„ãŸçš†æ§˜å¤§å¤‰ã‚ã‚ŠãŒã¨ã†ã”ã–ã„ã¾ã—ãŸã€‚
+ã¾ãŸã€ä¸€ã¤è¿”äº‹ã§ã‚¢ã‚¤ã‚³ãƒ³ã‚’æä¾›ã—ã¦ã„ãŸã ã„ãŸnobonã•ã‚“(http://blog.nobon.boo.jp/)ã€
+å¿«ãReadMeã®è‹±è¨³ã‚’å¼•ãå—ã‘ã¦é ‚ã„ãŸæ ªå¼ä¼šç¤¾ä¸‡è‘‰(http://www.everyleaf.com)ã®å¤§å ´å¯§å­ã•ã‚“ã«ã¯
+ç‰¹ã«æ„Ÿè¬ç”³ã—ä¸Šã’ã¾ã™ã€‚
