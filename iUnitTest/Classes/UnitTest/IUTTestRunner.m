@@ -245,19 +245,41 @@
 IUTLog(NSStringFromClass([site class]));
         [site clearAssertedCount];
         for (NSString *testSel in site.tests) {
-            if (stopRequest) goto ABORT_TEST;
+            if (stopRequest) {
+                goto ABORT_TEST;
+            }
             @try {
 IUTLog(@"  %@", testSel);
                 [tests addObject:testSel];
+                
+                // setup
 IUTLog(@"  　　setUp");
                 [self performSelectorOnMainThread:@"setUp" target:site];
                 if (self.exception) @throw self.exception;
                 if (site.testAfterDelay != 0.0) {
                     [NSThread sleepForTimeInterval:site.testAfterDelay];
                 }
+                
+                // test
 IUTLog(@"  　　test");
+            
                 [self performSelectorOnMainThread:testSel target:site];
                 if (self.exception) @throw self.exception;
+                
+                // next test
+                while(site.nextTest) {
+                    SEL aSelector = site.nextTest;
+                    site.nextTest = NULL;
+                    if (site.nextTestAfterDelay != 0.0) {
+                        [NSThread sleepForTimeInterval:site.nextTestAfterDelay];
+                    }
+IUTLog(@"  　　  %@", NSStringFromSelector(aSelector));
+                    [self performSelectorOnMainThread:NSStringFromSelector(aSelector) target:site];
+                    if (self.exception) {
+                        @throw self.exception;
+                    }
+                }
+                
                 [passes addObject:testSel];
             }
             @catch (NSException * e) {
@@ -273,6 +295,8 @@ IUTLog(@"    Error:%@", [IUTAssertion assertionInfoForException:anException].mes
             @finally {
                 self.exception = nil;
                 @try {
+                
+                // tear down
 IUTLog(@"  　　tearDown");
                     [self performSelectorOnMainThread:@"tearDown" target:site];
                     if (self.exception) @throw self.exception;

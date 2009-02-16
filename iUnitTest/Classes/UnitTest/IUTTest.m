@@ -17,6 +17,7 @@
 @implementation IUTTest
 
 @synthesize tests, testAfterDelay;
+@synthesize nextTest, nextTestAfterDelay;
 
 
 - (id)init
@@ -58,5 +59,12 @@
 - (void)tearDown
 {
 }
+
+- (void)performTest:(SEL)selector afterDelay:(NSTimeInterval)delay
+{
+    self.nextTest = selector;
+    self.nextTestAfterDelay = delay;
+}
+
 
 @end

@@ -21,6 +21,8 @@
 		461CFF530F2A0DE900315F17 /* IUTTestRunnerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7910F21430500D830A5 /* IUTTestRunnerTest.m */; };
 		462057A10F28B2EC00857D87 /* IUTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462057A00F28B2EC00857D87 /* IUTDetailViewController.m */; };
 		4620593F0F28CB7300857D87 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4620593E0F28CB7300857D87 /* DetailView.xib */; };
+		464F76C60F4861AF005C0C89 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C50F4861AF005C0C89 /* Foo.m */; };
+		464F76C90F4864F9005C0C89 /* FooTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C80F4864F9005C0C89 /* FooTest.m */; };
 		4659B8F30F33FABC0030D828 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659B8F20F33FABC0030D828 /* Default.png */; };
 		465B04460F205A62000E8FE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B043C0F205A62000E8FE2 /* AppDelegate.m */; };
 		465B04470F205A62000E8FE2 /* IUTAssertion.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B043F0F205A62000E8FE2 /* IUTAssertion.m */; };
@@ -54,6 +56,10 @@
 		4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTDetailViewController.h; sourceTree = "<group>"; };
 		462057A00F28B2EC00857D87 /* IUTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTDetailViewController.m; sourceTree = "<group>"; };
 		4620593E0F28CB7300857D87 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailView.xib; path = ../../iUnitTest/DetailView.xib; sourceTree = SOURCE_ROOT; };
+		464F76C40F4861AF005C0C89 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		464F76C50F4861AF005C0C89 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
+		464F76C70F4864F9005C0C89 /* FooTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooTest.h; sourceTree = "<group>"; };
+		464F76C80F4864F9005C0C89 /* FooTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooTest.m; sourceTree = "<group>"; };
 		4659B8F20F33FABC0030D828 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../iUnitTest/Default.png; sourceTree = SOURCE_ROOT; };
 		4659BC010F365CC00030D828 /* IUTAssertionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfo.h; sourceTree = "<group>"; };
 		465B043B0F205A62000E8FE2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -240,6 +246,10 @@
 				4665433E0F2837A10086DAC8 /* IUTTestRunnerViewControllerTest.m */,
 				46718C000F381B1F00272C9A /* SenTestAssertionTest.h */,
 				46718C010F381B1F00272C9A /* SenTestAssertionTest.m */,
+				464F76C40F4861AF005C0C89 /* Foo.h */,
+				464F76C50F4861AF005C0C89 /* Foo.m */,
+				464F76C70F4864F9005C0C89 /* FooTest.h */,
+				464F76C80F4864F9005C0C89 /* FooTest.m */,
 			);
 			path = SelfTests;
 			sourceTree = "<group>";
@@ -363,6 +373,8 @@
 				461CFF530F2A0DE900315F17 /* IUTTestRunnerTest.m in Sources */,
 				46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */,
 				466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */,
+				464F76C60F4861AF005C0C89 /* Foo.m in Sources */,
+				464F76C90F4864F9005C0C89 /* FooTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
