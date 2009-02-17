@@ -17,7 +17,7 @@
     [super setUp];
     foo = [Foo new];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self selector:@selector(fooDidChange:) name:FooDidChangeNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(fooDidChange:) name:FooDidChangeNotification object:foo];
     notifiedCount = 0;
 }
 
@@ -43,19 +43,31 @@
 #pragma mark -
 #pragma mark Tests
 
-- (void)_testNotification
-{
-    foo.bar = 123;
-    foo.hoge = 456;
-    
-    ASSERT_EQUAL_INT(2, notifiedCount);
-}
 
+/*
+// It won't be a success.
+// Because fooDidChange: is called after testNotification.
+// The notifiedCount is zero this moment.
 - (void)testNotification
 {
     foo.bar = 123;
     foo.hoge = 456;
     
+    ASSERT_EQUAL_INT(1, notifiedCount);
+}
+*/
+
+// It will be a success.
+// The fooDidChange: is called after testNotification.
+// Then _test2Notification is called.
+- (void)testNotification
+{
+    // The foo will notify, did change property.
+    foo.bar = 123;
+    foo.hoge = 456;
+    
+    // It makes to test after notification.
+    // You can adjust timing by afterDelay.
     [self performTest:@selector(_test2Notification) afterDelay:0.0];
 }
 
