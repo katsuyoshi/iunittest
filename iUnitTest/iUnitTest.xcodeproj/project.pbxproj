@@ -313,6 +313,7 @@
 				GCC_PREFIX_HEADER = iUnitTest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = iUnitTest;
+				SDKROOT = iphonesimulator2.2;
 			};
 			name = Release;
 		};
