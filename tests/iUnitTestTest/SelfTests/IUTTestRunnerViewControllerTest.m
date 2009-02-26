@@ -7,7 +7,7 @@
 //
 
 #import "IUTTestRunnerViewControllerTest.h"
-
+#import "IUTPreference.h"
 
 
 @implementation IUTTestRunnerViewControllerTest
@@ -49,5 +49,18 @@
     [controller didTest:self];
     ASSERT_EQUAL(controller.runner.successColor, controller.view.backgroundColor);
 }
+
+/* DELETEME:
+// It broke passedTests in preference.
+// It makes hung up application.
+- (void)_testClearPassedTestsAction
+{
+    IUTPreference *preference = [IUTPreference sharedPreference];
+    [preference addPassedTest:@"Foo" methodName:@"Bar"];
+    ASSERT([preference.passedTests count]);
+    [controller clearPassedTestsAction:self];
+    ASSERT(![preference.passedTests count]);
+}
+*/
 
 @end

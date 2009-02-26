@@ -8,6 +8,7 @@
 
 #import "IUTTestRunnerViewController.h"
 #import "IUTTestRunner.h"
+#import "IUTPreference.h"
 
 
 @interface IUTTestRunnerViewController(_private)
@@ -16,7 +17,7 @@
 
 @implementation IUTTestRunnerViewController
 
-@synthesize progressView, startStopButton, indicatorView, resultLabel, resultTestViewController;
+@synthesize progressView, startStopButton, indicatorView, resultLabel, resultTestViewController, allButton;
 @synthesize running, runner;
 
 
@@ -54,6 +55,10 @@
     [self.view addSubview:resultTestViewController.view];
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:resultTestViewController.view];
     [resultTestViewController.tableView reloadData];
+        
+    if ([[IUTPreference sharedPreference]isAutoRun]) {
+        [self startAction:self];
+    }
 }
 
 /*
@@ -95,6 +100,8 @@
     }
     [resultTestViewController.tableView reloadData];
     self.view.backgroundColor = runner.backgroundColor;
+
+    allButton.enabled = !self.isRunning && [[IUTPreference sharedPreference] canClear];
 }
 
 - (IBAction)startStopAction:(id)sender
@@ -117,6 +124,11 @@
 {
     self.running = NO;
     [self.runner stop:self];    
+}
+
+- (IBAction)clearPassedTestsAction:(id)sender
+{
+    [[IUTPreference sharedPreference] clearPassedTests];
 }
 
 

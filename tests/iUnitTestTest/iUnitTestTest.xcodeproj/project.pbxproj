@@ -11,6 +11,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		4608BD7F0F56F7B80011302D /* IUTPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4626E8070F5600F000F3510A /* IUTPreference.m */; };
 		461CFE920F299E0100315F17 /* IUTTestRunnerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7EE0F214CCF00D830A5 /* IUTTestRunnerMock.m */; };
 		461CFE930F299E0200315F17 /* IUTAssertionInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */; };
 		461CFE940F299E0200315F17 /* IUTAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B04600F2065B3000E8FE2 /* IUTAssertionTest.m */; };
@@ -21,6 +22,7 @@
 		461CFF530F2A0DE900315F17 /* IUTTestRunnerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7910F21430500D830A5 /* IUTTestRunnerTest.m */; };
 		462057A10F28B2EC00857D87 /* IUTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462057A00F28B2EC00857D87 /* IUTDetailViewController.m */; };
 		4620593F0F28CB7300857D87 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4620593E0F28CB7300857D87 /* DetailView.xib */; };
+		4626E80A0F5602CD00F3510A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4626E8090F5602CD00F3510A /* Settings.bundle */; };
 		464F76C60F4861AF005C0C89 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C50F4861AF005C0C89 /* Foo.m */; };
 		464F76C90F4864F9005C0C89 /* FooTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C80F4864F9005C0C89 /* FooTest.m */; };
 		4659B8F30F33FABC0030D828 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659B8F20F33FABC0030D828 /* Default.png */; };
@@ -53,9 +55,14 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iUnitTestTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iUnitTestTest_Prefix.pch; sourceTree = "<group>"; };
+		4608BBC60F56DD6C0011302D /* IUTPreferenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTPreferenceTest.h; sourceTree = "<group>"; };
+		4608BBC70F56DD6C0011302D /* IUTPreferenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTPreferenceTest.m; sourceTree = "<group>"; };
 		4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTDetailViewController.h; sourceTree = "<group>"; };
 		462057A00F28B2EC00857D87 /* IUTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTDetailViewController.m; sourceTree = "<group>"; };
 		4620593E0F28CB7300857D87 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailView.xib; path = ../../iUnitTest/DetailView.xib; sourceTree = SOURCE_ROOT; };
+		4626E8060F5600F000F3510A /* IUTPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTPreference.h; sourceTree = "<group>"; };
+		4626E8070F5600F000F3510A /* IUTPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTPreference.m; sourceTree = "<group>"; };
+		4626E8090F5602CD00F3510A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../iUnitTest/Settings.bundle; sourceTree = SOURCE_ROOT; };
 		464F76C40F4861AF005C0C89 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		464F76C50F4861AF005C0C89 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		464F76C70F4864F9005C0C89 /* FooTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooTest.h; sourceTree = "<group>"; };
@@ -165,6 +172,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4626E8090F5602CD00F3510A /* Settings.bundle */,
 				4659B8F20F33FABC0030D828 /* Default.png */,
 				466AF4EB0F2F049B004A649A /* icon.png */,
 				46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */,
@@ -221,6 +229,8 @@
 				4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */,
 				462057A00F28B2EC00857D87 /* IUTDetailViewController.m */,
 				46C8F4B50F3A05AF00CE0DC0 /* IUTLog.h */,
+				4626E8060F5600F000F3510A /* IUTPreference.h */,
+				4626E8070F5600F000F3510A /* IUTPreference.m */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -250,6 +260,8 @@
 				464F76C50F4861AF005C0C89 /* Foo.m */,
 				464F76C70F4864F9005C0C89 /* FooTest.h */,
 				464F76C80F4864F9005C0C89 /* FooTest.m */,
+				4608BBC60F56DD6C0011302D /* IUTPreferenceTest.h */,
+				4608BBC70F56DD6C0011302D /* IUTPreferenceTest.m */,
 			);
 			path = SelfTests;
 			sourceTree = "<group>";
@@ -337,6 +349,7 @@
 				46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */,
 				466AF4EC0F2F049B004A649A /* icon.png in Resources */,
 				4659B8F30F33FABC0030D828 /* Default.png in Resources */,
+				4626E80A0F5602CD00F3510A /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +388,7 @@
 				466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */,
 				464F76C60F4861AF005C0C89 /* Foo.m in Sources */,
 				464F76C90F4864F9005C0C89 /* FooTest.m in Sources */,
+				4608BD7F0F56F7B80011302D /* IUTPreference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

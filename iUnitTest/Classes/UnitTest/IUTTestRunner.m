@@ -10,6 +10,7 @@
 #import "IUTTest.h"
 #import "/usr/include/objc/objc-class.h"
 #import "IUTLog.h"
+#import "IUTPreference.h"
 
 
 @interface IUTTestRunner(_private)
@@ -240,14 +241,21 @@
 
     float count = (float)[self allTestCount];
     int i = 0;
+    IUTPreference *preference = [IUTPreference sharedPreference];
 
     for (IUTTest *site in sites) {
-IUTLog(NSStringFromClass([site class]));
+        NSString *siteName = NSStringFromClass([site class]);
+IUTLog(siteName);
         [site clearAssertedCount];
         for (NSString *testSel in site.tests) {
             if (stopRequest) {
                 goto ABORT_TEST;
             }
+            if (![preference needsTest:siteName methodName:testSel]) {
+IUTLog(@"  %@ was skiped", testSel);
+                continue;
+            }
+            
             @try {
 IUTLog(@"  %@", testSel);
                 [tests addObject:testSel];
@@ -281,6 +289,7 @@ IUTLog(@"  　　  %@", NSStringFromSelector(aSelector));
                 }
                 
                 [passes addObject:testSel];
+                [preference addPassedTest:siteName methodName:testSel];
             }
             @catch (NSException * e) {
                 if ([[e name] isEqualToString:IUTAssertionExceptionName]) {
@@ -315,8 +324,17 @@ IUTLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].messa
         }
     }
 
-ABORT_TEST:    
+ABORT_TEST:
+
+    // store result to preference
+    if (self.isPassed) {
+        [preference clearPassedTests];
+    }
+    [preference synchronize];
+    
+    // notify didTest
     [sender performSelectorOnMainThread:@selector(didTest:) withObject:nil waitUntilDone:YES];
+    
     [pool release];
     [NSThread exit];
 }
