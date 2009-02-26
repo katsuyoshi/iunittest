@@ -81,6 +81,7 @@
     [startStopButton release];
     [indicatorView release];
     [resultLabel release];
+    [allButton release];
     [runner release];
     [super dealloc];
 }
