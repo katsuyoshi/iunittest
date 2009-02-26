@@ -130,6 +130,7 @@
 - (IBAction)clearPassedTestsAction:(id)sender
 {
     [[IUTPreference sharedPreference] clearPassedTests];
+    [self updateControls];
 }
 
 
