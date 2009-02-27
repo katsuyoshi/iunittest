@@ -37,6 +37,7 @@
 		466AF4EC0F2F049B004A649A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF4EB0F2F049B004A649A /* icon.png */; };
 		466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 466EDC870F40955400D2B9AC /* GTMSenTestCase.m */; };
 		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
+		46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */; };
 		46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */; };
 		46D6D7E30F214AAC00D830A5 /* IUTResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7E20F214AAC00D830A5 /* IUTResultTableViewController.m */; };
 		46D6D9E20F217B5700D830A5 /* IUTResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */; };
@@ -92,6 +93,7 @@
 		46718BFF0F38156F00272C9A /* SenTestAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertion.h; sourceTree = "<group>"; };
 		46718C000F381B1F00272C9A /* SenTestAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertionTest.h; sourceTree = "<group>"; };
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
+		46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40_w.png; path = ../../iUnitTest/isd_logo_60x40_w.png; sourceTree = SOURCE_ROOT; };
 		46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40.png; path = ../../iUnitTest/isd_logo_60x40.png; sourceTree = SOURCE_ROOT; };
 		46C8F4B50F3A05AF00CE0DC0 /* IUTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTLog.h; sourceTree = "<group>"; };
 		46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfoTest.h; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				4659B8F20F33FABC0030D828 /* Default.png */,
 				466AF4EB0F2F049B004A649A /* icon.png */,
 				46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */,
+				46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */,
 				4620593E0F28CB7300857D87 /* DetailView.xib */,
 				465B044B0F205A79000E8FE2 /* MainWindow.xib */,
 				465B044C0F205A79000E8FE2 /* TestView.xib */,
@@ -350,6 +353,7 @@
 				466AF4EC0F2F049B004A649A /* icon.png in Resources */,
 				4659B8F30F33FABC0030D828 /* Default.png in Resources */,
 				4626E80A0F5602CD00F3510A /* Settings.bundle in Resources */,
+				46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iUnitTestTest_Prefix.pch;
