@@ -127,6 +127,12 @@
     return count;
 }
 
+- (int)badgeNumber
+{
+    return [fails count] + [errors count];
+}
+
+
 #pragma mark -
 #pragma mark query result
 

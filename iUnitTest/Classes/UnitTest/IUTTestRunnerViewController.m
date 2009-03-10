@@ -148,6 +148,7 @@
 
 - (void)willTest:(id)sender
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     [self updateControls];
 }
 
@@ -155,6 +156,7 @@
 {
     [self stopAction:self];
     [self updateControls];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = self.runner.badgeNumber;
 }
 
 

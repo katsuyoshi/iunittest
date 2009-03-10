@@ -30,6 +30,8 @@
 @property (retain, readonly) NSMutableArray *fails;
 @property (retain, readonly) NSMutableArray *errors;
 
+@property (readonly) int badgeNumber;
+
 @property (retain) NSException *exception;
 
 @property (assign, readonly) NSString *result;
