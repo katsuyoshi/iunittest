@@ -38,6 +38,7 @@
 		466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 466EDC870F40955400D2B9AC /* GTMSenTestCase.m */; };
 		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
 		46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */; };
+		46BDC4EE0F723F400021B6D5 /* IUTTestInheritedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */; };
 		46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */; };
 		46D6D7E30F214AAC00D830A5 /* IUTResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7E20F214AAC00D830A5 /* IUTResultTableViewController.m */; };
 		46D6D9E20F217B5700D830A5 /* IUTResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D9E10F217B5700D830A5 /* IUTResultTableViewCell.m */; };
@@ -94,6 +95,8 @@
 		46718C000F381B1F00272C9A /* SenTestAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertionTest.h; sourceTree = "<group>"; };
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
 		46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40_w.png; path = ../../iUnitTest/isd_logo_60x40_w.png; sourceTree = SOURCE_ROOT; };
+		46BDC4EC0F723F400021B6D5 /* IUTTestInheritedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestInheritedTest.h; sourceTree = "<group>"; };
+		46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestInheritedTest.m; sourceTree = "<group>"; };
 		46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40.png; path = ../../iUnitTest/isd_logo_60x40.png; sourceTree = SOURCE_ROOT; };
 		46C8F4B50F3A05AF00CE0DC0 /* IUTLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTLog.h; sourceTree = "<group>"; };
 		46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAssertionInfoTest.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 				464F76C80F4864F9005C0C89 /* FooTest.m */,
 				4608BBC60F56DD6C0011302D /* IUTPreferenceTest.h */,
 				4608BBC70F56DD6C0011302D /* IUTPreferenceTest.m */,
+				46BDC4EC0F723F400021B6D5 /* IUTTestInheritedTest.h */,
+				46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */,
 			);
 			path = SelfTests;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				464F76C60F4861AF005C0C89 /* Foo.m in Sources */,
 				464F76C90F4864F9005C0C89 /* FooTest.m in Sources */,
 				4608BD7F0F56F7B80011302D /* IUTPreference.m in Sources */,
+				46BDC4EE0F723F400021B6D5 /* IUTTestInheritedTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

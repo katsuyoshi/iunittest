@@ -26,6 +26,12 @@
 @property SEL nextTest;
 @property NSTimeInterval nextTestAfterDelay;
 
+/**
+ * Returns a Boolean value that indicates whether to collect tests in super class.
+ * default is NO.
+ * @return YES if collect tests in super class, otherwise NO.
+ */
++ (BOOL)doesCollectTestsInSuper;
 
 - (void)setUp;
 - (void)tearDown;
