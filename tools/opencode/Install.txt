@@ -3,6 +3,11 @@ opencode
                                    Katsuyoshi Ito <kito@itosoft.com>
                                    April 27, 2009
 
+* Introduction
+
+opencode is a service to show a source code.
+
+
 * Installation
 
   1. Build and copy binary to '/usr/local/bin'.

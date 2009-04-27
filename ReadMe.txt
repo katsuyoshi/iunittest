@@ -14,6 +14,12 @@ to run your tests.
 In iUnitTest application, all methods whose name start with 'test'
 in classes inherited from IUTTest will be run as test cases.
 
+opencode:
+opencode is a service to show a source code.
+If you run with opencode, when you touch the failure cell, iUnitTest send
+a source code information to it. Then failure code appear on Xcode.
+It works running on iPhone simulator.
+
 
 * Requirement
 
@@ -24,6 +30,9 @@ iPhone SDK for iPhone OS 2.2 or later.
 
 Run 'sudo ./setup'.
 Then the iUnitTest templates will be added to your Xcode.
+
+opencode:
+See tools/opencode/Install.txt
 
 
 * Examples
