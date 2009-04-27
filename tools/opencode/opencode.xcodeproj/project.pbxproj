@@ -70,12 +70,12 @@
 			children = (
 				465835E10FA3DFC10075C1C0 /* TCPServer.h */,
 				465835E20FA3DFC10075C1C0 /* TCPServer.m */,
+				465835E40FA3DFFE0075C1C0 /* Server.h */,
+				465835E50FA3DFFE0075C1C0 /* Server.m */,
 				465835760FA352E70075C1C0 /* SourceCodeOpener.h */,
 				465835770FA352E70075C1C0 /* SourceCodeOpener.m */,
 				32A70AAB03705E1F00C91783 /* opencode_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* opencode.m */,
-				465835E40FA3DFFE0075C1C0 /* Server.h */,
-				465835E50FA3DFFE0075C1C0 /* Server.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";

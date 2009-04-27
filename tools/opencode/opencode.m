@@ -3,6 +3,7 @@
 #import "Server.h"
 
 int main (int argc, const char * argv[]) {
+
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     NSRunLoop * runLoop = [NSRunLoop currentRunLoop];
 
@@ -18,5 +19,6 @@ int main (int argc, const char * argv[]) {
     [runLoop run];
     [server release];
     [pool drain];
+
     return 0;
 }
