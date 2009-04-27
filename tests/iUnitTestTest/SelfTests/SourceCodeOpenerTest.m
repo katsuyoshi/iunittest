@@ -17,7 +17,7 @@
 - (void)setUp
 {
     [super setUp];
-    opener = [SourceCodeOpener new];
+    opener = [[SourceCodeOpener sourceCodeOpener] retain];
     // wait to find the opencode service.
     testAfterDelay = 0.5;
 }

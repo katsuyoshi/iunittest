@@ -24,6 +24,9 @@
 @property (retain) NSFileHandle *fileHandle;
 
 
++ (id)sourceCodeOpener;
+
+
 #pragma mark -
 #pragma mark NSNetServiceBrowser's delegate
 

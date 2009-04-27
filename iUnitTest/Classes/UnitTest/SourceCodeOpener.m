@@ -25,6 +25,17 @@
 
 @synthesize targetService, fileHandle;
 
++ (id)sourceCodeOpener
+{
+    static id opener = nil;
+    if (opener == nil) {
+        opener = [self new];
+    }
+    return opener;
+}
+
+
+
 - (id)init
 {
     self = [super init];
@@ -49,6 +60,8 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark open/close
 
 - (BOOL)openWithSocketAddress:(struct sockaddr *)socketAddress
 {
@@ -144,8 +157,10 @@
 - (void)open:(IUTAssertionInfo *)info
 {
     if ([self isOpend]) {
-        NSString *cmd = [NSString stringWithFormat:@"%@:%d\n", info.filePath, info.line];
-        [self.fileHandle writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
+        if (info.line) {
+            NSString *cmd = [NSString stringWithFormat:@"%@:%d\n", info.filePath, info.line];
+            [self.fileHandle writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
+        }
     }
 }
 

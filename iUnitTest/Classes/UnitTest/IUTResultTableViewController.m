@@ -10,6 +10,8 @@
 #import "IUTAssertion.h"
 #import "IUTResultTableViewCell.h"
 #import "IUTTestRunnerViewController.h"
+#import "SourceCodeOpener.h"
+
 
 @implementation IUTResultTableViewController
 
@@ -70,6 +72,11 @@
     return (section == 0) ? self.runner.fails : self.runner.errors;
 }
 
+- (NSException *)resultForIndexPath:(NSIndexPath *)indexPath
+{
+    return [[self resultsForSection:indexPath.section] objectAtIndex:indexPath.row];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -100,23 +107,30 @@
         cell = [[[IUTResultTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    cell.exception = [[self resultsForSection:indexPath.section] objectAtIndex:indexPath.row];
+    cell.exception = [self resultForIndexPath:indexPath];
     
     return cell;
 }
 
 - (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    return UITableViewCellAccessoryDisclosureIndicator;
+    return UITableViewCellAccessoryDetailDisclosureButton;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.detailViewController.exception = [[self resultsForSection:indexPath.section] objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:[self resultForIndexPath:indexPath]];
+    if (info) {
+        [[SourceCodeOpener sourceCodeOpener] open:info];
+    }
 
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    self.detailViewController.exception = [[self resultsForSection:indexPath.section] objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:self.detailViewController animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

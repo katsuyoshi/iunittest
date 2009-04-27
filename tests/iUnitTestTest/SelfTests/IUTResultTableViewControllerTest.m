@@ -114,10 +114,9 @@
 
 - (void)testAccessoryTypeForRowWithIndexPath
 {
-    ASSERT_EQUAL_INT(UITableViewCellAccessoryDisclosureIndicator, [controller tableView:controller.tableView accessoryTypeForRowWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]);
-    ASSERT_EQUAL_INT(UITableViewCellAccessoryDisclosureIndicator, [controller tableView:controller.tableView accessoryTypeForRowWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]]);
+    ASSERT_EQUAL_INT(UITableViewCellAccessoryDetailDisclosureButton, [controller tableView:controller.tableView accessoryTypeForRowWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]);
+    ASSERT_EQUAL_INT(UITableViewCellAccessoryDetailDisclosureButton, [controller tableView:controller.tableView accessoryTypeForRowWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]]);
 }
-
 
 
 @end

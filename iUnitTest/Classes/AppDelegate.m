@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SourceCodeOpener.h"
 
 @implementation AppDelegate
 
@@ -23,6 +23,8 @@
     // Override point for customization after application launch
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
+    
+    [SourceCodeOpener sourceCodeOpener];
 }
 
 

@@ -8,6 +8,8 @@ include FileUtils
 
 mkdir_p File.join(@path, "scripts")
 
+cp(File.join(@src, "Classes/AppDelegate.h"), File.join(@path, "Classes/AppDelegate.h"))
+cp(File.join(@src, "Classes/AppDelegate.m"), File.join(@path, "Classes/AppDelegate.m"))
 cp_r(File.join(@src, "Classes/UnitTest"), File.join(@path, "Classes"))
 cp_r(File.join(@src, "scripts"), @path) if File.exist? File.join(@src, "scripts")
 cp_r(Dir.glob("#{@src}/*.bundle"), @path)
