@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+require 'fileutils'
+
+filename = File.expand_path('~') + '/Library/LaunchAgents/com.itosoft.iunittest_opencode.plist'
+FileUtils.rm filename if File.exists? filename
+
+filename = '/usr/local/bin/opencode'
+FileUtils.rm filename if File.exists? filename

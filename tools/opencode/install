@@ -1,0 +1,4 @@
+#!/usr/bin/ruby
+require 'fileutils'
+
+FileUtils.cp 'com.itosoft.iunittest_opencode.plist', File.expand_path('~') + '/Library/LaunchAgents/'

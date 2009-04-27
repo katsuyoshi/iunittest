@@ -1,0 +1,25 @@
+opencode
+                                   ITO SOFT DESIGN Inc. http://www.itosoft.com/
+                                   Katsuyoshi Ito <kito@itosoft.com>
+                                   April 27, 2009
+
+* Installation
+
+  1. Build and copy binary to '/usr/local/bin'.
+
+     > cd your_build_folder
+     > sudo cp opencode /usr/local/bin
+
+  2. Run script 'install'.
+     It copy 'com.itosoft.iunittest_opencode' to '~/Library/LaunchAgents'.
+
+     > install
+
+  3. logout and login.
+
+* Uninstall
+
+  1. run script 'uninstall'
+     It removes '/usr/local/bin/opencode' and '~/Library/LaunchAgents/com.itosoft.iunittest_opencode'.
+
+     > sudo 'uninstall'
