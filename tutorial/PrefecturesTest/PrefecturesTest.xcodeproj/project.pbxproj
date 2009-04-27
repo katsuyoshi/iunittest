@@ -12,6 +12,11 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		461BECB00FA669650014E684 /* SourceCodeOpener.m in Sources */ = {isa = PBXBuildFile; fileRef = 461BECAF0FA669650014E684 /* SourceCodeOpener.m */; };
+		461BECB40FA6697F0014E684 /* IUTPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 461BECB30FA6697F0014E684 /* IUTPreference.m */; };
+		461BECCC0FA669BB0014E684 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 461BECCB0FA669BB0014E684 /* Settings.bundle */; };
+		461BECD80FA669F80014E684 /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 461BECD70FA669F80014E684 /* isd_logo_60x40_w.png */; };
+		461BECDC0FA66A2B0014E684 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 461BECDB0FA66A2B0014E684 /* icon.png */; };
 		4620593D0F28CB5700857D87 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4620593C0F28CB5700857D87 /* DetailView.xib */; };
 		465B04250F2056FF000E8FE2 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 465B04240F2056FF000E8FE2 /* TestView.xib */; };
 		46C6AB570F2DBE7E00BA1B73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB3E0F2DBE7E00BA1B73 /* AppDelegate.m */; };
@@ -26,7 +31,6 @@
 		46C6AB600F2DBE7E00BA1B73 /* IUTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB520F2DBE7E00BA1B73 /* IUTTest.m */; };
 		46C6AB610F2DBE7E00BA1B73 /* IUTTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB540F2DBE7E00BA1B73 /* IUTTestRunner.m */; };
 		46C6AB620F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB560F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m */; };
-		46C6ADCA0F2DDFC800BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6ADC90F2DDFC800BA1B73 /* isd_logo_60x40.png */; };
 		46C70DF50F2DE07800541593 /* RootViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C70DF40F2DE07800541593 /* RootViewControllerTest.m */; };
 		46C70DFA0F2DE12D00541593 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C70DF90F2DE12D00541593 /* RootViewController.m */; };
 /* End PBXBuildFile section */
@@ -39,6 +43,13 @@
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iUnitTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iUnitTest_Prefix.pch; sourceTree = "<group>"; };
+		461BECAE0FA669650014E684 /* SourceCodeOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCodeOpener.h; sourceTree = "<group>"; };
+		461BECAF0FA669650014E684 /* SourceCodeOpener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceCodeOpener.m; sourceTree = "<group>"; };
+		461BECB20FA6697F0014E684 /* IUTPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTPreference.h; sourceTree = "<group>"; };
+		461BECB30FA6697F0014E684 /* IUTPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTPreference.m; sourceTree = "<group>"; };
+		461BECCB0FA669BB0014E684 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		461BECD70FA669F80014E684 /* isd_logo_60x40_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isd_logo_60x40_w.png; sourceTree = "<group>"; };
+		461BECDB0FA66A2B0014E684 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4620593C0F28CB5700857D87 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		465B04240F2056FF000E8FE2 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		46C6AB3D0F2DBE7E00BA1B73 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,7 +76,6 @@
 		46C6AB540F2DBE7E00BA1B73 /* IUTTestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunner.m; sourceTree = "<group>"; };
 		46C6AB550F2DBE7E00BA1B73 /* IUTTestRunnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestRunnerViewController.h; sourceTree = "<group>"; };
 		46C6AB560F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestRunnerViewController.m; sourceTree = "<group>"; };
-		46C6ADC90F2DDFC800BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isd_logo_60x40.png; sourceTree = "<group>"; };
 		46C70DF30F2DE07800541593 /* RootViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewControllerTest.h; sourceTree = "<group>"; };
 		46C70DF40F2DE07800541593 /* RootViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerTest.m; sourceTree = "<group>"; };
 		46C70DF80F2DE12D00541593 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../Prefectures/Classes/RootViewController.h; sourceTree = SOURCE_ROOT; };
@@ -121,7 +131,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				46C6ADC90F2DDFC800BA1B73 /* isd_logo_60x40.png */,
+				461BECDB0FA66A2B0014E684 /* icon.png */,
+				461BECD70FA669F80014E684 /* isd_logo_60x40_w.png */,
+				461BECCB0FA669BB0014E684 /* Settings.bundle */,
 				4620593C0F28CB5700857D87 /* DetailView.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -188,6 +200,10 @@
 				46C6AB540F2DBE7E00BA1B73 /* IUTTestRunner.m */,
 				46C6AB550F2DBE7E00BA1B73 /* IUTTestRunnerViewController.h */,
 				46C6AB560F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m */,
+				461BECB20FA6697F0014E684 /* IUTPreference.h */,
+				461BECB30FA6697F0014E684 /* IUTPreference.m */,
+				461BECAE0FA669650014E684 /* SourceCodeOpener.h */,
+				461BECAF0FA669650014E684 /* SourceCodeOpener.m */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -250,7 +266,9 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				465B04250F2056FF000E8FE2 /* TestView.xib in Resources */,
 				4620593D0F28CB5700857D87 /* DetailView.xib in Resources */,
-				46C6ADCA0F2DDFC800BA1B73 /* isd_logo_60x40.png in Resources */,
+				461BECCC0FA669BB0014E684 /* Settings.bundle in Resources */,
+				461BECD80FA669F80014E684 /* isd_logo_60x40_w.png in Resources */,
+				461BECDC0FA66A2B0014E684 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +294,8 @@
 				46C6AB620F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m in Sources */,
 				46C70DF50F2DE07800541593 /* RootViewControllerTest.m in Sources */,
 				46C70DFA0F2DE12D00541593 /* RootViewController.m in Sources */,
+				461BECB00FA669650014E684 /* SourceCodeOpener.m in Sources */,
+				461BECB40FA6697F0014E684 /* IUTPreference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

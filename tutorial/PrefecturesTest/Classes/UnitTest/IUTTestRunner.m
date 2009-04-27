@@ -9,6 +9,8 @@
 #import "IUTTestRunner.h"
 #import "IUTTest.h"
 #import "/usr/include/objc/objc-class.h"
+#import "IUTLog.h"
+#import "IUTPreference.h"
 
 
 @interface IUTTestRunner(_private)
@@ -125,6 +127,12 @@
     return count;
 }
 
+- (int)badgeNumber
+{
+    return [fails count] + [errors count];
+}
+
+
 #pragma mark -
 #pragma mark query result
 
@@ -239,46 +247,78 @@
 
     float count = (float)[self allTestCount];
     int i = 0;
+    IUTPreference *preference = [IUTPreference sharedPreference];
 
     for (IUTTest *site in sites) {
-NSLog(NSStringFromClass([site class]));
+        NSString *siteName = NSStringFromClass([site class]);
+IUTLog(siteName);
         [site clearAssertedCount];
         for (NSString *testSel in site.tests) {
-            if (stopRequest) goto ABORT_TEST;
+            if (stopRequest) {
+                goto ABORT_TEST;
+            }
+            if (![preference needsTest:siteName methodName:testSel]) {
+IUTLog(@"  %@ was skiped", testSel);
+                continue;
+            }
+            
             @try {
-NSLog(@"  %@", testSel);
+IUTLog(@"  %@", testSel);
                 [tests addObject:testSel];
-NSLog(@"  　　setUp");
+                
+                // setup
+IUTLog(@"  　　setUp");
                 [self performSelectorOnMainThread:@"setUp" target:site];
                 if (self.exception) @throw self.exception;
                 if (site.testAfterDelay != 0.0) {
                     [NSThread sleepForTimeInterval:site.testAfterDelay];
                 }
-NSLog(@"  　　test");
+                
+                // test
+IUTLog(@"  　　test");
+            
                 [self performSelectorOnMainThread:testSel target:site];
                 if (self.exception) @throw self.exception;
+                
+                // next test
+                while(site.nextTest) {
+                    SEL aSelector = site.nextTest;
+                    site.nextTest = NULL;
+                    if (site.nextTestAfterDelay != 0.0) {
+                        [NSThread sleepForTimeInterval:site.nextTestAfterDelay];
+                    }
+IUTLog(@"  　　  %@", NSStringFromSelector(aSelector));
+                    [self performSelectorOnMainThread:NSStringFromSelector(aSelector) target:site];
+                    if (self.exception) {
+                        @throw self.exception;
+                    }
+                }
+                
                 [passes addObject:testSel];
+                [preference addPassedTest:siteName methodName:testSel];
             }
             @catch (NSException * e) {
                 if ([[e name] isEqualToString:IUTAssertionExceptionName]) {
-NSLog(@"    *** Fail:%@", [IUTAssertion assertionInfoForException:e].message);
+IUTLog(@"    *** Fail:%@", [IUTAssertion assertionInfoForException:e].message);
                     [fails addObject:e];
                 } else {
                     NSException *anException = [IUTAssertion assertionErrorExceptionFrom:e klass:[site class] selectorName:testSel];
-NSLog(@"    Error:%@", [IUTAssertion assertionInfoForException:anException].message);
+IUTLog(@"    Error:%@", [IUTAssertion assertionInfoForException:anException].message);
                     [errors addObject:anException];
                 }
             }
             @finally {
                 self.exception = nil;
                 @try {
-NSLog(@"  　　tearDown");
+                
+                // tear down
+IUTLog(@"  　　tearDown");
                     [self performSelectorOnMainThread:@"tearDown" target:site];
                     if (self.exception) @throw self.exception;
                 }
                 @catch (NSException * e) {
                     NSException *anException = [IUTAssertion assertionErrorExceptionFrom:e klass:[site class] selectorName:testSel];
-NSLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].message);
+IUTLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].message);
                     [errors addObject:anException];
                 }
                 @finally {
@@ -290,8 +330,17 @@ NSLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].messag
         }
     }
 
-ABORT_TEST:    
+ABORT_TEST:
+
+    // store result to preference
+    if (self.isPassed) {
+        [preference clearPassedTests];
+    }
+    [preference synchronize];
+    
+    // notify didTest
     [sender performSelectorOnMainThread:@selector(didTest:) withObject:nil waitUntilDone:YES];
+    
     [pool release];
     [NSThread exit];
 }

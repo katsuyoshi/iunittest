@@ -18,6 +18,7 @@
     IBOutlet UIActivityIndicatorView *indicatorView;
     IBOutlet UILabel *resultLabel;
     IBOutlet IUTResultTableViewController *resultTestViewController;
+    IBOutlet UIBarButtonItem *allButton;
 
     BOOL running;
 
@@ -30,6 +31,7 @@
 @property (retain) IBOutlet UIActivityIndicatorView *indicatorView;
 @property (retain) IBOutlet UILabel *resultLabel;
 @property (retain) IBOutlet IUTResultTableViewController *resultTestViewController;
+@property (retain) IBOutlet UIBarButtonItem *allButton;
 
 
 @property (getter=isRunning) BOOL running;
@@ -42,11 +44,16 @@
 - (IBAction)startAction:(id)sender;
 - (IBAction)stopAction:(id)sender;
 
+- (IBAction)clearPassedTestsAction:(id)sender;
+
+
 
 - (void)setButtonTitle:(NSString *)title;
 
 - (void)setProgress:(NSNumber *)value;
 - (void)willTest:(id)sender;
 - (void)didTest:(id)sender;
+
+
 
 @end

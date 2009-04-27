@@ -80,6 +80,7 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
     assertedCount++;
     info.actual = value;
     info.expected = expected;
+    info.negativeCase = YES;
     if (value == expected) {
         @throw [self assertExceptionWithInfo:info];
     }
@@ -89,21 +90,30 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
 
 - (void)assertEqual:(id)value expected:(id)expected info:(IUTAssertionInfo *)info
 {
-    assertedCount++;
-    info.actual = value;
-    info.expected = expected;
-    if ([value isEqual:expected] == NO) {
-        @throw [self assertExceptionWithInfo:info];
+    if (expected == nil) {
+        [self assertNil:value info:info];
+    } else {
+        assertedCount++;
+        info.actual = value;
+        info.expected = expected;
+        if ([value isEqual:expected] == NO) {
+            @throw [self assertExceptionWithInfo:info];
+        }
     }
 }
 
 - (void)assertNotEqual:(id)value expected:(id)expected info:(IUTAssertionInfo *)info
 {
-    assertedCount++;
-    info.actual = value;
-    info.expected = expected;
-    if ([value isEqual:expected]) {
-        @throw [self assertExceptionWithInfo:info];
+    if (expected == nil) {
+        [self assertNotNil:value info:info];
+    } else {
+        assertedCount++;
+        info.actual = value;
+        info.expected = expected;
+        info.negativeCase = YES;
+        if ([value isEqual:expected]) {
+            @throw [self assertExceptionWithInfo:info];
+        }
     }
 }
 
@@ -165,7 +175,7 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
 - (void)assertNil:(id)value info:(IUTAssertionInfo *)info
 {
     assertedCount++;
-    info.expected = @"nil";
+    info.expected = nil;
     info.actual = value;
     if (value != nil) {
         @throw [self assertExceptionWithInfo:info];
@@ -175,9 +185,40 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
 - (void)assertNotNil:(id)value info:(IUTAssertionInfo *)info
 {
     assertedCount++;
-    info.expected = @"not nil";
+    info.expected = nil;
     info.actual = value;
+    info.negativeCase = YES;
     if (value == nil) {
+        @throw [self assertExceptionWithInfo:info];
+    }
+}
+
+- (void)assertEqualPoint:(CGPoint)value expected:(CGPoint)expected info:(IUTAssertionInfo *)info
+{
+    assertedCount++;
+    info.expected = NSStringFromCGPoint(expected);
+    info.actual = NSStringFromCGPoint(value);
+    if (!CGPointEqualToPoint(value, expected)) {
+        @throw [self assertExceptionWithInfo:info];
+    }
+}
+
+- (void)assertEqualSize:(CGSize)value expected:(CGSize)expected info:(IUTAssertionInfo *)info
+{
+    assertedCount++;
+    info.expected = NSStringFromCGSize(expected);
+    info.actual = NSStringFromCGSize(value);
+    if (!CGSizeEqualToSize(value, expected)) {
+        @throw [self assertExceptionWithInfo:info];
+    }
+}
+
+- (void)assertEqualRect:(CGRect)value expected:(CGRect)expected info:(IUTAssertionInfo *)info
+{
+    assertedCount++;
+    info.expected = NSStringFromCGRect(expected);
+    info.actual = NSStringFromCGRect(value);
+    if (!CGRectEqualToRect(value, expected)) {
         @throw [self assertExceptionWithInfo:info];
     }
 }

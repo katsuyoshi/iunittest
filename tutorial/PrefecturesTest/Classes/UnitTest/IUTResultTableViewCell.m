@@ -44,7 +44,7 @@
             self.resultLabel.backgroundColor = ([exception.name isEqualToString:IUTAssertionExceptionName]) ? [IUTTestRunner failureColor] : [IUTTestRunner errorColor];
             self.resultLabel.text = info.reason;
         } else {
-            self.resultLabel.backgroundColor = [UIColor redColor];
+            self.resultLabel.backgroundColor = [IUTTestRunner errorColor];
             self.resultLabel.text = exception.reason;
         }
         self.bgView.backgroundColor = self.resultLabel.backgroundColor;

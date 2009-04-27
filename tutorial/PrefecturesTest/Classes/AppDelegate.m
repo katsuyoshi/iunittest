@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SourceCodeOpener.h"
 
 @implementation AppDelegate
 
@@ -15,9 +15,16 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
+/* FIXME:
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [self setMyAppBoolProperty:[defaults boolForKey:MY_BOOL_PREF_KEY]];
+*/
+
     // Override point for customization after application launch
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
+    
+    [SourceCodeOpener sourceCodeOpener];
 }
 
 

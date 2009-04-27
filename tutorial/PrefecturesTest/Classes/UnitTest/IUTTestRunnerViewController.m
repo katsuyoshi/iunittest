@@ -8,6 +8,7 @@
 
 #import "IUTTestRunnerViewController.h"
 #import "IUTTestRunner.h"
+#import "IUTPreference.h"
 
 
 @interface IUTTestRunnerViewController(_private)
@@ -16,7 +17,7 @@
 
 @implementation IUTTestRunnerViewController
 
-@synthesize progressView, startStopButton, indicatorView, resultLabel, resultTestViewController;
+@synthesize progressView, startStopButton, indicatorView, resultLabel, resultTestViewController, allButton;
 @synthesize running, runner;
 
 
@@ -54,6 +55,10 @@
     [self.view addSubview:resultTestViewController.view];
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:resultTestViewController.view];
     [resultTestViewController.tableView reloadData];
+        
+    if ([[IUTPreference sharedPreference]isAutoRun]) {
+        [self startAction:self];
+    }
 }
 
 /*
@@ -76,6 +81,7 @@
     [startStopButton release];
     [indicatorView release];
     [resultLabel release];
+    [allButton release];
     [runner release];
     [super dealloc];
 }
@@ -95,6 +101,8 @@
     }
     [resultTestViewController.tableView reloadData];
     self.view.backgroundColor = runner.backgroundColor;
+
+    allButton.enabled = !self.isRunning && [[IUTPreference sharedPreference] canClear];
 }
 
 - (IBAction)startStopAction:(id)sender
@@ -119,11 +127,18 @@
     [self.runner stop:self];    
 }
 
+- (IBAction)clearPassedTestsAction:(id)sender
+{
+    [[IUTPreference sharedPreference] clearPassedTests];
+    [self updateControls];
+}
+
 
 - (void)setButtonTitle:(NSString *)title
 {
     [startStopButton setTitle:title forState:UIControlStateNormal];
     [startStopButton setTitle:title forState:UIControlStateHighlighted];
+    [startStopButton setTitle:title forState:UIControlStateDisabled];
 }
 
 - (void)setProgress:(NSNumber *)value
@@ -133,6 +148,7 @@
 
 - (void)willTest:(id)sender
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     [self updateControls];
 }
 
@@ -140,6 +156,7 @@
 {
     [self stopAction:self];
     [self updateControls];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = self.runner.badgeNumber;
 }
 
 

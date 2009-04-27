@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define IUTASSERTIN_INF(m)  [IUTAssertionInfo assertionInfoWithClass:[self class] selector:_cmd message:m filePath:[[[NSString alloc] initWithCString:__FILE__] autorelease] line:__LINE__]
+#define IUTASSERTION_INF(m)  [IUTAssertionInfo assertionInfoWithClass:[self class] selector:_cmd message:m filePath:[[[NSString alloc] initWithCString:__FILE__] autorelease] line:__LINE__]
 
 @interface IUTAssertionInfo : NSObject {
 
@@ -22,6 +22,8 @@
     id expected;
     id actual;
     id delta;
+    
+    BOOL negativeCase;
 }
 
 @property (retain, readonly) NSString *className;
@@ -36,6 +38,7 @@
 @property (retain) id actual;
 @property (retain) id delta;
 
+@property BOOL negativeCase;
 
 + (id)assertionInfoWithClass:(Class)klass selector:(SEL)selector message:(NSString *)message filePath:(NSString *)path line:(NSInteger)line;
 
