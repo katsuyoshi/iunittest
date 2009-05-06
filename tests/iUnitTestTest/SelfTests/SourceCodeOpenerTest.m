@@ -9,6 +9,8 @@
 #import "SourceCodeOpenerTest.h"
 
 
+#if TARGET_IPHONE_SIMULATOR
+
 /*
  * run 'opencode' before test here.
  */
@@ -47,5 +49,13 @@
     [opener open:IUTASSERTION_INF(nil)];
 }
 
+- (void)testOpenHere
+{
+    // If success, this line will be hilighted.
+    SOURCE_CODE_OPENER_OPEN_HERE();
+}
+
 
 @end
+
+#endif

@@ -10,9 +10,12 @@
 #import "IUTTest.h"
 #import "SourceCodeOpener.h"
 
+#if TARGET_IPHONE_SIMULATOR
 
 @interface SourceCodeOpenerTest : IUTTest {
     SourceCodeOpener *opener;
 }
 
 @end
+
+#endif

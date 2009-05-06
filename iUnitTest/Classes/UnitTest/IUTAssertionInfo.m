@@ -88,3 +88,17 @@
 
 
 @end
+
+
+#if TARGET_IPHONE_SIMULATOR
+
+@implementation SourceCodeOpener(IUTAssertionInfo)
+
+- (void)open:(IUTAssertionInfo *)info
+{
+    [self open:info.filePath line:info.line];
+}
+
+@end
+
+#endif

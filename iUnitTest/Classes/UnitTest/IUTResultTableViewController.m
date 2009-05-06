@@ -118,10 +118,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+#if TARGET_IPHONE_SIMULATOR
     IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:[self resultForIndexPath:indexPath]];
     if (info) {
         [[SourceCodeOpener sourceCodeOpener] open:info];
     }
+#endif
 
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }

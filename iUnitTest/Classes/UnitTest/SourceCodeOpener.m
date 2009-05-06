@@ -6,6 +6,10 @@
 //  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
 //
 
+
+#if TARGET_IPHONE_SIMULATOR
+
+
 #import "SourceCodeOpener.h"
 #import <sys/types.h>
 #import <sys/socket.h>
@@ -154,15 +158,17 @@
 }
 
 
-- (void)open:(IUTAssertionInfo *)info
+
+- (void)open:(NSString *)filePath line:(NSInteger)line 
 {
     if ([self isOpend]) {
-        if (info.line) {
-            NSString *cmd = [NSString stringWithFormat:@"%@:%d\n", info.filePath, info.line];
+        if (line) {
+            NSString *cmd = [NSString stringWithFormat:@"%@:%d\n", filePath, line];
             [self.fileHandle writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
         }
     }
 }
 
-
 @end
+
+#endif
