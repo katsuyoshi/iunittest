@@ -33,6 +33,14 @@
  */
 + (BOOL)doesCollectTestsInSuper;
 
+/**
+ * Returns a Boolean value that indicates whether to test even sucessed in RunFailuresOnly setting.
+ * default is NO.
+ * @return YES if force tests in this class, otherwise NO.
+ */
++ (BOOL)forceTestsAnyway;
+
+
 - (void)setUp;
 - (void)tearDown;
 

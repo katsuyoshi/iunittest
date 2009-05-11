@@ -103,6 +103,9 @@
 - (BOOL)needsTest:(NSString *)className methodName:(NSString *)methodName
 {
     if (self.isRunFailuresOnly) {
+        if ([NSClassFromString(className) forceTestsAnyway]) {
+            return YES;
+        }
         NSMutableArray *methods = [self.passedTests objectForKey:className];
         return (methods && [methods containsObject:methodName]) ? NO : YES;
     } else {

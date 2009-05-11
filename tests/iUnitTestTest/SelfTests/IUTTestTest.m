@@ -61,6 +61,11 @@
     ASSERT_NOTHING_RAISED(@throw @"exception");
 }
 
++ (BOOL)forceTestsAnyway
+{
+    return YES;
+}
+
 #endif
 
 @end
