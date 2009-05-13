@@ -7,6 +7,7 @@
 //
 
 #import "IUTPreference.h"
+#import "IUTTest.h"
 
 #define AUTO_RUN_KEY    @"AUTO_RUN"
 #define RUN_FAILURES_ONLY_KEY    @"RUN_FAILURES_ONLY"
