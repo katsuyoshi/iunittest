@@ -39,6 +39,7 @@
 		466AF4EC0F2F049B004A649A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 466AF4EB0F2F049B004A649A /* icon.png */; };
 		466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 466EDC870F40955400D2B9AC /* GTMSenTestCase.m */; };
 		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
+		4675E44A0FBB881600AB902D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4675E4490FBB881600AB902D /* Localizable.strings */; };
 		46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */; };
 		46BDC4EE0F723F400021B6D5 /* IUTTestInheritedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */; };
 		46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */; };
@@ -100,6 +101,8 @@
 		46718BFF0F38156F00272C9A /* SenTestAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertion.h; sourceTree = "<group>"; };
 		46718C000F381B1F00272C9A /* SenTestAssertionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestAssertionTest.h; sourceTree = "<group>"; };
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
+		4675E4470FBB880A00AB902D /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4675E44B0FBB881F00AB902D /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40_w.png; path = ../../iUnitTest/isd_logo_60x40_w.png; sourceTree = SOURCE_ROOT; };
 		46BDC4EC0F723F400021B6D5 /* IUTTestInheritedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestInheritedTest.h; sourceTree = "<group>"; };
 		46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestInheritedTest.m; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 				465B044B0F205A79000E8FE2 /* MainWindow.xib */,
 				465B044C0F205A79000E8FE2 /* TestView.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				4675E4490FBB881600AB902D /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -369,6 +373,7 @@
 				4659B8F30F33FABC0030D828 /* Default.png in Resources */,
 				4626E80A0F5602CD00F3510A /* Settings.bundle in Resources */,
 				46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */,
+				4675E44A0FBB881600AB902D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +420,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4675E4490FBB881600AB902D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4675E4470FBB880A00AB902D /* English */,
+				4675E44B0FBB881F00AB902D /* Japanese */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {

@@ -67,6 +67,9 @@
     } while(0)
 
 
+#define ASSERT_EQUAL_LOCALIZED_STRING(_expected, _value) ASSERT_EQUAL(NSLocalizedString(_expected, nil), _value)
+
+
 
 
 extern NSString * const IUTAssertionExceptionName;

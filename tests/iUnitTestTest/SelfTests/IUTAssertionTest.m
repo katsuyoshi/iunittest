@@ -1125,4 +1125,13 @@
     } while(0);
 }
 
+// Using setting application, set language Japanese before test.
+- (void)testAssertEqualLocalizedString
+{
+    ASSERT_EQUAL(@"テスト", NSLocalizedString(@"Test", nil));
+    ASSERT_NOTHING_RAISED(
+        ASSERT_EQUAL_LOCALIZED_STRING(@"Test", NSLocalizedString(@"Test", nil));
+    );
+}
+
 @end
