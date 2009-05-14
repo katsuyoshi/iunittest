@@ -84,8 +84,6 @@ extern NSString * const IUTAssertionInfoKey;
 
 @property (readonly) int assertedCount;
 
-+ (IUTAssertionInfo *)assertionInfoForException:(NSException *)exception;
-
 + (NSException *)assertionErrorExceptionFrom:(NSException *)exception klass:(Class)klass selectorName:(NSString *)selectorString;
 
 - (void)clearAssertedCount;

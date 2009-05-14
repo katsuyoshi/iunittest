@@ -61,6 +61,11 @@
     ASSERT_NOTHING_RAISED(@throw @"exception");
 }
 
+- (void)testThisClassAlways
+{
+    ASSERT_FAIL(@"fail always");
+}
+
 + (BOOL)forceTestsAnyway
 {
     return YES;

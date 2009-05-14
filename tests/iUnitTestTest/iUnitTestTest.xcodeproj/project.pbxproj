@@ -40,6 +40,8 @@
 		466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 466EDC870F40955400D2B9AC /* GTMSenTestCase.m */; };
 		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
 		4675E44A0FBB881600AB902D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4675E4490FBB881600AB902D /* Localizable.strings */; };
+		469F8E920FBC6029004FD86F /* NSExceptionExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F8E910FBC6029004FD86F /* NSExceptionExtension.m */; };
+		469F8F390FBC67DB004FD86F /* NSExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F8F380FBC67DB004FD86F /* NSExceptionTest.m */; };
 		46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */; };
 		46BDC4EE0F723F400021B6D5 /* IUTTestInheritedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */; };
 		46C6AD920F2DDB4100BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6AD910F2DDB4100BA1B73 /* isd_logo_60x40.png */; };
@@ -103,6 +105,10 @@
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
 		4675E4470FBB880A00AB902D /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4675E44B0FBB881F00AB902D /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		469F8E900FBC6029004FD86F /* NSExceptionExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionExtension.h; sourceTree = "<group>"; };
+		469F8E910FBC6029004FD86F /* NSExceptionExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionExtension.m; sourceTree = "<group>"; };
+		469F8F370FBC67DB004FD86F /* NSExceptionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionTest.h; sourceTree = "<group>"; };
+		469F8F380FBC67DB004FD86F /* NSExceptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionTest.m; sourceTree = "<group>"; };
 		46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = isd_logo_60x40_w.png; path = ../../iUnitTest/isd_logo_60x40_w.png; sourceTree = SOURCE_ROOT; };
 		46BDC4EC0F723F400021B6D5 /* IUTTestInheritedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTTestInheritedTest.h; sourceTree = "<group>"; };
 		46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTTestInheritedTest.m; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 				4626E8070F5600F000F3510A /* IUTPreference.m */,
 				4658377F0FA49BE40075C1C0 /* SourceCodeOpener.h */,
 				465837800FA49BE40075C1C0 /* SourceCodeOpener.m */,
+				469F8E900FBC6029004FD86F /* NSExceptionExtension.h */,
+				469F8E910FBC6029004FD86F /* NSExceptionExtension.m */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -284,6 +292,8 @@
 				46BDC4ED0F723F400021B6D5 /* IUTTestInheritedTest.m */,
 				465837E30FA51AAA0075C1C0 /* SourceCodeOpenerTest.h */,
 				465837E40FA51AAA0075C1C0 /* SourceCodeOpenerTest.m */,
+				469F8F370FBC67DB004FD86F /* NSExceptionTest.h */,
+				469F8F380FBC67DB004FD86F /* NSExceptionTest.m */,
 			);
 			path = SelfTests;
 			sourceTree = "<group>";
@@ -416,6 +426,8 @@
 				46BDC4EE0F723F400021B6D5 /* IUTTestInheritedTest.m in Sources */,
 				465837810FA49BE40075C1C0 /* SourceCodeOpener.m in Sources */,
 				465837E50FA51AAA0075C1C0 /* SourceCodeOpenerTest.m in Sources */,
+				469F8E920FBC6029004FD86F /* NSExceptionExtension.m in Sources */,
+				469F8F390FBC67DB004FD86F /* NSExceptionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

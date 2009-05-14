@@ -9,6 +9,7 @@
 #import "IUTResultTableViewControllerTest.h"
 #import "IUTTestRunnerMock.h"
 #import "IUTResultTableViewCell.h"
+#import "NSExceptionExtension.h"
 
 
 
@@ -88,7 +89,7 @@
     for (row = 0; row < [results count]; row++) {
         IUTResultTableViewCell *cell = (IUTResultTableViewCell *)[controller tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
         NSException *exception = [results objectAtIndex:row];
-        ASSERT_EQUAL([[IUTAssertion assertionInfoForException:exception] reason], cell.resultLabel.text);
+        ASSERT_EQUAL([exception.assertionInfo reason], cell.resultLabel.text);
     }
 
     section = 1;

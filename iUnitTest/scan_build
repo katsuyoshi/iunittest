@@ -1,2 +1,2 @@
 #!/bin/sh
-scan-build xcodebuild
+scan-build -k -V xcodebuild -configuration Debug -sdk iphonesimulator2.2.1

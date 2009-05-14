@@ -11,6 +11,7 @@
 #import "/usr/include/objc/objc-class.h"
 #import "IUTLog.h"
 #import "IUTPreference.h"
+#import "NSExceptionExtension.h"
 
 
 @interface IUTTestRunner(_private)
@@ -165,6 +166,11 @@
     return [UIColor yellowColor];
 }
 
++ (UIColor *)failureColor2
+{
+    return [self successColor];
+}
+
 + (UIColor *)errorColor
 {
     return [UIColor redColor];
@@ -183,6 +189,11 @@
 - (UIColor *)failureColor
 {
     return [[self class] failureColor];
+}
+
+- (UIColor *)failureColor2
+{
+    return [[self class] failureColor2];
 }
 
 - (UIColor *)errorColor
@@ -298,12 +309,12 @@ IUTLog(@"  　　  %@", NSStringFromSelector(aSelector));
                 [preference addPassedTest:siteName methodName:testSel];
             }
             @catch (NSException * e) {
-                if ([[e name] isEqualToString:IUTAssertionExceptionName]) {
-IUTLog(@"    *** Fail:%@", [IUTAssertion assertionInfoForException:e].message);
+                if ([e isFailure]) {
+IUTLog(@"    *** Fail:%@", e.assertionInfo.message);
                     [fails addObject:e];
                 } else {
                     NSException *anException = [IUTAssertion assertionErrorExceptionFrom:e klass:[site class] selectorName:testSel];
-IUTLog(@"    Error:%@", [IUTAssertion assertionInfoForException:anException].message);
+IUTLog(@"    Error:%@", e.assertionInfo.message);
                     [errors addObject:anException];
                 }
             }
@@ -318,7 +329,7 @@ IUTLog(@"  　　tearDown");
                 }
                 @catch (NSException * e) {
                     NSException *anException = [IUTAssertion assertionErrorExceptionFrom:e klass:[site class] selectorName:testSel];
-IUTLog(@"  Error:%@", [IUTAssertion assertionInfoForException:anException].message);
+IUTLog(@"  Error:%@", e.assertionInfo.message);
                     [errors addObject:anException];
                 }
                 @finally {

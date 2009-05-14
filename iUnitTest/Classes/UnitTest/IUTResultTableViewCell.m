@@ -9,6 +9,7 @@
 #import "IUTResultTableViewCell.h"
 #import "IUTAssertion.h"
 #import "IUTTestRunner.h"
+#import "NSExceptionExtension.h"
 
 
 @implementation IUTResultTableViewCell
@@ -39,9 +40,9 @@
         [exception release];
         exception = [anException retain];
 
-        IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:exception];
+        IUTAssertionInfo *info = exception.assertionInfo;
         if (info) {
-            self.resultLabel.backgroundColor = ([exception.name isEqualToString:IUTAssertionExceptionName]) ? [IUTTestRunner failureColor] : [IUTTestRunner errorColor];
+            self.resultLabel.backgroundColor = [exception color];
             self.resultLabel.text = info.reason;
         } else {
             self.resultLabel.backgroundColor = [IUTTestRunner errorColor];

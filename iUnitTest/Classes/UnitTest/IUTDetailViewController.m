@@ -9,6 +9,7 @@
 #import "IUTDetailViewController.h"
 #import "IUTAssertion.h"
 #import "IUTTestRunner.h"
+#import "NSExceptionExtension.h"
 
 
 @implementation IUTDetailViewController
@@ -65,7 +66,7 @@
         [exception release];
         exception = [anException retain];
 
-        IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:exception];
+        IUTAssertionInfo *info = exception.assertionInfo;
         if (info) {
             self.view.backgroundColor = ([exception.name isEqualToString:IUTAssertionExceptionName]) ? [IUTTestRunner failureColor] : [IUTTestRunner errorColor];
             self.textView.text = info.reason;

@@ -11,6 +11,7 @@
 #import "IUTResultTableViewCell.h"
 #import "IUTTestRunnerViewController.h"
 #import "SourceCodeOpener.h"
+#import "NSExceptionExtension.h"
 
 
 @implementation IUTResultTableViewController
@@ -119,7 +120,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 #if TARGET_IPHONE_SIMULATOR
-    IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:[self resultForIndexPath:indexPath]];
+    IUTAssertionInfo *info = [self resultForIndexPath:indexPath].assertionInfo;
     if (info) {
         [[SourceCodeOpener sourceCodeOpener] open:info];
     }
