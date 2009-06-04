@@ -129,8 +129,10 @@
     [resolvingServices removeObject:sender];
     
     if (![self isOpend]) {
-        NSString *hostName = [NSString stringWithFormat:@"%@.", [[NSProcessInfo processInfo] hostName]];
-        if ([[sender hostName] isEqualToString:hostName]) {
+        // to make local domain
+        NSString *hostName = [[NSProcessInfo processInfo] hostName];
+        hostName = [[[hostName componentsSeparatedByString:@"."] objectAtIndex:0] stringByAppendingString:@".local."];
+        if ([[sender hostName] caseInsensitiveCompare:hostName] == NSOrderedSame) {
             
             if ([[sender addresses] count] > 0) {
                 NSData * address;
