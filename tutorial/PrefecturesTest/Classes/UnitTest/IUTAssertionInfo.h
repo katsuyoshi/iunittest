@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SourceCodeOpener.h"
 
 
 #define IUTASSERTION_INF(m)  [IUTAssertionInfo assertionInfoWithClass:[self class] selector:_cmd message:m filePath:[[[NSString alloc] initWithCString:__FILE__] autorelease] line:__LINE__]
@@ -46,3 +47,14 @@
 
 
 @end
+
+
+#if TARGET_IPHONE_SIMULATOR
+
+@interface SourceCodeOpener(IUTAssertionInfo)
+
+- (void)open:(IUTAssertionInfo *)info;
+
+@end
+
+#endif

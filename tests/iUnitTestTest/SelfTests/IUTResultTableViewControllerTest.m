@@ -90,6 +90,7 @@
         IUTResultTableViewCell *cell = (IUTResultTableViewCell *)[controller tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
         NSException *exception = [results objectAtIndex:row];
         ASSERT_EQUAL([exception.assertionInfo reason], cell.resultLabel.text);
+        ASSERT_EQUAL_INT(UITableViewCellAccessoryDetailDisclosureButton, cell.accessoryType);
     }
 
     section = 1;
@@ -98,6 +99,7 @@
         IUTResultTableViewCell *cell = (IUTResultTableViewCell *)[controller tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
         NSException *exception = [results objectAtIndex:row];
         ASSERT_EQUAL([exception reason], cell.resultLabel.text);
+        ASSERT_EQUAL_INT(UITableViewCellAccessoryDetailDisclosureButton, cell.accessoryType);
     }
 
 }
@@ -110,13 +112,6 @@
     ASSERT_EQUAL_INT(UITableViewCellSelectionStyleBlue, cell.selectionStyle);
     cell = [controller tableView:self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
     ASSERT_EQUAL_INT(UITableViewCellSelectionStyleBlue, cell.selectionStyle);
-}
-
-
-- (void)testAccessoryTypeForRowWithIndexPath
-{
-    ASSERT_EQUAL_INT(UITableViewCellAccessoryDetailDisclosureButton, [controller tableView:controller.tableView accessoryTypeForRowWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]);
-    ASSERT_EQUAL_INT(UITableViewCellAccessoryDetailDisclosureButton, [controller tableView:controller.tableView accessoryTypeForRowWithIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]]);
 }
 
 

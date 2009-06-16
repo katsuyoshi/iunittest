@@ -7,6 +7,7 @@
 //
 
 #import "IUTPreference.h"
+#import "IUTTest.h"
 
 #define AUTO_RUN_KEY    @"AUTO_RUN"
 #define RUN_FAILURES_ONLY_KEY    @"RUN_FAILURES_ONLY"
@@ -103,6 +104,9 @@
 - (BOOL)needsTest:(NSString *)className methodName:(NSString *)methodName
 {
     if (self.isRunFailuresOnly) {
+        if ([NSClassFromString(className) forceTestsAnyway]) {
+            return YES;
+        }
         NSMutableArray *methods = [self.passedTests objectForKey:className];
         return (methods && [methods containsObject:methodName]) ? NO : YES;
     } else {

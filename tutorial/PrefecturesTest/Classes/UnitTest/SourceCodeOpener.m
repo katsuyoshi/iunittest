@@ -6,6 +6,10 @@
 //  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
 //
 
+
+#if TARGET_IPHONE_SIMULATOR
+
+
 #import "SourceCodeOpener.h"
 #import <sys/types.h>
 #import <sys/socket.h>
@@ -125,8 +129,10 @@
     [resolvingServices removeObject:sender];
     
     if (![self isOpend]) {
-        NSString *hostName = [NSString stringWithFormat:@"%@.", [[NSProcessInfo processInfo] hostName]];
-        if ([[sender hostName] isEqualToString:hostName]) {
+        // to make local domain
+        NSString *hostName = [[NSProcessInfo processInfo] hostName];
+        hostName = [[[hostName componentsSeparatedByString:@"."] objectAtIndex:0] stringByAppendingString:@".local."];
+        if ([[sender hostName] caseInsensitiveCompare:hostName] == NSOrderedSame) {
             
             if ([[sender addresses] count] > 0) {
                 NSData * address;
@@ -154,15 +160,17 @@
 }
 
 
-- (void)open:(IUTAssertionInfo *)info
+
+- (void)open:(NSString *)filePath line:(NSInteger)line 
 {
     if ([self isOpend]) {
-        if (info.line) {
-            NSString *cmd = [NSString stringWithFormat:@"%@:%d\n", info.filePath, info.line];
+        if (line) {
+            NSString *cmd = [NSString stringWithFormat:@"%@:%d\n", filePath, line];
             [self.fileHandle writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
         }
     }
 }
 
-
 @end
+
+#endif

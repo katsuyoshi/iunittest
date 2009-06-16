@@ -11,6 +11,7 @@
 #import "IUTResultTableViewCell.h"
 #import "IUTTestRunnerViewController.h"
 #import "SourceCodeOpener.h"
+#import "NSExceptionExtension.h"
 
 
 @implementation IUTResultTableViewController
@@ -108,20 +109,18 @@
     }
     
     cell.exception = [self resultForIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     return cell;
 }
 
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewCellAccessoryDetailDisclosureButton;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:[self resultForIndexPath:indexPath]];
+#if TARGET_IPHONE_SIMULATOR
+    IUTAssertionInfo *info = [self resultForIndexPath:indexPath].assertionInfo;
     if (info) {
         [[SourceCodeOpener sourceCodeOpener] open:info];
     }
+#endif
 
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
 }
