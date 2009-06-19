@@ -23,6 +23,10 @@
 		462057A10F28B2EC00857D87 /* IUTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462057A00F28B2EC00857D87 /* IUTDetailViewController.m */; };
 		4620593F0F28CB7300857D87 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4620593E0F28CB7300857D87 /* DetailView.xib */; };
 		4626E80A0F5602CD00F3510A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4626E8090F5602CD00F3510A /* Settings.bundle */; };
+		462AC4CD0FEB020B00B587D6 /* UIViewBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 462AC4CC0FEB020B00B587D6 /* UIViewBasedTest.m */; };
+		462AC4D30FEB025600B587D6 /* UIViewBasedTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 462AC4D20FEB025600B587D6 /* UIViewBasedTestTest.m */; };
+		462AC5430FEB20B400B587D6 /* UITableViewBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 462AC5420FEB20B400B587D6 /* UITableViewBasedTest.m */; };
+		462AC5670FEB237C00B587D6 /* UITableViewBasedTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 462AC54D0FEB231D00B587D6 /* UITableViewBasedTestTest.m */; };
 		464F76C60F4861AF005C0C89 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C50F4861AF005C0C89 /* Foo.m */; };
 		464F76C90F4864F9005C0C89 /* FooTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C80F4864F9005C0C89 /* FooTest.m */; };
 		465837810FA49BE40075C1C0 /* SourceCodeOpener.m in Sources */ = {isa = PBXBuildFile; fileRef = 465837800FA49BE40075C1C0 /* SourceCodeOpener.m */; };
@@ -70,6 +74,14 @@
 		4626E8060F5600F000F3510A /* IUTPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTPreference.h; sourceTree = "<group>"; };
 		4626E8070F5600F000F3510A /* IUTPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTPreference.m; sourceTree = "<group>"; };
 		4626E8090F5602CD00F3510A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../iUnitTest/Settings.bundle; sourceTree = SOURCE_ROOT; };
+		462AC4CB0FEB020B00B587D6 /* UIViewBasedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewBasedTest.h; sourceTree = "<group>"; };
+		462AC4CC0FEB020B00B587D6 /* UIViewBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewBasedTest.m; sourceTree = "<group>"; };
+		462AC4D10FEB025600B587D6 /* UIViewBasedTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewBasedTestTest.h; sourceTree = "<group>"; };
+		462AC4D20FEB025600B587D6 /* UIViewBasedTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewBasedTestTest.m; sourceTree = "<group>"; };
+		462AC5410FEB20B400B587D6 /* UITableViewBasedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewBasedTest.h; sourceTree = "<group>"; };
+		462AC5420FEB20B400B587D6 /* UITableViewBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewBasedTest.m; sourceTree = "<group>"; };
+		462AC54C0FEB231D00B587D6 /* UITableViewBasedTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewBasedTestTest.h; sourceTree = "<group>"; };
+		462AC54D0FEB231D00B587D6 /* UITableViewBasedTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewBasedTestTest.m; sourceTree = "<group>"; };
 		464F76C40F4861AF005C0C89 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		464F76C50F4861AF005C0C89 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		464F76C70F4864F9005C0C89 /* FooTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooTest.h; sourceTree = "<group>"; };
@@ -310,6 +322,10 @@
 		46D6DAD60F21A1B600D830A5 /* ControllerTest */ = {
 			isa = PBXGroup;
 			children = (
+				462AC4CB0FEB020B00B587D6 /* UIViewBasedTest.h */,
+				462AC4CC0FEB020B00B587D6 /* UIViewBasedTest.m */,
+				462AC5410FEB20B400B587D6 /* UITableViewBasedTest.h */,
+				462AC5420FEB20B400B587D6 /* UITableViewBasedTest.m */,
 				46D6DAD70F21A2C200D830A5 /* UITabBarBasedTest.h */,
 				46D6DAD80F21A2C200D830A5 /* UITabBarBasedTest.m */,
 				46D6DC8C0F21BB6500D830A5 /* UINavigationBarBasedTest.h */,
@@ -323,6 +339,10 @@
 		46D6DC490F21B97000D830A5 /* ControllerTest */ = {
 			isa = PBXGroup;
 			children = (
+				462AC4D10FEB025600B587D6 /* UIViewBasedTestTest.h */,
+				462AC4D20FEB025600B587D6 /* UIViewBasedTestTest.m */,
+				462AC54C0FEB231D00B587D6 /* UITableViewBasedTestTest.h */,
+				462AC54D0FEB231D00B587D6 /* UITableViewBasedTestTest.m */,
 				46D6DC4A0F21B98900D830A5 /* UITabBarBasedTestTest.h */,
 				46D6DC4B0F21B98900D830A5 /* UITabBarBasedTestTest.m */,
 				46D6DCD00F21C23800D830A5 /* UINavigationBarBasedTestTest.h */,
@@ -428,6 +448,10 @@
 				465837E50FA51AAA0075C1C0 /* SourceCodeOpenerTest.m in Sources */,
 				469F8E920FBC6029004FD86F /* NSExceptionExtension.m in Sources */,
 				469F8F390FBC67DB004FD86F /* NSExceptionTest.m in Sources */,
+				462AC4CD0FEB020B00B587D6 /* UIViewBasedTest.m in Sources */,
+				462AC4D30FEB025600B587D6 /* UIViewBasedTestTest.m in Sources */,
+				462AC5430FEB20B400B587D6 /* UITableViewBasedTest.m in Sources */,
+				462AC5670FEB237C00B587D6 /* UITableViewBasedTestTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +477,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iUnitTestTest_Prefix.pch;
@@ -461,6 +486,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = iUnitTestTest;
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphonesimulator3.0;
 			};
 			name = Debug;
