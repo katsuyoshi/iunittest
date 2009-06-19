@@ -477,14 +477,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iUnitTestTest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = iUnitTestTest;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphonesimulator3.0;
@@ -502,7 +502,7 @@
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = iUnitTestTest;
-				SDKROOT = iphonesimulator2.2;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Release;
 		};
