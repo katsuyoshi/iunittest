@@ -26,6 +26,11 @@
     return NO;
 }
 
++ (BOOL)forceTestsAnyway
+{
+    return NO;
+}
+
 - (id)init
 {
     self = [super init];

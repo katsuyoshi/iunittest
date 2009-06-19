@@ -24,7 +24,7 @@
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
     
-    [SourceCodeOpener sourceCodeOpener];
+    SOURCE_CODE_OPENER_START();
 }
 
 

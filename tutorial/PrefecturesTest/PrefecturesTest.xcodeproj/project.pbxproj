@@ -33,6 +33,7 @@
 		46C6AB620F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB560F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m */; };
 		46C70DF50F2DE07800541593 /* RootViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C70DF40F2DE07800541593 /* RootViewControllerTest.m */; };
 		46C70DFA0F2DE12D00541593 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C70DF90F2DE12D00541593 /* RootViewController.m */; };
+		46EE56DD0FE853F1001BE323 /* NSExceptionExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EE56DC0FE853F1001BE323 /* NSExceptionExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		46C70DF40F2DE07800541593 /* RootViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerTest.m; sourceTree = "<group>"; };
 		46C70DF80F2DE12D00541593 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../Prefectures/Classes/RootViewController.h; sourceTree = SOURCE_ROOT; };
 		46C70DF90F2DE12D00541593 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../Prefectures/Classes/RootViewController.m; sourceTree = SOURCE_ROOT; };
+		46EE56DB0FE853F1001BE323 /* NSExceptionExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionExtension.h; sourceTree = "<group>"; };
+		46EE56DC0FE853F1001BE323 /* NSExceptionExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionExtension.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				46C6AB400F2DBE7E00BA1B73 /* ControllerTest */,
+				46EE56DB0FE853F1001BE323 /* NSExceptionExtension.h */,
+				46EE56DC0FE853F1001BE323 /* NSExceptionExtension.m */,
 				46C6AB470F2DBE7E00BA1B73 /* IUTAssertion.h */,
 				46C6AB480F2DBE7E00BA1B73 /* IUTAssertion.m */,
 				46C6AB490F2DBE7E00BA1B73 /* IUTAssertionInfo.h */,
@@ -296,6 +301,7 @@
 				46C70DFA0F2DE12D00541593 /* RootViewController.m in Sources */,
 				461BECB00FA669650014E684 /* SourceCodeOpener.m in Sources */,
 				461BECB40FA6697F0014E684 /* IUTPreference.m in Sources */,
+				46EE56DD0FE853F1001BE323 /* NSExceptionExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +319,7 @@
 				GCC_PREFIX_HEADER = iUnitTest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = PrefecturesTest;
+				SDKROOT = iphoneos2.2;
 			};
 			name = Debug;
 		};
@@ -325,6 +332,7 @@
 				GCC_PREFIX_HEADER = iUnitTest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = PrefecturesTest;
+				SDKROOT = iphoneos2.2;
 			};
 			name = Release;
 		};

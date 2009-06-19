@@ -262,7 +262,7 @@
 
     for (IUTTest *site in sites) {
         NSString *siteName = NSStringFromClass([site class]);
-IUTLog(siteName);
+IUTLog(@"%@", siteName);
         [site clearAssertedCount];
         for (NSString *testSel in site.tests) {
             if (stopRequest) {

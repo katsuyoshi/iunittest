@@ -9,6 +9,7 @@
 #import "IUTResultTableViewCell.h"
 #import "IUTAssertion.h"
 #import "IUTTestRunner.h"
+#import "NSExceptionExtension.h"
 
 
 @implementation IUTResultTableViewCell
@@ -19,7 +20,6 @@
 
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {
-
         resultLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         resultLabel.font = [UIFont fontWithName:resultLabel.font.fontName size:14];
         resultLabel.numberOfLines = 0;
@@ -39,9 +39,9 @@
         [exception release];
         exception = [anException retain];
 
-        IUTAssertionInfo *info =[IUTAssertion assertionInfoForException:exception];
+        IUTAssertionInfo *info = exception.assertionInfo;
         if (info) {
-            self.resultLabel.backgroundColor = ([exception.name isEqualToString:IUTAssertionExceptionName]) ? [IUTTestRunner failureColor] : [IUTTestRunner errorColor];
+            self.resultLabel.backgroundColor = [exception color];
             self.resultLabel.text = info.reason;
         } else {
             self.resultLabel.backgroundColor = [IUTTestRunner errorColor];

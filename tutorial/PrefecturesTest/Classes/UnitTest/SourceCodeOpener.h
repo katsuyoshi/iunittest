@@ -7,8 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IUTAssertionInfo.h"
 
+
+#if TARGET_IPHONE_SIMULATOR
+
+#define SOURCE_CODE_OPENER_START()      [SourceCodeOpener sourceCodeOpener]
+#define SOURCE_CODE_OPENER_OPEN_HERE()  [[SourceCodeOpener sourceCodeOpener] open:[NSString stringWithFormat:@"%s", __FILE__] line:__LINE__]
+
+#else
+
+#define SOURCE_CODE_OPENER_START()      
+#define SOURCE_CODE_OPENER_OPEN_HERE()  
+
+#endif
+
+
+
+#if TARGET_IPHONE_SIMULATOR
 
 @interface SourceCodeOpener : NSObject {
     
@@ -42,7 +57,9 @@
 
 
 
-- (void)open:(IUTAssertionInfo *)info;
+- (void)open:(NSString *)filePath line:(NSInteger)line;
 
 
 @end
+
+#endif

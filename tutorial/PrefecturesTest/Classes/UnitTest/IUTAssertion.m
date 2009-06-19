@@ -24,16 +24,6 @@ NSString * const IUTAssertionInfoKey = @"IUTAssertionInfoKey";
 
 @synthesize assertedCount;
 
-
-+ (IUTAssertionInfo *)assertionInfoForException:(NSException *)exception
-{
-    if ([[exception name] isEqualToString:IUTAssertionExceptionName] ||
-        [[exception name] isEqualToString:IUTAssertionErrorExceptionName]) {
-        return [[exception userInfo] objectForKey:IUTAssertionInfoKey];
-    }
-    return nil;
-}
-
 + (NSException *)assertionErrorExceptionFrom:(NSException *)anException klass:(Class)klass selectorName:(NSString *)selectorString
 {
     IUTAssertionInfo *info = [IUTAssertionInfo assertionInfoWithClass:klass selector:NSSelectorFromString(selectorString) message:anException.reason filePath:[NSString stringWithFormat:@"%@.m", NSStringFromClass(klass)] line:0];
