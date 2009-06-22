@@ -79,13 +79,36 @@
     }
 }
 
+
+- (NSNumber *)willSetUp
+{
+    return [NSNumber numberWithDouble:0.0];
+}
+
 - (void)setUp
 {
+}
+
+- (NSNumber *)didSetUp
+{
+    return [NSNumber numberWithDouble:testAfterDelay];
+}
+
+
+- (NSNumber *)willTearDown
+{
+    return [NSNumber numberWithDouble:0.0];
 }
 
 - (void)tearDown
 {
 }
+
+- (NSNumber *)didTearDown
+{
+    return [NSNumber numberWithDouble:0.0];
+}
+
 
 - (void)performTest:(SEL)selector afterDelay:(NSTimeInterval)delay
 {

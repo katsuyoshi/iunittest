@@ -21,6 +21,8 @@
     NSException *exception;
 
     BOOL stopRequest;
+    
+    NSTimeInterval delay;
 }
 
 @property (retain, readonly) NSMutableArray *sites;
