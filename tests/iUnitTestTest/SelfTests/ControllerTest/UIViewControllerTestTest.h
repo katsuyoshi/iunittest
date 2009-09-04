@@ -16,37 +16,37 @@
 
 @end
 
-@interface UIViewControllerTestWithNavicationTest : UIViewControllerTest {
+@interface UIViewControllerTestWithNavigationTest : UIViewControllerTestTest {
 
 }
 
 @end
 
-@interface UIViewControllerTestWithTabBarTest : UIViewControllerTest {
+@interface UIViewControllerTestWithTabBarTest : UIViewControllerTestTest {
 
 }
 
 @end
 
-@interface UIViewControllerTestWithNavicationAndTabBarTest : UIViewControllerTest {
+@interface UIViewControllerTestWithNavigationAndTabBarTest : UIViewControllerTestTest {
 
 }
 
 @end
 
-@interface UIViewControllerTestWithClassNameTest : UIViewControllerTest {
+@interface UIViewControllerTestWithClassNameTest : UIViewControllerTestTest {
 
 }
 
 @end
 
-@interface UIViewControllerTestWithNibNameTest : UIViewControllerTest {
+@interface UIViewControllerTestWithNibNameTest : UIViewControllerTestTest {
 
 }
 
 @end
 
-@interface UIViewControllerTestWithClassNameAndDifferentNibNameTest : UIViewControllerTest {
+@interface UIViewControllerTestWithClassNameAndDifferentNibNameTest : UIViewControllerTestTest {
 
 }
 

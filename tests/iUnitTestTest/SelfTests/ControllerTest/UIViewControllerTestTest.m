@@ -14,7 +14,12 @@
 #pragma mark -
 #pragma mark -
 
-@implementation UIViewControllerTestWithNavicationTest
+@implementation UIViewControllerTestTest
+
+- (NSString *)viewControllerName
+{
+    return @"UIViewController";
+}
 
 - (void)testViewControllers
 {
@@ -31,7 +36,7 @@
 #pragma mark -
 #pragma mark -
 
-@implementation UIViewControllerTestTest
+@implementation UIViewControllerTestWithNavigationTest
 
 - (BOOL)hasNavigationController
 {
@@ -87,7 +92,7 @@
 #pragma mark -
 #pragma mark -
 
-@implementation UIViewControllerTestWithNavicationAndTabBarTest
+@implementation UIViewControllerTestWithNavigationAndTabBarTest
 
 - (BOOL)hasNavigationController
 {

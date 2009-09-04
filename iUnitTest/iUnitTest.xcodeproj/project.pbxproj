@@ -38,6 +38,7 @@
 		46C6AB620F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6AB560F2DBE7E00BA1B73 /* IUTTestRunnerViewController.m */; };
 		46C6ADCA0F2DDFC800BA1B73 /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 46C6ADC90F2DDFC800BA1B73 /* isd_logo_60x40.png */; };
 		46F523A2105111F600AC87E8 /* UIViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F523A1105111F600AC87E8 /* UIViewControllerTest.m */; };
+		46F524E81051260900AC87E8 /* UITableViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F524E71051260900AC87E8 /* UITableViewControllerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,9 @@
 		46C6ADC90F2DDFC800BA1B73 /* isd_logo_60x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isd_logo_60x40.png; sourceTree = "<group>"; };
 		46F523A0105111F600AC87E8 /* UIViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerTest.h; sourceTree = "<group>"; };
 		46F523A1105111F600AC87E8 /* UIViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTest.m; sourceTree = "<group>"; };
+		46F524E61051260900AC87E8 /* UITableViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerTest.h; sourceTree = "<group>"; };
+		46F524E71051260900AC87E8 /* UITableViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerTest.m; sourceTree = "<group>"; };
+		46F524E9105126A700AC87E8 /* UITableViewControllerTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerTestHelper.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +227,7 @@
 				468052AC0FA58ACB003B5A71 /* SourceCodeOpener.m */,
 				469F8E820FBC5A4C004FD86F /* NSExceptionExtension.h */,
 				469F8E830FBC5A4C004FD86F /* NSExceptionExtension.m */,
+				46F524E9105126A700AC87E8 /* UITableViewControllerTestHelper.h */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -230,6 +235,8 @@
 		46C6AB400F2DBE7E00BA1B73 /* ControllerTest */ = {
 			isa = PBXGroup;
 			children = (
+				46F524E61051260900AC87E8 /* UITableViewControllerTest.h */,
+				46F524E71051260900AC87E8 /* UITableViewControllerTest.m */,
 				462AC4B20FEAFF2400B587D6 /* UIViewBasedTest.h */,
 				462AC4B30FEAFF2400B587D6 /* UIViewBasedTest.m */,
 				462AC5A10FEB29B200B587D6 /* UITableViewBasedTest.h */,
@@ -333,6 +340,7 @@
 				462AC4B40FEAFF2400B587D6 /* UIViewBasedTest.m in Sources */,
 				462AC5A30FEB29B200B587D6 /* UITableViewBasedTest.m in Sources */,
 				46F523A2105111F600AC87E8 /* UIViewControllerTest.m in Sources */,
+				46F524E81051260900AC87E8 /* UITableViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

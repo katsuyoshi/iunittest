@@ -101,7 +101,7 @@
 
 - (NSString *)viewControllerName
 {
-    return @"UIViewController";
+    return nil;
 }
 
 - (BOOL)hasNavigationController
