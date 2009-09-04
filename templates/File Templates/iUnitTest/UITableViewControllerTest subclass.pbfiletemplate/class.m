@@ -7,6 +7,7 @@
 //
 
 #import "UITableViewControllerTestTest.h"
+#import "UITableViewControllerTestHelper.h"
 
 
 @implementation UITableViewControllerTestTest
