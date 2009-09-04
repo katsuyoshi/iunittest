@@ -356,12 +356,15 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iUnitTest_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = Info.plist;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = iUnitTest;
 				SDKROOT = iphonesimulator3.0;
 			};
@@ -379,7 +382,7 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = iUnitTest;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "015FD9E7-03D2-482E-8BF0-526AFEFF0A8C";
-				SDKROOT = iphonesimulator2.2;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Release;
 		};
