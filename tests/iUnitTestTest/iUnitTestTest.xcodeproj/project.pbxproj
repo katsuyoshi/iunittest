@@ -57,6 +57,11 @@
 		46D6DCD20F21C23800D830A5 /* UINavigationBarBasedTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DCD10F21C23800D830A5 /* UINavigationBarBasedTestTest.m */; };
 		46D6DD170F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */; };
 		46D6DD1B0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */; };
+		46F523CC105113AF00AC87E8 /* UIViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F523CB105113AF00AC87E8 /* UIViewControllerTest.m */; };
+		46F523D1105113E600AC87E8 /* UIViewControllerTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F523D0105113E600AC87E8 /* UIViewControllerTestTest.m */; };
+		46F5245010511B0C00AC87E8 /* MyViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5244E10511B0C00AC87E8 /* MyViewController2.m */; };
+		46F5245110511B0C00AC87E8 /* MyViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F5244F10511B0C00AC87E8 /* MyViewController2.xib */; };
+		46F5245410511B2300AC87E8 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5245310511B2300AC87E8 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +159,15 @@
 		46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarAndNavigationBarBasedTest.m; sourceTree = "<group>"; };
 		46D6DD190F21C4C500D830A5 /* UITabBarAndNavigationTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarAndNavigationTestTest.h; sourceTree = "<group>"; };
 		46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarAndNavigationTestTest.m; sourceTree = "<group>"; };
+		46F523CA105113AF00AC87E8 /* UIViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerTest.h; sourceTree = "<group>"; };
+		46F523CB105113AF00AC87E8 /* UIViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTest.m; sourceTree = "<group>"; };
+		46F523CF105113E600AC87E8 /* UIViewControllerTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerTestTest.h; sourceTree = "<group>"; };
+		46F523D0105113E600AC87E8 /* UIViewControllerTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTestTest.m; sourceTree = "<group>"; };
+		46F5244D10511B0C00AC87E8 /* MyViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController2.h; sourceTree = "<group>"; };
+		46F5244E10511B0C00AC87E8 /* MyViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController2.m; sourceTree = "<group>"; };
+		46F5244F10511B0C00AC87E8 /* MyViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController2.xib; sourceTree = "<group>"; };
+		46F5245210511B2300AC87E8 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		46F5245310511B2300AC87E8 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +329,11 @@
 			children = (
 				46D6D7ED0F214CCF00D830A5 /* IUTTestRunnerMock.h */,
 				46D6D7EE0F214CCF00D830A5 /* IUTTestRunnerMock.m */,
+				46F5245210511B2300AC87E8 /* MyViewController.h */,
+				46F5245310511B2300AC87E8 /* MyViewController.m */,
+				46F5244D10511B0C00AC87E8 /* MyViewController2.h */,
+				46F5244E10511B0C00AC87E8 /* MyViewController2.m */,
+				46F5244F10511B0C00AC87E8 /* MyViewController2.xib */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -332,6 +351,8 @@
 				46D6DC8D0F21BB6500D830A5 /* UINavigationBarBasedTest.m */,
 				46D6DD150F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.h */,
 				46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */,
+				46F523CA105113AF00AC87E8 /* UIViewControllerTest.h */,
+				46F523CB105113AF00AC87E8 /* UIViewControllerTest.m */,
 			);
 			path = ControllerTest;
 			sourceTree = "<group>";
@@ -349,6 +370,8 @@
 				46D6DCD10F21C23800D830A5 /* UINavigationBarBasedTestTest.m */,
 				46D6DD190F21C4C500D830A5 /* UITabBarAndNavigationTestTest.h */,
 				46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */,
+				46F523CF105113E600AC87E8 /* UIViewControllerTestTest.h */,
+				46F523D0105113E600AC87E8 /* UIViewControllerTestTest.m */,
 			);
 			path = ControllerTest;
 			sourceTree = "<group>";
@@ -404,6 +427,7 @@
 				4626E80A0F5602CD00F3510A /* Settings.bundle in Resources */,
 				46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */,
 				4675E44A0FBB881600AB902D /* Localizable.strings in Resources */,
+				46F5245110511B0C00AC87E8 /* MyViewController2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +476,10 @@
 				462AC4D30FEB025600B587D6 /* UIViewBasedTestTest.m in Sources */,
 				462AC5430FEB20B400B587D6 /* UITableViewBasedTest.m in Sources */,
 				462AC5670FEB237C00B587D6 /* UITableViewBasedTestTest.m in Sources */,
+				46F523CC105113AF00AC87E8 /* UIViewControllerTest.m in Sources */,
+				46F523D1105113E600AC87E8 /* UIViewControllerTestTest.m in Sources */,
+				46F5245010511B0C00AC87E8 /* MyViewController2.m in Sources */,
+				46F5245410511B2300AC87E8 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
