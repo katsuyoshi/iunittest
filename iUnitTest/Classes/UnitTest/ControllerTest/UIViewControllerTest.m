@@ -71,10 +71,10 @@
     NSMutableArray *modalViewControllers = [NSMutableArray array];
     UIViewController *modalViewController = [_baseViwController modalViewController];
     while (modalViewController) {
-        [modalViewControllers insertObject:modalViewController atIndex:0];
+        [modalViewControllers addObject:modalViewController];
         modalViewController = [modalViewController modalViewController];
     }
-    for (UIViewController *controller in modalViewControllers) {
+    for (UIViewController *controller in [modalViewControllers reverseObjectEnumerator]) {
         [controller dismissModalViewControllerAnimated:NO];
     }
     
