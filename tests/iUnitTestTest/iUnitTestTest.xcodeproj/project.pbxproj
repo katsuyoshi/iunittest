@@ -62,6 +62,11 @@
 		46F5245010511B0C00AC87E8 /* MyViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5244E10511B0C00AC87E8 /* MyViewController2.m */; };
 		46F5245110511B0C00AC87E8 /* MyViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F5244F10511B0C00AC87E8 /* MyViewController2.xib */; };
 		46F5245410511B2300AC87E8 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5245310511B2300AC87E8 /* MyViewController.m */; };
+		46F5247810511CB200AC87E8 /* UITableViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5247710511CB200AC87E8 /* UITableViewControllerTest.m */; };
+		46F5247F10511E6C00AC87E8 /* UITableViewControllerTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5247E10511E6C00AC87E8 /* UITableViewControllerTestTest.m */; };
+		46F5248210511EA000AC87E8 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5248110511EA000AC87E8 /* MyTableViewController.m */; };
+		46F5249410511FD900AC87E8 /* MyTableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F5249210511FD900AC87E8 /* MyTableViewController2.m */; };
+		46F5249510511FD900AC87E8 /* MyTableViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F5249310511FD900AC87E8 /* MyTableViewController2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +173,15 @@
 		46F5244F10511B0C00AC87E8 /* MyViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController2.xib; sourceTree = "<group>"; };
 		46F5245210511B2300AC87E8 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		46F5245310511B2300AC87E8 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		46F5247610511CB200AC87E8 /* UITableViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerTest.h; sourceTree = "<group>"; };
+		46F5247710511CB200AC87E8 /* UITableViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerTest.m; sourceTree = "<group>"; };
+		46F5247D10511E6C00AC87E8 /* UITableViewControllerTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerTestTest.h; sourceTree = "<group>"; };
+		46F5247E10511E6C00AC87E8 /* UITableViewControllerTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerTestTest.m; sourceTree = "<group>"; };
+		46F5248010511EA000AC87E8 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		46F5248110511EA000AC87E8 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		46F5249110511FD900AC87E8 /* MyTableViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController2.h; sourceTree = "<group>"; };
+		46F5249210511FD900AC87E8 /* MyTableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController2.m; sourceTree = "<group>"; };
+		46F5249310511FD900AC87E8 /* MyTableViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewController2.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +348,11 @@
 				46F5244D10511B0C00AC87E8 /* MyViewController2.h */,
 				46F5244E10511B0C00AC87E8 /* MyViewController2.m */,
 				46F5244F10511B0C00AC87E8 /* MyViewController2.xib */,
+				46F5248010511EA000AC87E8 /* MyTableViewController.h */,
+				46F5248110511EA000AC87E8 /* MyTableViewController.m */,
+				46F5249110511FD900AC87E8 /* MyTableViewController2.h */,
+				46F5249210511FD900AC87E8 /* MyTableViewController2.m */,
+				46F5249310511FD900AC87E8 /* MyTableViewController2.xib */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -353,6 +372,8 @@
 				46D6DD160F21C40400D830A5 /* UITabBarAndNavigationBarBasedTest.m */,
 				46F523CA105113AF00AC87E8 /* UIViewControllerTest.h */,
 				46F523CB105113AF00AC87E8 /* UIViewControllerTest.m */,
+				46F5247610511CB200AC87E8 /* UITableViewControllerTest.h */,
+				46F5247710511CB200AC87E8 /* UITableViewControllerTest.m */,
 			);
 			path = ControllerTest;
 			sourceTree = "<group>";
@@ -372,6 +393,8 @@
 				46D6DD1A0F21C4C500D830A5 /* UITabBarAndNavigationTestTest.m */,
 				46F523CF105113E600AC87E8 /* UIViewControllerTestTest.h */,
 				46F523D0105113E600AC87E8 /* UIViewControllerTestTest.m */,
+				46F5247D10511E6C00AC87E8 /* UITableViewControllerTestTest.h */,
+				46F5247E10511E6C00AC87E8 /* UITableViewControllerTestTest.m */,
 			);
 			path = ControllerTest;
 			sourceTree = "<group>";
@@ -428,6 +451,7 @@
 				46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */,
 				4675E44A0FBB881600AB902D /* Localizable.strings in Resources */,
 				46F5245110511B0C00AC87E8 /* MyViewController2.xib in Resources */,
+				46F5249510511FD900AC87E8 /* MyTableViewController2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +504,10 @@
 				46F523D1105113E600AC87E8 /* UIViewControllerTestTest.m in Sources */,
 				46F5245010511B0C00AC87E8 /* MyViewController2.m in Sources */,
 				46F5245410511B2300AC87E8 /* MyViewController.m in Sources */,
+				46F5247810511CB200AC87E8 /* UITableViewControllerTest.m in Sources */,
+				46F5247F10511E6C00AC87E8 /* UITableViewControllerTestTest.m in Sources */,
+				46F5248210511EA000AC87E8 /* MyTableViewController.m in Sources */,
+				46F5249410511FD900AC87E8 /* MyTableViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
