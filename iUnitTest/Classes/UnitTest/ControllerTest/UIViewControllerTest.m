@@ -65,6 +65,14 @@
     [self buildViewController];
 }
 
+- (NSNumber *)willTearDown
+{
+    if (_viewController.editing) {
+        _viewController.editing = NO;
+    }
+    return [super willTearDown];
+}
+
 - (void)tearDown
 {
     // close modal views
@@ -112,6 +120,36 @@
 - (BOOL)hasTabBarController
 {
     return NO;
+}
+
+
+#pragma mark -
+#pragma mark touches
+
+- (void)touchLeftBarButtonItem
+{
+    UINavigationItem *navigationItem = self.viewController.navigationController.visibleViewController.navigationItem;
+    if (navigationItem) {
+        id target = navigationItem.leftBarButtonItem.target;
+        if (target) {
+            [target performSelector:navigationItem.leftBarButtonItem.action];
+        } else {
+            [self.viewController.navigationController popViewControllerAnimated:YES];
+        }
+    }
+}
+ 
+- (void)touchRightBarButtonItem
+{
+    UINavigationItem *navigationItem = self.viewController.navigationController.visibleViewController.navigationItem;
+    if (navigationItem) {
+        id target = navigationItem.leftBarButtonItem.target;
+        if (target) {
+            [target performSelector:navigationItem.rightBarButtonItem.action];
+        } else {
+            // CHECKME:
+        }
+    }
 }
 
 @end

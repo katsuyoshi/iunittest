@@ -52,4 +52,11 @@
 - (BOOL)hasTabBarController;
 
 
+/** Perform left bar button item action of top(visible) view controller. */ 
+- (void)touchLeftBarButtonItem;
+
+/** Perform right bar button item action of top(visible) view controller. */ 
+- (void)touchRightBarButtonItem;
+
+
 @end

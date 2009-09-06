@@ -12,6 +12,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		4608BD7F0F56F7B80011302D /* IUTPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 4626E8070F5600F000F3510A /* IUTPreference.m */; };
+		461693121053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 461693111053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m */; };
 		461CFE920F299E0100315F17 /* IUTTestRunnerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D7EE0F214CCF00D830A5 /* IUTTestRunnerMock.m */; };
 		461CFE930F299E0200315F17 /* IUTAssertionInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D6D3F20F20812A00D830A5 /* IUTAssertionInfoTest.m */; };
 		461CFE940F299E0200315F17 /* IUTAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 465B04600F2065B3000E8FE2 /* IUTAssertionTest.m */; };
@@ -78,6 +79,8 @@
 		32CA4F630368D1EE00C91783 /* iUnitTestTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iUnitTestTest_Prefix.pch; sourceTree = "<group>"; };
 		4608BBC60F56DD6C0011302D /* IUTPreferenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTPreferenceTest.h; sourceTree = "<group>"; };
 		4608BBC70F56DD6C0011302D /* IUTPreferenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTPreferenceTest.m; sourceTree = "<group>"; };
+		461693101053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerTouchBarButtonItemTest.h; sourceTree = "<group>"; };
+		461693111053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTouchBarButtonItemTest.m; sourceTree = "<group>"; };
 		4620579F0F28B2EC00857D87 /* IUTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTDetailViewController.h; sourceTree = "<group>"; };
 		462057A00F28B2EC00857D87 /* IUTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTDetailViewController.m; sourceTree = "<group>"; };
 		4620593E0F28CB7300857D87 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DetailView.xib; path = ../../iUnitTest/DetailView.xib; sourceTree = SOURCE_ROOT; };
@@ -395,6 +398,8 @@
 				46F523D0105113E600AC87E8 /* UIViewControllerTestTest.m */,
 				46F5247D10511E6C00AC87E8 /* UITableViewControllerTestTest.h */,
 				46F5247E10511E6C00AC87E8 /* UITableViewControllerTestTest.m */,
+				461693101053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.h */,
+				461693111053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m */,
 			);
 			path = ControllerTest;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				46F5247F10511E6C00AC87E8 /* UITableViewControllerTestTest.m in Sources */,
 				46F5248210511EA000AC87E8 /* MyTableViewController.m in Sources */,
 				46F5249410511FD900AC87E8 /* MyTableViewController2.m in Sources */,
+				461693121053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +544,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iUnitTestTest_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = 4.2;
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "";

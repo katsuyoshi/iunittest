@@ -11,6 +11,17 @@
 
 @interface MyViewController : UIViewController {
 
+    UIBarButtonItem *preLeftBarButtonItem;
+    
+    BOOL saved;
+    BOOL canceled;
 }
+
+@property (readonly) BOOL saved;
+@property (readonly) BOOL canceled;
+
+- (void)saveAction:(id)sender;
+- (void)cancelAction:(id)sender;
+
 
 @end
