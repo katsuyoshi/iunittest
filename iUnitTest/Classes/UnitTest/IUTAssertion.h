@@ -69,6 +69,8 @@
 
 #define ASSERT_EQUAL_LOCALIZED_STRING(_expected, _value) ASSERT_EQUAL(NSLocalizedString(_expected, nil), _value)
 
+#define ASSERT_EQUAL_LOCALIZED_STRING_FROM_TABLE(_expected, _table, _value) ASSERT_EQUAL(NSLocalizedStringFromTable(_expected, _table, nil), _value)
+
 
 
 
