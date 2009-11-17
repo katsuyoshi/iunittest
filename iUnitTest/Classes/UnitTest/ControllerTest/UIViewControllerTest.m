@@ -70,7 +70,12 @@
     if (_viewController.editing) {
         _viewController.editing = NO;
     }
-    return [super willTearDown];
+    BOOL hasAlertView = CLOSE_ALL_ALERTVIEWS();
+    if (hasAlertView) {
+        return [NSNumber numberWithDouble:1.0];
+    } else {
+        return [super willTearDown];
+    }
 }
 
 - (void)tearDown

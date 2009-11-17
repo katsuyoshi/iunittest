@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IUTTest.h"
+#import "AppAgentHelper.h"
 
 
 @interface UIViewControllerTest : IUTTest {

@@ -46,6 +46,8 @@
 		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
 		4675E44A0FBB881600AB902D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4675E4490FBB881600AB902D /* Localizable.strings */; };
 		468D068710B2B237006C87A6 /* PerformSetUpSequenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D068610B2B237006C87A6 /* PerformSetUpSequenceTest.m */; };
+		468D087910B2E4FC006C87A6 /* AppAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D087710B2E4FC006C87A6 /* AppAgent.m */; };
+		468D088410B2EAE0006C87A6 /* AppAgentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D088310B2EAE0006C87A6 /* AppAgentTest.m */; };
 		469F8E920FBC6029004FD86F /* NSExceptionExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F8E910FBC6029004FD86F /* NSExceptionExtension.m */; };
 		469F8F390FBC67DB004FD86F /* NSExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F8F380FBC67DB004FD86F /* NSExceptionTest.m */; };
 		46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */; };
@@ -133,6 +135,11 @@
 		4675E44B0FBB881F00AB902D /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		468D068510B2B237006C87A6 /* PerformSetUpSequenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformSetUpSequenceTest.h; sourceTree = "<group>"; };
 		468D068610B2B237006C87A6 /* PerformSetUpSequenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformSetUpSequenceTest.m; sourceTree = "<group>"; };
+		468D087610B2E4FC006C87A6 /* AppAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAgent.h; sourceTree = "<group>"; };
+		468D087710B2E4FC006C87A6 /* AppAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAgent.m; sourceTree = "<group>"; };
+		468D087810B2E4FC006C87A6 /* AppAgentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAgentHelper.h; sourceTree = "<group>"; };
+		468D088210B2EADF006C87A6 /* AppAgentTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAgentTest.h; sourceTree = "<group>"; };
+		468D088310B2EAE0006C87A6 /* AppAgentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAgentTest.m; sourceTree = "<group>"; };
 		469F8E900FBC6029004FD86F /* NSExceptionExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionExtension.h; sourceTree = "<group>"; };
 		469F8E910FBC6029004FD86F /* NSExceptionExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionExtension.m; sourceTree = "<group>"; };
 		469F8F370FBC67DB004FD86F /* NSExceptionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionTest.h; sourceTree = "<group>"; };
@@ -276,6 +283,9 @@
 		465B043D0F205A62000E8FE2 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				468D087810B2E4FC006C87A6 /* AppAgentHelper.h */,
+				468D087610B2E4FC006C87A6 /* AppAgent.h */,
+				468D087710B2E4FC006C87A6 /* AppAgent.m */,
 				46D6DAD60F21A1B600D830A5 /* ControllerTest */,
 				46718BFF0F38156F00272C9A /* SenTestAssertion.h */,
 				466EDC860F40955400D2B9AC /* GTMSenTestCase.h */,
@@ -310,6 +320,8 @@
 		465B045E0F20659F000E8FE2 /* SelfTests */ = {
 			isa = PBXGroup;
 			children = (
+				468D088210B2EADF006C87A6 /* AppAgentTest.h */,
+				468D088310B2EAE0006C87A6 /* AppAgentTest.m */,
 				46D6DC490F21B97000D830A5 /* ControllerTest */,
 				46D6D8060F2161CD00D830A5 /* Helpers */,
 				46D6D3F10F20812A00D830A5 /* IUTAssertionInfoTest.h */,
@@ -520,6 +532,8 @@
 				46F5249410511FD900AC87E8 /* MyTableViewController2.m in Sources */,
 				461693121053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m in Sources */,
 				468D068710B2B237006C87A6 /* PerformSetUpSequenceTest.m in Sources */,
+				468D087910B2E4FC006C87A6 /* AppAgent.m in Sources */,
+				468D088410B2EAE0006C87A6 /* AppAgentTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
