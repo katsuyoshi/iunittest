@@ -1,16 +1,16 @@
 //
-//  FooTest.m
+//  PerformSetUpSequenceTest.m
 //  iUnitTestTest
 //
-//  Created by Katsuyoshi Ito on 09/02/15.
+//  Created by Katsuyoshi Ito on 09/11/17.
 //  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
 //
 
-#import "FooTest.h"
+#import "PerformSetUpSequenceTest.h"
 
 
 
-@implementation FooTest
+@implementation PerformSetUpSequenceTest
 
 - (void)setUp
 {
@@ -19,6 +19,8 @@
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(fooDidChange:) name:FooDidChangeNotification object:foo];
     notifiedCount = 0;
+    
+    [self performSetUpSequence:@selector(setUpSequence1) afterDelay:0];
 }
 
 - (void)tearDown
@@ -39,42 +41,25 @@
 #pragma mark -
 #pragma mark Helpers
 
+- (void)setUpSequence1
+{
+    foo.bar = 1;    
+    [self performSetUpSequence:@selector(setUpSequence2) afterDelay:0];
+}
+
+- (void)setUpSequence2
+{
+    foo.bar = 2;
+}
 
 #pragma mark -
 #pragma mark Tests
 
-
-/*
-// It won't be a success.
-// Because fooDidChange: is called after testNotification.
-// The notifiedCount is zero this moment.
 - (void)testNotification
 {
-    foo.bar = 123;
-    foo.hoge = 456;
-    
-    ASSERT_EQUAL_INT(1, notifiedCount);
-}
-*/
-
-// It will be a success.
-// The fooDidChange: is called after testNotification.
-// Then _test2Notification is called.
-- (void)testNotification
-{
-    // The foo will notify, did change property.
-    foo.bar = 123;
-    foo.hoge = 456;
-    
-    // It makes to test after notification.
-    // You can adjust timing by afterDelay.
-    [self performTest:@selector(_test2Notification) afterDelay:0.0];
+    ASSERT_EQUAL_INT(2, notifiedCount);
 }
 
-- (void)_test2Notification
-{
-    ASSERT_EQUAL_INT(1, notifiedCount);
-}
 
 
 #pragma mark -
@@ -84,5 +69,16 @@
 {
     notifiedCount++;
 }
+
+
+#pragma mark -
+#pragma mark Option
+
+// Uncomment it, if you want to test this class except other passed test classes.
+//#define TESTS_ALWAYS
+#ifdef TESTS_ALWAYS
+- (void)testThisClassAlways { ASSERT_FAIL(@"fail always"); }
++ (BOOL)forceTestsAnyway { return YES; }
+#endif
 
 @end

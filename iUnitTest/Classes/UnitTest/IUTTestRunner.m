@@ -22,6 +22,7 @@
 - (void)performSelectorWithSelectorAndTargetArray2:(NSArray *)arg;
 - (void)performSelectorOnMainThread2:(NSString *)selectorString target:(id)target;
 - (void)runSetUp:(IUTTest *)site;
+- (void)runSetUpSequence:(IUTTest *)site;
 - (void)runTest:(IUTTest *)site selector:(NSString *)testSel;
 - (void)runTearDown:(IUTTest *)site;
 - (void)wait:(NSTimeInterval)time;
@@ -287,6 +288,24 @@ IUTLog(@"  　　setUp");
     [self wait:delay];
 }
 
+- (void)runSetUpSequence:(IUTTest *)site
+{
+IUTLog(@"  　　setUpSequence");
+            
+    // next test
+    while(site.nextSetUpSequence) {
+        SEL aSelector = site.nextSetUpSequence;
+        site.nextSetUpSequence = NULL;
+        [self wait:site.nextSetUpSequenceAfterDelay];
+
+IUTLog(@"  　　  %@", NSStringFromSelector(aSelector));
+        [self performSelectorOnMainThread:NSStringFromSelector(aSelector) target:site];
+        if (self.exception) {
+            @throw self.exception;
+        }
+    }
+}
+
 - (void)runTest:(IUTTest *)site selector:(NSString *)testSel
 {
 IUTLog(@"  　　test");
@@ -373,6 +392,7 @@ IUTLog(@"  %@", testSel);
                 [tests addObject:testSel];
                 
                 [self runSetUp:site];
+                [self runSetUpSequence:site];
                 [self runTest:site selector:testSel];
                 
                 [passes addObject:testSel];

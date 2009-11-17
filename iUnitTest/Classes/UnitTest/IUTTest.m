@@ -18,6 +18,7 @@
 @implementation IUTTest
 
 @synthesize tests, testAfterDelay;
+@synthesize nextSetUpSequence, nextSetUpSequenceAfterDelay;
 @synthesize nextTest, nextTestAfterDelay;
 
 
@@ -109,6 +110,12 @@
     return [NSNumber numberWithDouble:0.0];
 }
 
+
+- (void)performSetUpSequence:(SEL)selector afterDelay:(NSTimeInterval)delay
+{
+    self.nextSetUpSequence = selector;
+    self.nextSetUpSequenceAfterDelay = delay;
+}
 
 - (void)performTest:(SEL)selector afterDelay:(NSTimeInterval)delay
 {

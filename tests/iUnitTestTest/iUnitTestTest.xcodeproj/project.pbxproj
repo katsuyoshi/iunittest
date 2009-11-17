@@ -29,7 +29,7 @@
 		462AC5430FEB20B400B587D6 /* UITableViewBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 462AC5420FEB20B400B587D6 /* UITableViewBasedTest.m */; };
 		462AC5670FEB237C00B587D6 /* UITableViewBasedTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 462AC54D0FEB231D00B587D6 /* UITableViewBasedTestTest.m */; };
 		464F76C60F4861AF005C0C89 /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C50F4861AF005C0C89 /* Foo.m */; };
-		464F76C90F4864F9005C0C89 /* FooTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C80F4864F9005C0C89 /* FooTest.m */; };
+		464F76C90F4864F9005C0C89 /* PreformTestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F76C80F4864F9005C0C89 /* PreformTestTest.m */; };
 		465837810FA49BE40075C1C0 /* SourceCodeOpener.m in Sources */ = {isa = PBXBuildFile; fileRef = 465837800FA49BE40075C1C0 /* SourceCodeOpener.m */; };
 		465837E50FA51AAA0075C1C0 /* SourceCodeOpenerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 465837E40FA51AAA0075C1C0 /* SourceCodeOpenerTest.m */; };
 		4659B8F30F33FABC0030D828 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659B8F20F33FABC0030D828 /* Default.png */; };
@@ -45,6 +45,7 @@
 		466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 466EDC870F40955400D2B9AC /* GTMSenTestCase.m */; };
 		46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46718C010F381B1F00272C9A /* SenTestAssertionTest.m */; };
 		4675E44A0FBB881600AB902D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4675E4490FBB881600AB902D /* Localizable.strings */; };
+		468D068710B2B237006C87A6 /* PerformSetUpSequenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 468D068610B2B237006C87A6 /* PerformSetUpSequenceTest.m */; };
 		469F8E920FBC6029004FD86F /* NSExceptionExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F8E910FBC6029004FD86F /* NSExceptionExtension.m */; };
 		469F8F390FBC67DB004FD86F /* NSExceptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F8F380FBC67DB004FD86F /* NSExceptionTest.m */; };
 		46B318010F57AA5A001412EC /* isd_logo_60x40_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B318000F57AA5A001412EC /* isd_logo_60x40_w.png */; };
@@ -97,8 +98,8 @@
 		462AC54D0FEB231D00B587D6 /* UITableViewBasedTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewBasedTestTest.m; sourceTree = "<group>"; };
 		464F76C40F4861AF005C0C89 /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
 		464F76C50F4861AF005C0C89 /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
-		464F76C70F4864F9005C0C89 /* FooTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooTest.h; sourceTree = "<group>"; };
-		464F76C80F4864F9005C0C89 /* FooTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooTest.m; sourceTree = "<group>"; };
+		464F76C70F4864F9005C0C89 /* PreformTestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreformTestTest.h; sourceTree = "<group>"; };
+		464F76C80F4864F9005C0C89 /* PreformTestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreformTestTest.m; sourceTree = "<group>"; };
 		4658377F0FA49BE40075C1C0 /* SourceCodeOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCodeOpener.h; sourceTree = "<group>"; };
 		465837800FA49BE40075C1C0 /* SourceCodeOpener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceCodeOpener.m; sourceTree = "<group>"; };
 		465837E30FA51AAA0075C1C0 /* SourceCodeOpenerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCodeOpenerTest.h; sourceTree = "<group>"; };
@@ -130,6 +131,8 @@
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
 		4675E4470FBB880A00AB902D /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4675E44B0FBB881F00AB902D /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		468D068510B2B237006C87A6 /* PerformSetUpSequenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformSetUpSequenceTest.h; sourceTree = "<group>"; };
+		468D068610B2B237006C87A6 /* PerformSetUpSequenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformSetUpSequenceTest.m; sourceTree = "<group>"; };
 		469F8E900FBC6029004FD86F /* NSExceptionExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionExtension.h; sourceTree = "<group>"; };
 		469F8E910FBC6029004FD86F /* NSExceptionExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionExtension.m; sourceTree = "<group>"; };
 		469F8F370FBC67DB004FD86F /* NSExceptionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionTest.h; sourceTree = "<group>"; };
@@ -327,8 +330,10 @@
 				46718C010F381B1F00272C9A /* SenTestAssertionTest.m */,
 				464F76C40F4861AF005C0C89 /* Foo.h */,
 				464F76C50F4861AF005C0C89 /* Foo.m */,
-				464F76C70F4864F9005C0C89 /* FooTest.h */,
-				464F76C80F4864F9005C0C89 /* FooTest.m */,
+				464F76C70F4864F9005C0C89 /* PreformTestTest.h */,
+				464F76C80F4864F9005C0C89 /* PreformTestTest.m */,
+				468D068510B2B237006C87A6 /* PerformSetUpSequenceTest.h */,
+				468D068610B2B237006C87A6 /* PerformSetUpSequenceTest.m */,
 				4608BBC60F56DD6C0011302D /* IUTPreferenceTest.h */,
 				4608BBC70F56DD6C0011302D /* IUTPreferenceTest.m */,
 				46BDC4EC0F723F400021B6D5 /* IUTTestInheritedTest.h */,
@@ -494,7 +499,7 @@
 				46718C020F381B1F00272C9A /* SenTestAssertionTest.m in Sources */,
 				466EDC880F40955400D2B9AC /* GTMSenTestCase.m in Sources */,
 				464F76C60F4861AF005C0C89 /* Foo.m in Sources */,
-				464F76C90F4864F9005C0C89 /* FooTest.m in Sources */,
+				464F76C90F4864F9005C0C89 /* PreformTestTest.m in Sources */,
 				4608BD7F0F56F7B80011302D /* IUTPreference.m in Sources */,
 				46BDC4EE0F723F400021B6D5 /* IUTTestInheritedTest.m in Sources */,
 				465837810FA49BE40075C1C0 /* SourceCodeOpener.m in Sources */,
@@ -514,6 +519,7 @@
 				46F5248210511EA000AC87E8 /* MyTableViewController.m in Sources */,
 				46F5249410511FD900AC87E8 /* MyTableViewController2.m in Sources */,
 				461693121053F98C00CE56D5 /* UIViewControllerTouchBarButtonItemTest.m in Sources */,
+				468D068710B2B237006C87A6 /* PerformSetUpSequenceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

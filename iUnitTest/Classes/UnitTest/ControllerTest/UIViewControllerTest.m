@@ -82,7 +82,9 @@
         [modalViewControllers addObject:modalViewController];
         modalViewController = [modalViewController modalViewController];
     }
-    for (UIViewController *controller in [modalViewControllers reverseObjectEnumerator]) {
+    NSEnumerator *controllerEnumerator = [modalViewControllers reverseObjectEnumerator];
+    UIViewController *controller = nil;
+    while (controller = [controllerEnumerator nextObject]) {
         [controller dismissModalViewControllerAnimated:NO];
     }
     

@@ -1,5 +1,5 @@
 //
-//  FooTest.h
+//  PreformTestTest.h
 //  iUnitTestTest
 //
 //  Created by Katsuyoshi Ito on 09/02/15.
@@ -18,7 +18,7 @@
  * In this case, call -performTest:afterDelay: in your test methods;
  * It will be called in next run loop.
  */
-@interface FooTest : IUTTest {
+@interface PreformTestTest : IUTTest {
 
     Foo *foo;
     int notifiedCount;
