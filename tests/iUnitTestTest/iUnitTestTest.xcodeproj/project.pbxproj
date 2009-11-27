@@ -133,6 +133,7 @@
 		46718C010F381B1F00272C9A /* SenTestAssertionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestAssertionTest.m; sourceTree = "<group>"; };
 		4675E4470FBB880A00AB902D /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4675E44B0FBB881F00AB902D /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		46828C4610BFEC7D00F3259C /* UITableViewControllerTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerTestHelper.h; sourceTree = "<group>"; };
 		468D068510B2B237006C87A6 /* PerformSetUpSequenceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformSetUpSequenceTest.h; sourceTree = "<group>"; };
 		468D068610B2B237006C87A6 /* PerformSetUpSequenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformSetUpSequenceTest.m; sourceTree = "<group>"; };
 		468D087610B2E4FC006C87A6 /* AppAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAgent.h; sourceTree = "<group>"; };
@@ -283,6 +284,7 @@
 		465B043D0F205A62000E8FE2 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				46828C4610BFEC7D00F3259C /* UITableViewControllerTestHelper.h */,
 				468D087810B2E4FC006C87A6 /* AppAgentHelper.h */,
 				468D087610B2E4FC006C87A6 /* AppAgent.h */,
 				468D087710B2E4FC006C87A6 /* AppAgent.m */,

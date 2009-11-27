@@ -31,6 +31,11 @@
     [super dealloc];
 }
 
+- (BOOL)hasNavigationController
+{
+    return YES;
+}
+
 
 #pragma mark -
 #pragma mark Helpers

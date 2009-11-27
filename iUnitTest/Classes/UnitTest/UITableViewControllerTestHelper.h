@@ -24,6 +24,10 @@
 
 #define EDITING_STYLE(r,s)              [self.tableViewController tableView:self.tableView editingStyleForRowAtIndexPath:[NSIndexPath indexPathForRow:(r) inSection:(s)]]
 
+#define CAN_MOVE_CELL(r,s)              [self.tableViewController tableView:self.tableView canMoveRowAtIndexPath:[NSIndexPath indexPathForRow:(r) inSection:(s)]]
+
+#define TARGET_INDEXPTH(source,proposed)              [self.tableViewController tableView:self.tableView targetIndexPathForMoveFromRowAtIndexPath:source toProposedIndexPath:proposed]
+
 
 
 // For UITableView

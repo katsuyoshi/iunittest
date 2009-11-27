@@ -111,10 +111,20 @@
     return (UITextField *)[self findViewWithClass:[UITextField class] inViews:[view subviews]];
 }
 
-
-- (BOOL)closeAllAlertViews
+- (UISwitch *)switchInView:(UIView *)view
 {
-    NSArray *alertViews = [self findAllViewWithClass:[UIAlertView class] inViews:[self.window subviews]];
+    return (UISwitch *)[self findViewWithClass:[UISwitch class] inViews:[view subviews]];
+}
+
+
+- (NSArray *)alertViews
+{
+    return [self findAllViewWithClass:[UIAlertView class] inViews:[self.window subviews]];
+}
+
+- (int)closeAllAlertViews
+{
+    NSArray *alertViews = self.alertViews;
     
     for (UIAlertView *alertView in alertViews) {
         [alertView dismissWithClickedButtonIndex:0 animated:NO];

@@ -25,7 +25,9 @@
 
 
 - (UITextField *)textFieldInView:(UIView *)view;
+- (UISwitch *)switchInView:(UIView *)view;
 
-- (BOOL)closeAllAlertViews;
+- (NSArray *)alertViews;
+- (int)closeAllAlertViews;
 
 @end
