@@ -20,7 +20,9 @@
     [notificationCenter addObserver:self selector:@selector(fooDidChange:) name:FooDidChangeNotification object:foo];
     notifiedCount = 0;
     
-    [self performSetUpSequence:@selector(setUpSequence1) afterDelay:0];
+//    [self performSetUpSequence:@selector(setUpSequence1) afterDelay:0];
+//    [self performSetUpSequence:@selector(setUpSequenceUsingIDLE) afterDelay:0];
+    [self performSetUpSequence:@selector(setUpSequenceUsingIDLE2) afterDelay:0];
 }
 
 - (void)tearDown
@@ -51,6 +53,23 @@
 {
     foo.bar = 2;
 }
+
+
+- (void)setUpSequenceUsingIDLE
+{
+    foo.bar = 1;
+    SETUP_IDLE(setUp2SequenceUsingIDLE, 0);
+    foo.bar = 2;
+}
+
+- (void)setUpSequenceUsingIDLE2
+{
+    foo.bar = 1;
+    SETUP_IDLE(setUp2SequenceUsingIDLE2, 0);
+    SETUP_IDLE(setUp3SequenceUsingIDLE2, 0);
+    foo.bar = 2;
+}
+
 
 #pragma mark -
 #pragma mark Tests

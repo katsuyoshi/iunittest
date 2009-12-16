@@ -72,7 +72,23 @@
 #define ASSERT_EQUAL_LOCALIZED_STRING_FROM_TABLE(_expected, _table, _value) ASSERT_EQUAL(NSLocalizedStringFromTable(_expected, _table, nil), _value)
 
 
+#pragma mark -
+#pragma mark helper
 
+#define TEST_IDLE(sel,t) \
+    [self performTest:@selector(_ ## sel) afterDelay:t];\
+}\
+- (void)_ ## sel {\
+
+
+#define SETUP_IDLE(sel,t) \
+    [self performSetUpSequence:@selector(_ ## sel) afterDelay:t];\
+}\
+- (void)_ ## sel {\
+
+
+
+#pragma mark -
 
 extern NSString * const IUTAssertionExceptionName;
 extern NSString * const IUTAssertionErrorExceptionName;
