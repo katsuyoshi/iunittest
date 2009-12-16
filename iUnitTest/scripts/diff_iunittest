@@ -1,0 +1,30 @@
+#!/usr/bin/ruby
+needs_patch = false
+
+ARGV.each do |option|
+  case option
+  when "--patch", "-p"
+    needs_patch = true
+  when "--help", "?"
+    puts <<EOF
+usage: diff_iunittest [--patch] [--help] [?]
+
+Options:
+  --patch, -p : force patch process
+  --help, ?   : show help
+EOF
+    exit(-1)
+  end
+end
+
+src_dir = File.expand_path("~/git/iunittest/iUnitTest/Classes")
+dst_dir = File.expand_path("./Classes")
+
+Dir.glob("#{src_dir}/**/*.{h,m}") do |file|
+  local_path = file[src_dir.length..-1]
+  if needs_patch
+    system("diff -u #{file} #{dst_dir}#{local_path} | patch #{file}")
+  else
+    system("diff -u #{file} #{dst_dir}#{local_path}")
+  end
+end
