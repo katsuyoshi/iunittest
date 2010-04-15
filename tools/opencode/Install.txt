@@ -18,7 +18,7 @@ opencode is a service to show a source code.
   2. Run script 'install'.
      It copy 'com.itosoft.iunittest_opencode' to '~/Library/LaunchAgents'.
 
-     > install
+     > ./install
 
   3. logout and login.
 
