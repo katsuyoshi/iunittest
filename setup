@@ -1,2 +1,2 @@
 #!/bin/sh
-ruby setup.rb
+ruby -Ku setup.rb
