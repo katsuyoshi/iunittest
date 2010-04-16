@@ -50,6 +50,14 @@
 #pragma mark -
 #pragma mark setUp/tearDown
 
+/*
+ // prepare datas
+ - (NSNumber *)willSetUp
+ {
+ return [super willSetUp];
+ }
+ */
+
 - (void)setUp
 {
     [super setUp];
@@ -59,6 +67,14 @@
 {
     [super tearDown];
 }
+
+/*
+ // release datas
+ - (NSNumber *)didTearDown
+ {
+ return [super didTearDown];
+ }
+ */
 
 #pragma mark -
 #pragma mark Tests
