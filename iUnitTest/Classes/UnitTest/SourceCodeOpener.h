@@ -25,7 +25,7 @@
 
 #if TARGET_IPHONE_SIMULATOR
 
-@interface SourceCodeOpener : NSObject {
+@interface SourceCodeOpener : NSObject <NSNetServiceDelegate, NSNetServiceBrowserDelegate> {
     
     NSNetServiceBrowser *browser;
     NSMutableSet *services;
