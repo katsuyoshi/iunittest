@@ -370,11 +370,12 @@
 				GCC_PREFIX_HEADER = iUnitTest_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = iUnitTest;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -387,10 +388,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iUnitTest_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = iUnitTest;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "015FD9E7-03D2-482E-8BF0-526AFEFF0A8C";
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
 		};
@@ -404,7 +406,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Debug;
 		};
@@ -417,7 +419,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2;
+				SDKROOT = iphonesimulator4.0;
 			};
 			name = Release;
 		};
