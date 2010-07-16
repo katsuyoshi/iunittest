@@ -18,8 +18,10 @@
 @synthesize resultLabel, bgView;
 @synthesize exception;
 
-- (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
         resultLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         resultLabel.font = [UIFont fontWithName:resultLabel.font.fontName size:14];
         resultLabel.numberOfLines = 0;

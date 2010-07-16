@@ -1,5 +1,5 @@
 {
 	MainTemplateFile = "class.m";
 	"CounterpartTemplateFile" = "class.h";
-	Description = "UINavigationBar based iUnitTest Test Case";
+	Description = "UITableViewController based iUnitTest Test Case";
 }

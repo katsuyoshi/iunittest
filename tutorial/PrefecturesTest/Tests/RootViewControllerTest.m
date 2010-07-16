@@ -69,13 +69,13 @@
 
 - (void)testCellForRowAtIndexPath
 {
-    ASSERT_EQUAL(@"Hokkaido", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] text]);
-    ASSERT_EQUAL(@"Aomori", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]] text]);
-    ASSERT_EQUAL(@"Iwate", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]] text]);
-    ASSERT_EQUAL(@"Akita", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]] text]);
-    ASSERT_EQUAL(@"Yamagata", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]] text]);
-    ASSERT_EQUAL(@"Miyagi", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]] text]);
-    ASSERT_EQUAL(@"Fukusima", [[controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:1]] text]);
+    ASSERT_EQUAL(@"Hokkaido", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].textLabel.text);
+    ASSERT_EQUAL(@"Aomori", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]].textLabel.text);
+    ASSERT_EQUAL(@"Iwate", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]].textLabel.text);
+    ASSERT_EQUAL(@"Akita", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]].textLabel.text);
+    ASSERT_EQUAL(@"Yamagata", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]].textLabel.text);
+    ASSERT_EQUAL(@"Miyagi", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]].textLabel.text);
+    ASSERT_EQUAL(@"Fukusima", [controller tableView:controller.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:1]].textLabel.text);
 }
 
 @end

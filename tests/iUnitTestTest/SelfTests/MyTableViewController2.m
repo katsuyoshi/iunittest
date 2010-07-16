@@ -1,32 +1,33 @@
 //
-//  RootViewController.m
-//  Prefectures
+//  MyTableViewController2.m
+//  iUnitTestTest
 //
-//  Created by Katsuyoshi Ito on 09/01/26.
-//  Copyright ITO SOFT DESIGN Inc 2009. All rights reserved.
+//  Created by Katsuyoshi Ito on 09/09/04.
+//  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
 //
 
-#import "RootViewController.h"
-#import "PrefecturesAppDelegate.h"
+#import "MyTableViewController2.h"
 
 
-@implementation RootViewController
+@implementation MyTableViewController2
 
+/*
+- (id)initWithStyle:(UITableViewStyle)style {
+    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+    if (self = [super initWithStyle:style]) {
+    }
+    return self;
+}
+*/
+
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    dataSource = [[NSArray alloc] initWithObjects:
-                    [NSArray arrayWithObject:@"Hokkaido"],
-                    [NSArray arrayWithObjects:
-                                @"Aomori",
-                                @"Iwate",
-                                @"Akita",
-                                @"Yamagata",
-                                @"Miyagi",
-                                @"Fukusima",
-                                nil],
-                    nil];
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,27 +59,28 @@
 */
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+	// Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+	
+	// Release any cached data, images, etc that aren't in use.
 }
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
+}
+
 
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [dataSource count];
+    return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return @"Hokkaido";
-    } else {
-        return @"Tohoku";
-    }
-}
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[dataSource objectAtIndex:section] count];
+    return 0;
 }
 
 
@@ -93,7 +95,7 @@
     }
     
     // Set up the cell...
-    cell.textLabel.text = [[dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	
     return cell;
 }
 
@@ -147,7 +149,6 @@
 
 
 - (void)dealloc {
-    [dataSource release];
     [super dealloc];
 }
 

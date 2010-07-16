@@ -1,16 +1,16 @@
 //
-//  FooTest.m
+//  PreformTestTest.m
 //  iUnitTestTest
 //
 //  Created by Katsuyoshi Ito on 09/02/15.
 //  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
 //
 
-#import "FooTest.h"
+#import "PreformTestTest.h"
 
 
 
-@implementation FooTest
+@implementation PreformTestTest
 
 - (void)setUp
 {
@@ -75,6 +75,30 @@
 {
     ASSERT_EQUAL_INT(1, notifiedCount);
 }
+
+
+- (void)testNotificationUsiingIDLE
+{
+    // The foo will notify, did change property.
+    foo.bar = 123;
+    foo.hoge = 456;
+    
+    TEST_IDLE(test2NotificationUsiingIDLE, 0.0);
+    ASSERT_EQUAL_INT(1, notifiedCount);
+}
+
+- (void)testNotificationUsiingIDLE2
+{
+    // The foo will notify, did change property.
+    foo.bar = 123;
+    foo.hoge = 456;
+    
+    TEST_IDLE(test2NotificationUsiingIDLE2, 0.0);
+    ASSERT(YES);
+    TEST_IDLE(test3NotificationUsiingIDLE2, 0.0);
+    ASSERT_EQUAL_INT(1, notifiedCount);
+}
+
 
 
 #pragma mark -
