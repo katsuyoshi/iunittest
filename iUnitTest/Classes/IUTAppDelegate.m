@@ -6,10 +6,10 @@
 //  Copyright 2009 ITO SOFT DESIGN Inc. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "IUTAppDelegate.h"
 #import "SourceCodeOpener.h"
 
-@implementation AppDelegate
+@implementation IUTAppDelegate
 
 @synthesize window, viewController;
 

@@ -183,7 +183,7 @@
 - (IUTDetailViewController *)detailViewController
 {
     if (detailViewController == nil) {
-        detailViewController = [[IUTDetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
+        detailViewController = [[IUTDetailViewController alloc] initWithNibName:@"IUTDetailView" bundle:nil];
     }
     return detailViewController;
 }
