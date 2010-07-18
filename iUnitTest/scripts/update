@@ -8,10 +8,8 @@ include FileUtils
 
 mkdir_p File.join(@path, "scripts")
 
-cp(File.join(@src, "Classes/AppDelegate.h"), File.join(@path, "Classes/AppDelegate.h"))
-cp(File.join(@src, "Classes/AppDelegate.m"), File.join(@path, "Classes/AppDelegate.m"))
-cp_r(File.join(@src, "Classes/UnitTest"), File.join(@path, "Classes"))
-cp_r(File.join(@src, "scripts"), @path) if File.exist? File.join(@src, "scripts")
-cp_r(Dir.glob("#{@src}/*.bundle"), @path)
-cp(Dir.glob("#{@src}/*.xib"), @path)
-cp(Dir.glob("#{@src}/*.png"), @path)
+src_file = File.join(@src, "scripts/update_iunittest.rb")
+dst_file = File.join(@path, "scripts/update_iunittest.rb")
+cp(src_file, dst_file) if File.exist? src_file
+
+require 'scripts/update_iunittest'
