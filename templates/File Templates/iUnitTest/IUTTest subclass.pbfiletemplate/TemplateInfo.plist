@@ -1,5 +1,0 @@
-{
-	MainTemplateFile = "class.m";
-	"CounterpartTemplateFile" = "class.h";
-	Description = "iUnitTest Test Case";
-}

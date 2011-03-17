@@ -3,7 +3,7 @@ require 'fileutils'
 
 include FileUtils
 
-@dest = "/Library/Application Support/Developer/Shared/Xcode"
+@dest = File.expand_path "~/Library/Developer/Xcode/Templates"
 @path = File.dirname(__FILE__)
 
 def copy_project_tmplate
@@ -24,7 +24,7 @@ def copy_project_tmplate
   # replace target name
   pbxproj_file = File.join(project_dir, "iUnitTest.xcodeproj/project.pbxproj");
   context = File.read pbxproj_file
-  context.gsub!(/iUnitTest/, "«PROJECTNAME»")
+  context.gsub!(/iUnitTest/, "___PROJECTNAME___")
   context.gsub!(/«PROJECTNAME»_Prefix.pch/, "iUnitTest_Prefix.pch")
   File.open(pbxproj_file, "w") do |file|
     file.write context
@@ -46,25 +46,25 @@ def replace_tags extention
     match = nil
     case extention
     when "m"
-      context.gsub!(/@implementation\s+\w+/, "@implementation «FILEBASENAMEASIDENTIFIER»")
+      context.gsub!(/@implementation\s+\w+/, "@implementation ___FILEBASENAMEASIDENTIFIER___")
       /^\/\/\s+(\w+).m/ =~ context
       match = $1
-      context.gsub!(Regexp.new("#{match}.m"), "«FILENAME»")
+      context.gsub!(Regexp.new("#{match}.m"), "___FILENAME___")
     when "h" 
-      context.gsub!(/@interface\s+\w+/, "@interface «FILEBASENAMEASIDENTIFIER»")
+      context.gsub!(/@interface\s+\w+/, "@interface ___FILEBASENAMEASIDENTIFIER___")
       /^\/\/\s+(\w+).h/ =~ context
       match = $1
-      context.gsub!(Regexp.new("#{match}.h"), "«FILENAME»")
+      context.gsub!(Regexp.new("#{match}.h"), "___FILENAME___")
     end
     
-    context.gsub!(Regexp.new("#import\s+\"#{match}.h\""), "«OPTIONALHEADERIMPORTLINE»") if match
-    context.gsub!(/iUnitTestTest/, "«PROJECTNAME»")
-    context.gsub!(/\d+\/\d+\/\d+/, "«DATE»")
+    context.gsub!(Regexp.new("#import\s+\"#{match}.h\""), '#import "___FILEBASENAME___.h"') if match
+    context.gsub!(/iUnitTestTest/, "___PROJECTNAME___")
+    context.gsub!(/\d+\/\d+\/\d+/, "___DATE___")
     /^\/\/\s+Copyright\s+(\d+)/ =~ context
     match = $1
-    context.gsub!(Regexp.new("#{match}"), "«YEAR»")
-    context.gsub!(/Katsuyoshi Ito/, "«FULLUSERNAME»")
-    context.gsub!(/ITO SOFT DESIGN Inc/, "«ORGANIZATIONNAME»")
+    context.gsub!(Regexp.new("#{match}"), "___YEAR___")
+    context.gsub!(/Katsuyoshi Ito/, "___FULLUSERNAME___")
+    context.gsub!(/ITO SOFT DESIGN Inc/, "___ORGANIZATIONNAME___")
     File.open(filename, "w") do |file|
       file.write context
     end
@@ -83,12 +83,14 @@ def copy_file_template
   install_dir =  File.join(@dest, "File Templates/iUnitTest")
   rm_rf install_dir if File.directory? install_dir
   
-  src = File.join(@path, "tmp/File Templates")
-  cp_r(src, @dest)
+  src = File.join(@path, "tmp/File Templates/iUnitTest")
+  dest = File.join(@dest, "File Templates")
+  mkdir_p dest
+  cp_r(src, dest)
   rm_rf File.join(@path, "tmp")
 end
 
 
 mkdir_p @dest
-copy_project_tmplate
+# copy_project_tmplate
 copy_file_template

@@ -1,0 +1,15 @@
+{
+	AllowedTypes = (
+		"public.objective-c-source",
+		"public.objective-c-plus-plus-source",
+	);
+	"CounterpartTemplateFile" = "___FILEBASENAME___.h";
+	"DefaultCompletionName" = MyViewControllerTest;
+	Description = "UIViewController based iUnitTest Test Case";
+	Kind = "Xcode.IDEKit.TextSubstitutionFileTemplateKind";
+	MainTemplateFile = "___FILEBASENAME___.m";
+	Platforms = (
+		"com.apple.platform.iphoneos",
+	);
+	Summary = "An Objective-C category";
+}
