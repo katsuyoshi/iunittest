@@ -2,3 +2,5 @@
 *.pbxuser
 tmp
 .DS_Store
+*.xcworkspace
+xcuserdata

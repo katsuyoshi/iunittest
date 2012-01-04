@@ -1,0 +1,23 @@
+{
+	Ancestors = (
+		"com.apple.dt.unit.cocoaTouchUniversalApplication",
+	);
+	Concrete = YES;
+	Description = "This template provides a unit test application for iUnitTest.";
+	Identifier = "com.itosoft.iunittest.test.applicaion";
+	Kind = "Xcode.Xcode3.ProjectTemplateUnitKind";
+	Nodes = (
+		"Classes/IUTAppDelegate.h",
+		"scan_build",
+	);
+	Definitions = {
+		"Classes/IUTAppDelegate.h" = {
+			Path = "Classes/IUTAppDelegate.h";
+			TargetIndices = ();
+		};
+		"scan_build" = {
+			Path = "scan_build";
+			TargetIndices = ();
+		};
+	};
+}
