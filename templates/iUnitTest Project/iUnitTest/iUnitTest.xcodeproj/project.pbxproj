@@ -41,6 +41,8 @@
 		469B334114B42F420041CAF8 /* SourceCodeOpener.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B332514B42F420041CAF8 /* SourceCodeOpener.m */; };
 		469B334714B431B00041CAF8 /* IUTMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469B334614B431B00041CAF8 /* IUTMainWindow.xib */; };
 		469B334A14B432260041CAF8 /* IUTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B334914B432250041CAF8 /* IUTAppDelegate.m */; };
+		469B335314B438710041CAF8 /* .do_not_remove_this_directory in Resources */ = {isa = PBXBuildFile; fileRef = 469B335014B438710041CAF8 /* .do_not_remove_this_directory */; };
+		469B335414B438710041CAF8 /* .do_not_remove_this_directory in Resources */ = {isa = PBXBuildFile; fileRef = 469B335214B438710041CAF8 /* .do_not_remove_this_directory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		469B334614B431B00041CAF8 /* IUTMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IUTMainWindow.xib; sourceTree = "<group>"; };
 		469B334814B432250041CAF8 /* IUTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUTAppDelegate.h; sourceTree = "<group>"; };
 		469B334914B432250041CAF8 /* IUTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IUTAppDelegate.m; sourceTree = "<group>"; };
+		469B335014B438710041CAF8 /* .do_not_remove_this_directory */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .do_not_remove_this_directory; sourceTree = "<group>"; };
+		469B335214B438710041CAF8 /* .do_not_remove_this_directory */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .do_not_remove_this_directory; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		469B32DB14B42CFF0041CAF8 /* iUnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				469B334F14B438710041CAF8 /* Classes */,
+				469B335114B438710041CAF8 /* Tests */,
 				469B32DC14B42CFF0041CAF8 /* Supporting Files */,
 			);
 			path = iUnitTest;
@@ -255,6 +261,22 @@
 			path = ControllerTest;
 			sourceTree = "<group>";
 		};
+		469B334F14B438710041CAF8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				469B335014B438710041CAF8 /* .do_not_remove_this_directory */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		469B335114B438710041CAF8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				469B335214B438710041CAF8 /* .do_not_remove_this_directory */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +337,8 @@
 				469B332C14B42F420041CAF8 /* IUTTestView.xib in Resources */,
 				469B332D14B42F420041CAF8 /* Settings.bundle in Resources */,
 				469B334714B431B00041CAF8 /* IUTMainWindow.xib in Resources */,
+				469B335314B438710041CAF8 /* .do_not_remove_this_directory in Resources */,
+				469B335414B438710041CAF8 /* .do_not_remove_this_directory in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
