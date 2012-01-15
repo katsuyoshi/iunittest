@@ -40,7 +40,7 @@
 
 - (NSException *)failureException2
 {
-    IUTAssertionInfo *info = [IUTAssertionInfo assertionInfoWithClass:[self class] selector:@selector(testThisClassAlways) message:@"message" filePath:[[[NSString alloc] initWithCString:__FILE__] autorelease] line:__LINE__];
+    IUTAssertionInfo *info = [IUTAssertionInfo assertionInfoWithClass:[self class] selector:@selector(testThisClassAlways) message:@"message" filePath:[[[NSString alloc] initWithCString:__FILE__ encoding:NSUTF8StringEncoding] autorelease] line:__LINE__];
     return [NSException exceptionWithName:IUTAssertionExceptionName reason:nil userInfo:[NSDictionary dictionaryWithObjectsAndKeys:info, IUTAssertionInfoKey, nil]];
 }
 

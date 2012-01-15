@@ -10,7 +10,6 @@
 		4684C49714C2EFF600590A35 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4684C49514C2EFF600590A35 /* Localizable.strings */; };
 		4684C49C14C2F06200590A35 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4684C49A14C2F06200590A35 /* Localizable.strings */; };
 		4684C49E14C2F06A00590A35 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4684C49A14C2F06200590A35 /* Localizable.strings */; };
-		4695557C14C2EBA7005449FD /* iUnitTestTest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4695557914C2EBA7005449FD /* iUnitTestTest-Info.plist */; };
 		469555C214C2EC19005449FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4695558114C2EC19005449FD /* InfoPlist.strings */; };
 		469555C314C2EC19005449FD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4695558414C2EC19005449FD /* Default.png */; };
 		469555C414C2EC19005449FD /* isd_logo_60x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 4695558514C2EC19005449FD /* isd_logo_60x40.png */; };
@@ -500,7 +499,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4695557C14C2EBA7005449FD /* iUnitTestTest-Info.plist in Resources */,
 				469555C214C2EC19005449FD /* InfoPlist.strings in Resources */,
 				469555C314C2EC19005449FD /* Default.png in Resources */,
 				469555C414C2EC19005449FD /* isd_logo_60x40.png in Resources */,

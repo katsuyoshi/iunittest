@@ -18,7 +18,7 @@
     ASSERT_EQUAL_INT(__LINE__ - 1, info.line);
     ASSERT_EQUAL(@"IUTAssertionInfoTest", info.className);
     ASSERT_EQUAL(@"testInitialize", info.methodName);
-    ASSERT_EQUAL([[[NSString alloc] initWithCString:__FILE__] autorelease], info.filePath);
+    ASSERT_EQUAL([[[NSString alloc] initWithCString:__FILE__ encoding:NSUTF8StringEncoding] autorelease], info.filePath);
     ASSERT_EQUAL(@"IUTAssertionInfoTest.m", info.fileName);
     ASSERT_EQUAL(@"test message", info.message);
 }

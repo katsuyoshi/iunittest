@@ -10,7 +10,7 @@
 #import "SourceCodeOpener.h"
 
 
-#define IUTASSERTION_INF(m)  [IUTAssertionInfo assertionInfoWithClass:[self class] selector:_cmd message:m filePath:[[[NSString alloc] initWithCString:__FILE__] autorelease] line:__LINE__]
+#define IUTASSERTION_INF(m)  [IUTAssertionInfo assertionInfoWithClass:[self class] selector:_cmd message:m filePath:[[[NSString alloc] initWithCString:__FILE__ encoding:NSUTF8StringEncoding] autorelease] line:__LINE__]
 
 @interface IUTAssertionInfo : NSObject {
 
