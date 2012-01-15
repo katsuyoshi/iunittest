@@ -50,5 +50,9 @@ NSString * const FooDidChangeNotification = @"FooDidChangeNotification";
     notified = NO;
 }
 
++ (BOOL)forceTestsAnyway
+{
+    return NO;
+}
 
 @end
