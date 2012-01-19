@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # -*- coding:UTF-8 -*-
 require "fileutils"
 
