@@ -105,7 +105,7 @@
     
     IUTResultTableViewCell *cell = (IUTResultTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[IUTResultTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[IUTResultTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     cell.exception = [self resultForIndexPath:indexPath];
@@ -183,7 +183,7 @@
 - (IUTDetailViewController *)detailViewController
 {
     if (detailViewController == nil) {
-        detailViewController = [[IUTDetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
+        detailViewController = [[IUTDetailViewController alloc] initWithNibName:@"IUTDetailView" bundle:nil];
     }
     return detailViewController;
 }

@@ -18,6 +18,7 @@
 @implementation IUTTest
 
 @synthesize tests, testAfterDelay;
+@synthesize nextSetUpSequence, nextSetUpSequenceAfterDelay;
 @synthesize nextTest, nextTestAfterDelay;
 
 
@@ -79,12 +80,41 @@
     }
 }
 
+
+- (NSNumber *)willSetUp
+{
+    return [NSNumber numberWithDouble:0.0];
+}
+
 - (void)setUp
 {
 }
 
+- (NSNumber *)didSetUp
+{
+    return [NSNumber numberWithDouble:testAfterDelay];
+}
+
+
+- (NSNumber *)willTearDown
+{
+    return [NSNumber numberWithDouble:0.0];
+}
+
 - (void)tearDown
 {
+}
+
+- (NSNumber *)didTearDown
+{
+    return [NSNumber numberWithDouble:0.0];
+}
+
+
+- (void)performSetUpSequence:(SEL)selector afterDelay:(NSTimeInterval)delay
+{
+    self.nextSetUpSequence = selector;
+    self.nextSetUpSequenceAfterDelay = delay;
 }
 
 - (void)performTest:(SEL)selector afterDelay:(NSTimeInterval)delay
