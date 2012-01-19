@@ -10,9 +10,6 @@ FileUtils.mkdir_p dst_path
 Dir.chdir(dst_path) do
   unless File.exist? "iunittest"
     system "git clone git@github.com:katsuyoshi/iunittest.git"
-    Dir.chdir "iunittest" do
-      system "git checkout -b xcode4 origin/xcode4"
-    end
   end
   src_path = "../iUnitTest/iunittest"
   dst_path = "iunittest/iUnitTest/iUnitTest"
