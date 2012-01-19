@@ -42,7 +42,7 @@
 
 - (void)testCollectTests
 {
-    ASSERT_EQUAL_INT(11, [self.tests count]);
+    ASSERT_EQUAL_INT(15, [self.tests count]);
     
     ASSERT([self.tests containsObject:@"testCollectTests"]);
     ASSERT([self.tests containsObject:@"test1"]);
@@ -55,6 +55,11 @@
     ASSERT([self.tests containsObject:@"test8"]);
     ASSERT([self.tests containsObject:@"test9"]);
     ASSERT([self.tests containsObject:@"testInSubclass"]);
+
+    ASSERT([self.tests containsObject:@"nowShouldSupported"]);
+    ASSERT([self.tests containsObject:@"ShouldSupport"]);
+    ASSERT([self.tests containsObject:@"itShouldEqual0"]);
+    ASSERT([self.tests containsObject:@"Should"]);
 }
 
 - (void)testInSubclass

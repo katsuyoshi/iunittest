@@ -13,7 +13,7 @@
 
 - (void)testCollectTests
 {
-    ASSERT_EQUAL_INT(10, [self.tests count]);
+    ASSERT_EQUAL_INT(14, [self.tests count]);
     
     ASSERT([self.tests containsObject:@"testCollectTests"]);
     ASSERT([self.tests containsObject:@"test1"]);
@@ -25,9 +25,14 @@
     ASSERT([self.tests containsObject:@"test7"]);
     ASSERT([self.tests containsObject:@"test8"]);
     ASSERT([self.tests containsObject:@"test9"]);
+
+    ASSERT([self.tests containsObject:@"nowShouldSupported"]);
+    ASSERT([self.tests containsObject:@"ShouldSupport"]);
+    ASSERT([self.tests containsObject:@"itShouldEqual0"]);
+    ASSERT([self.tests containsObject:@"Should"]);
 }
 
-// collect start with test methods only
+// collect start with test methods
 - (void)test1 {}
 - (void)test2 {}
 - (void)test3 {}
@@ -37,6 +42,12 @@
 - (void)test7 {}
 - (void)test8 {}
 - (void)test9 {}
+
+// collect contains Should test methods
+- (void)nowShouldSupported {}
+- (void)ShouldSupport {}
+- (void)itShouldEqual0 {}
+- (void)Should {}
 
 // those tests are not collected
 - (void)_test1 {}

@@ -48,7 +48,7 @@
     [super dealloc];
 }
 
-- (void)collectTestsForClass:(Class)klass
+- (void)collectTestKeywordTestsForClass:(Class)klass
 {
     unsigned int count;
     NSRange range = NSMakeRange(0, [@"test" length]);
@@ -65,6 +65,31 @@
         }
     }
     free(methods);
+}
+
+- (void)collectShouldKeywordTestsForClass:(Class)klass
+{
+    unsigned int count;
+    Method *methods = class_copyMethodList(klass, &count);
+    Method *methodPtr = methods;
+    for (int i = 0; i < count; i++, methodPtr++) {
+        Method aMethod = *methodPtr;
+        NSString *selectorName = NSStringFromSelector(method_getName(aMethod));
+        NSRange ragne = [selectorName rangeOfString:@"Should"];
+        if (ragne.location != NSNotFound) {
+            // if already has selectorName, it will be overrided. Then ignore this methods.
+            if (![tests containsObject:selectorName]) {
+                [tests addObject:selectorName];
+            }
+        }
+    }
+    free(methods);
+}
+
+- (void)collectTestsForClass:(Class)klass
+{
+    [self collectTestKeywordTestsForClass:klass];
+    [self collectShouldKeywordTestsForClass:klass];
 }
 
 - (void)collectTests
