@@ -27,7 +27,7 @@ Xcode 4ではファイルを開くだけで、該当行選択する事が出来�
 
 必要な環境
 =
-iPhone SDK fo iOS5以降とXcode 4
+iPhone SDK fo iOS5以降とXcode 4  
 iOS4以前でXcode 3を使う場合はsdk3.0ブランチを使用して下さい。 
 
 
