@@ -9,6 +9,7 @@
 #import "IUTTestRunnerViewController.h"
 #import "IUTTestRunner.h"
 #import "IUTPreference.h"
+#import "CoreFoundation/CoreFoundation.h"
 
 
 @interface IUTTestRunnerViewController(_private)
@@ -59,6 +60,8 @@
     if ([[IUTPreference sharedPreference]isAutoRun]) {
         [self startAction:self];
     }
+    
+    self.title = [[[NSBundle mainBundle] infoDictionary] valueForKey:kCFBundleNameKey];
 }
 
 /*
